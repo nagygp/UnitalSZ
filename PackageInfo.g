@@ -10,30 +10,30 @@ SetPackageInfo( rec(
 
 PackageName := "UnitalSZ",
 Subtitle := "Algorithms and library of unitals of projective planes",
-Version := "0.1",
-Date := "26/10/2017", # dd/mm/yyyy format
+Version := "0.2",
+Date := "8/11/2017", # dd/mm/yyyy format
 
 Persons := [
   rec(
     IsAuthor := true,
     IsMaintainer := true,
-    FirstNames := "Gabor Peter",
+    FirstNames := "Gábor Péter",
     LastName := "Nagy",
     WWWHome := "http://www.math.u-szeged.hu/~nagyg",
     Email := "nagyg@math.u-szeged.hu",
-    PostalAddress := "H-6720 Szeged, Aradi vertanuk tere 1",
-    Place := "Szeged",
+    PostalAddress := "H-6720 Szeged, Aradi vértanúk tere 1",
+    Place := "Szeged (Hungary)",
     Institution := "University of Szeged",
   ),
   rec(
     IsAuthor := true,
     IsMaintainer := true,
-    FirstNames := "David",
-    LastName := "Mezofi",
+    FirstNames := "Dávid",
+    LastName := "Mezőfi",
     WWWHome := "TODO",
     Email := "david.mezofi93@gmail.com",
-    PostalAddress := "H-6720 Szeged, Aradi vertanuk tere 1",
-    Place := "Szeged",
+    PostalAddress := "H-6720 Szeged, Aradi vértanúk tere 1",
+    Place := "Szeged (Hungary)",
     Institution := "University of Szeged",
   ),
 ],
@@ -76,7 +76,11 @@ PackageDoc := rec(
 
 Dependencies := rec(
   GAP := ">= 4.8",
-  NeededOtherPackages := [ [ "GAPDoc", ">= 1.5" ] ],
+  NeededOtherPackages := [
+    [ "GAPDoc", ">= 1.5" ],
+    [ "Digraphs", ">= 0.10.1" ],
+    [ "io", ">=4.4.6" ]
+  ],
   SuggestedOtherPackages := [ ],
   ExternalConditions := [ ],
 ),
@@ -90,5 +94,3 @@ TestFile := "tst/testall.g",
 #Keywords := [ "TODO" ],
 
 ));
-
-

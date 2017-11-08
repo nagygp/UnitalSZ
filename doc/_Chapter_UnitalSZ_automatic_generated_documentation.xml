@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_UnitalSZ_automatic_generated_documentation">
+<Heading>UnitalSZ automatic generated documentation</Heading>
+
+<Section Label="Chapter_UnitalSZ_automatic_generated_documentation_Section_UnitalSZ_automatic_generated_documentation_of_global_functions">
+<Heading>UnitalSZ automatic generated documentation of global functions</Heading>
+
+<ManSection>
+  <Func Arg="arg" Name="AU_UnitalBlistList_axiomcheck" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="bmat" Name="IsAU_UnitalBlistList" />
+ <Returns>true if <A>bmat</A> is the blist list of an abstract unital.
+</Returns>
+ <Description>
+Each row of <A>bmat</A> corresponds to a block of the unital. We check the sizes of the blocks and the sizes of the intersections of the dual blocks.
+Wrong <A>bmat</A> matrix size drops error.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="IsAU_UnitalIncidenceMatrix" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="IsAU_UnitalBlockDesign" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_UnitalByBlistListNC" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_UnitalByBlistList" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_UnitalByDesignBlocks" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_UnitalByIncidenceMatrix" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_HermitianAbstractUnital" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_ReadLibraryDataFromFiles" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_InitLibraryData" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_BBTUnital" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_KNPUnital" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="arg" Name="AU_LibraryInfo" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_UnitalSZ_automatic_generated_documentation_Section_UnitalSZ_automatic_generated_documentation_of_attributes">
+<Heading>UnitalSZ automatic generated documentation of attributes</Heading>
+
+<ManSection>
+  <Attr Arg="arg" Name="AU_Points" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="arg" Name="AU_Blocks" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="arg" Name="AU_IncidenceDigraph" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="arg" Name="AutomorphismGroup" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_UnitalSZ_automatic_generated_documentation_Section_UnitalSZ_automatic_generated_documentation_of_methods">
+<Heading>UnitalSZ automatic generated documentation of methods</Heading>
+
+<ManSection>
+  <Oper Arg="arg1,arg2" Name="AU_Isomorphism" Label="for IsAU_UnitalDesign,IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

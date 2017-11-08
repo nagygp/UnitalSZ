@@ -5,3 +5,4 @@
 #
 
 ReadPackage( "UnitalSZ", "gap/UnitalSZ.gd");
+ReadPackage( "UnitalSZ", "gap/libraries.gd");
