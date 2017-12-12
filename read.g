@@ -3,5 +3,5 @@
 #
 # Reading the implementation part of the package.
 #
-ReadPackage( "UnitalSZ", "gap/UnitalSZ.gi");
-ReadPackage( "UnitalSZ", "gap/libraries.gi");
+ReadPackage( "UnitalSZ", "gap/UnitalSZ.gi" );
+ReadPackage( "UnitalSZ", "gap/libraries.gi" );
