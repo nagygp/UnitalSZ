@@ -58,6 +58,9 @@ DeclareAttribute( "AU_IncidenceDigraph", IsAU_UnitalDesign );
 DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
+DeclareAttribute( "AU_FullPoints", IsAU_UnitalDesign );
+#! @Description
+#!   Insert documentation for you function here
 DeclareOperation( "AU_Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
 #! @Description
 #!   Insert documentation for you function here
