@@ -8,8 +8,9 @@ DeclareCategory( "IsAU_UnitalDesign", IsObject );
 DeclareSynonym( "IsAU_Unital", IsAU_UnitalDesign );
 DeclareSynonym( "IsAU_AbstractUnital", IsAU_UnitalDesign );
 
-DeclareRepresentation( "IsAU_UnitalDesignRep", IsComponentObjectRep and IsAttributeStoringRep, ["bmat"] );
-AU_UnitalDesignFamily:=NewFamily("AbstractUnitalDesignFam");
+DeclareRepresentation( "IsAU_UnitalDesignRep", IsComponentObjectRep and
+                       IsAttributeStoringRep, [ "bmat" ] );
+AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
 
 
 #! @Description
@@ -18,7 +19,8 @@ DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
 #! @Arguments bmat
 #! @Returns true if <A>bmat</A> is the blist list of an abstract unital.
 #! @Description
-#!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the sizes of the blocks and the sizes of the intersections of the dual blocks.
+#!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
+#!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 #!   Wrong <A>bmat</A> matrix size drops error.
 DeclareGlobalFunction( "IsAU_UnitalBlistList" );
 #! @Description
@@ -56,7 +58,10 @@ DeclareAttribute( "AU_IncidenceDigraph", IsAU_UnitalDesign );
 DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareOperation( "AU_Isomorphism", [IsAU_UnitalDesign,IsAU_UnitalDesign] );
+DeclareAttribute( "AU_FullPoints", IsAU_UnitalDesign );
+#! @Description
+#!   Insert documentation for you function here
+DeclareOperation( "AU_Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
 #! @Description
 #!   Insert documentation for you function here
 DeclareGlobalFunction( "AU_HermitianAbstractUnital" );

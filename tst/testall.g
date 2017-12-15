@@ -1,12 +1,12 @@
 #
 # UnitalSZ: Algorithms and library of unitals of projective planes
 #
-# This file runs package tests. It is also referenced in the package
-# metadata in PackageInfo.g.
+# This file runs package tests. It is also referenced in the package metadata
+# in PackageInfo.g.
 #
 LoadPackage( "UnitalSZ" );
 
-TestDirectory(DirectoriesPackageLibrary( "UnitalSZ", "tst" ),
-  rec(exitGAP := true));
+TestDirectory( DirectoriesPackageLibrary( "UnitalSZ", "tst" ),
+               rec( exitGAP := true ) );
 
-FORCE_QUIT_GAP(1); # if we ever get here, there was an error
+FORCE_QUIT_GAP( 1 ); # If we ever get here, there was an error
