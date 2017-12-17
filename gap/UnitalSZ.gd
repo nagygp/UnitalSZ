@@ -55,13 +55,16 @@ DeclareAttribute( "AU_Blocks", IsAU_UnitalDesign );
 DeclareAttribute( "AU_IncidenceDigraph", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
-#! @Description
-#!   Insert documentation for you function here
 DeclareAttribute( "AU_FullPoints", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
+DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
+#! @Description
+#!   Insert documentation for you function here
 DeclareOperation( "AU_Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
+#! @Description
+#!   Insert documentation for you function here
+DeclareAttribute( "AU_FullPointsGenerators", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
 DeclareGlobalFunction( "AU_HermitianAbstractUnital" );

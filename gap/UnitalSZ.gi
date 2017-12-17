@@ -272,3 +272,9 @@ InstallMethod( AU_Isomorphism, "for two abstract unitals",
             return RestrictedPerm( ret, [ 1..Order( u1 )^3 + 1 ] );
         fi;
 end );
+
+InstallMethod( AU_FullPointsGenerators, "for an abstract unital",
+    [ IsAU_UnitalDesign ],
+function( u )
+    return [];
+end );
