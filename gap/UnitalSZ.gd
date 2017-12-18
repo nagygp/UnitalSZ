@@ -55,6 +55,9 @@ DeclareAttribute( "AU_Blocks", IsAU_UnitalDesign );
 DeclareAttribute( "AU_IncidenceDigraph", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
+DeclareAttribute( "AU_FullPointsNumberRepresentation", IsAU_UnitalDesign );
+#! @Description
+#!   Insert documentation for you function here
 DeclareAttribute( "AU_FullPoints", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here

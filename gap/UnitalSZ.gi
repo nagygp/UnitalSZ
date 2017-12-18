@@ -200,6 +200,12 @@ function( u )
                     end );
 end );
 
+InstallMethod( AU_FullPointsNumberRepresentation, "for an abstract unital",
+    [ IsAU_UnitalDesign ],
+function( u )
+    return [];
+end );
+
 InstallMethod( AU_FullPoints, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
