@@ -203,7 +203,37 @@ end );
 InstallMethod( AU_FullPointsNumberRepresentation, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
-    return [];
+    local bmattr, pts, nobls, bls, lsfullpoints, i, j, blocki, blockj,
+          nonincpts, fullpoints, p, bp, ibls, coveredpts;
+    bmattr := TransposedMat( u!.bmat );
+    pts := [ 1..Order( u )^3 + 1 ];
+    nobls := Order( u )^2 * ( Order( u )^2 - Order( u ) + 1 );
+    bls := [ 1..nobls ];
+    lsfullpoints := [];
+    for i in [ 1..( nobls - 1 ) ] do
+        blocki := u!.bmat[ i ];
+        for j in [ ( i + 1 )..nobls ] do
+            blockj := u!.bmat[ j ];
+            nonincpts := ListBlist( pts, List( UnionBlist( blocki, blockj ),
+                                               x -> not x ) );
+            fullpoints := [];
+            for p in nonincpts do
+                bp := ListBlist( bls, bmattr[ p ] );
+                ibls := Filtered( bp, x -> SizeBlist( IntersectionBlist(
+                        u!.bmat[ x ], blocki ) ) > 0 );
+                coveredpts := Flat( List( ibls, x -> ListBlist( pts,
+                              IntersectionBlist( u!.bmat[ x ], blockj ) ) ) );
+                if ListBlist( pts, blockj ) = Set( coveredpts ) then
+                    Add( fullpoints, p );
+                fi;
+            od;
+            if Length( fullpoints ) <> 0 then
+                Add( lsfullpoints, rec( block1 := i, block2 := j,
+                                        fullpts := fullpoints ) );
+            fi;
+        od;
+    od;
+    return lsfullpoints;
 end );
 
 InstallMethod( AU_FullPoints, "for an abstract unital",
