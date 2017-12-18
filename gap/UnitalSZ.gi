@@ -100,8 +100,8 @@ function( bls )
     else
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
-    SetAU_Points( u, pts );
-    SetAU_Blocks( u, bls );
+    SetPoints( u, pts );
+    SetBlocks( u, bls );
     return u;
 end );
 
@@ -176,19 +176,19 @@ end );
 ##  BLOCKS, POINTS, INCIDENT DIGRAPHS, FULL POINTS
 ##  ---------------------------------------------------------------------------
 
-InstallMethod( AU_Points, "for an abstract unital",
+InstallMethod( Points, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     return [ 1..Order( u )^3 + 1 ];
 end );
 
-InstallMethod( AU_Blocks, "for an abstract unital",
+InstallMethod( Blocks, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
-    return Set( u!.bmat, x -> ListBlist( AU_Points( u ), x ) );
+    return Set( u!.bmat, x -> ListBlist( Points( u ), x ) );
 end );
 
-InstallMethod( AU_IncidenceDigraph, "for an abstract unital",
+InstallMethod( IncidenceDigraph, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     local q;
@@ -200,7 +200,7 @@ function( u )
                     end );
 end );
 
-InstallMethod( AU_FullPoints, "for an abstract unital",
+InstallMethod( FullPoints, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     local bmattr, pts, nobls, bls, lsfullpoints, i, j, blocki, pblocki, blockj,
@@ -230,9 +230,9 @@ function( u )
                 fi;
             od;
             if Length( fullpoints ) <> 0 then
-                Apply( fullpoints, x -> AU_Points( u )[ x ] );
-                Add( lsfullpoints, rec( block1 := AU_Blocks( u )[ i ],
-                                        block2 := AU_Blocks( u )[ j ],
+                Apply( fullpoints, x -> Points( u )[ x ] );
+                Add( lsfullpoints, rec( block1 := Blocks( u )[ i ],
+                                        block2 := Blocks( u )[ j ],
                                         fullpts := fullpoints ) );
             fi;
         od;
@@ -255,19 +255,19 @@ InstallMethod( AutomorphismGroup, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     local g;
-    g := AutomorphismGroup( AU_IncidenceDigraph( u ) );
+    g := AutomorphismGroup( IncidenceDigraph( u ) );
     return Action( g, [ 1..Order( u )^3 + 1 ] );
 end );
 
-InstallMethod( AU_Isomorphism, "for two abstract unitals",
+InstallMethod( Isomorphism, "for two abstract unitals",
     [ IsAU_UnitalDesign, IsAU_UnitalDesign ],
     function( u1, u2 )
         local ret;
         if Order( u1 ) <> Order( u2 ) then
             return fail;
         fi;
-        ret := IsomorphismDigraphs( AU_IncidenceDigraph( u1 ),
-                                    AU_IncidenceDigraph( u2 ) );
+        ret := IsomorphismDigraphs( IncidenceDigraph( u1 ),
+                                    IncidenceDigraph( u2 ) );
         if ret = fail then
             return fail;
         else

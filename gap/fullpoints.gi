@@ -2,7 +2,7 @@
 ##  ACTIONS, AUTOMORPHISMS
 ##  ---------------------------------------------------------------------------
 
-InstallMethod( AU_FullPoints, "for an abstract unital",
+InstallMethod( FullPoints, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     local bmattr, pts, nobls, bls, lsfullpoints, i, j, blocki, pblocki, blockj,
@@ -32,9 +32,9 @@ function( u )
                 fi;
             od;
             if Length( fullpoints ) <> 0 then
-                Apply( fullpoints, x -> AU_Points( u )[ x ] );
-                Add( lsfullpoints, rec( block1 := AU_Blocks( u )[ i ],
-                                        block2 := AU_Blocks( u )[ j ],
+                Apply( fullpoints, x -> Points( u )[ x ] );
+                Add( lsfullpoints, rec( block1 := Blocks( u )[ i ],
+                                        block2 := Blocks( u )[ j ],
                                         fullpts := fullpoints ) );
             fi;
         od;

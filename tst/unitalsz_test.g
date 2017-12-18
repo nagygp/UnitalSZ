@@ -8,9 +8,9 @@ knps[ 4 ];
 List( knps, AutomorphismGroup );; time;
 Collected( List( knps, x -> Size( AutomorphismGroup( x ) ) ) ); time;
 
-AU_Isomorphism( her, knps[ 1 ] );
-AU_Isomorphism( her, knps[ 2 ] );
+Isomorphism( her, knps[ 1 ] );
+Isomorphism( her, knps[ 2 ] );
 
 # p := Random( SymmetricGroup( q^3 + 1 ) );
-# AU_Isomorphism( u, u^p );
+# Isomorphism( u, u^p );
 # u^last = u^p;
