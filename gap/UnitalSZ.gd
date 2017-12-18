@@ -46,25 +46,22 @@ DeclareGlobalFunction( "AU_UnitalByIncidenceMatrix" );
 
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "AU_Points", IsAU_UnitalDesign );
+DeclareAttribute( "Points", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "AU_Blocks", IsAU_UnitalDesign );
+DeclareAttribute( "Blocks", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "AU_IncidenceDigraph", IsAU_UnitalDesign );
+DeclareAttribute( "IncidenceDigraph", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
 DeclareAttribute( "AU_FullPointsNumberRepresentation", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "AU_FullPoints", IsAU_UnitalDesign );
-#! @Description
-#!   Insert documentation for you function here
 DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareOperation( "AU_Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
+DeclareOperation( "Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
 #! @Description
 #!   Insert documentation for you function here
 DeclareAttribute( "AU_FullPointsGenerators", IsAU_UnitalDesign );
