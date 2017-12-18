@@ -288,5 +288,35 @@ end );
 InstallMethod( AU_FullPointsGenerators, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
-    return [];
+    local bmattr, pts, bls, lsfullpoints, lsfullpointsgens, i, p, ibls,
+          imblock1, fullpointsgens, permblock1;
+    bmattr := TransposedMat( u!.bmat );
+    pts := [ 1..Order( u )^3 + 1 ];
+    bls := [ 1..Order( u )^2 * ( Order( u )^2 - Order( u ) + 1 ) ];
+    lsfullpoints := AU_FullPointsNumberRepresentation( u );
+    lsfullpointsgens := [];
+    for i in lsfullpoints do
+        p := i.fullpts[ 1 ];
+        ibls := Flat( List( ListBlist( pts, u!.bmat[ i.block1 ] ),
+                            x -> ListBlist( bls, IntersectionBlist(
+                                 bmattr[ p ], bmattr[ x ] ) ) ) );
+        imblock1 := Flat( List( ibls,
+                                x -> ListBlist( pts, IntersectionBlist(
+                                     u!.bmat[ x ], u!.bmat[ i.block2 ] ) ) ) );
+        fullpointsgens := [];
+        for p in i.fullpts do
+            ibls := Flat( List( imblock1, x -> ListBlist( bls,
+                                               IntersectionBlist( bmattr[ p ],
+                                               bmattr[ x ] ) ) ) );
+            permblock1 := Flat( List( ibls,
+                                      x -> ListBlist( pts, IntersectionBlist(
+                                      u!.bmat[ x ], u!.bmat[ i.block1 ] ) ) ) );
+            Add( fullpointsgens, Sortex( permblock1 ) );
+        od;
+        Add( lsfullpointsgens, rec( block1 := i.block1,
+                                    block2 := i.block2,
+                                    fullpts := i.fullpts,
+                                    fullptsgens := fullpointsgens ) );
+    od;
+    return lsfullpointsgens;
 end );
