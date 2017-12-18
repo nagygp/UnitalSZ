@@ -5,3 +5,4 @@
 #
 ReadPackage( "UnitalSZ", "gap/UnitalSZ.gi" );
 ReadPackage( "UnitalSZ", "gap/libraries.gi" );
+ReadPackage( "UnitalSZ", "gap/fullpoints.gi" );
