@@ -46,10 +46,10 @@ DeclareGlobalFunction( "AU_UnitalByIncidenceMatrix" );
 
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "Points", IsAU_UnitalDesign );
+DeclareAttribute( "PointsOfUnital", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
-DeclareAttribute( "Blocks", IsAU_UnitalDesign );
+DeclareAttribute( "BlocksOfUnital", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
 DeclareAttribute( "IncidenceDigraph", IsAU_UnitalDesign );

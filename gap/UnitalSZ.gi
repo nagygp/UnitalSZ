@@ -56,7 +56,7 @@ function( bls )
     pts := Union( bls );
     q := Size( bls[ 1 ] ) - 1;
     if Length( bls ) <> q^2 * ( q^2 - q + 1 ) or Size( pts ) <> q^3 + 1 then
-        Error( "wrong number of points or blocks" );
+        Error( "wrong number of PointsOfUnital or blocks" );
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
     return AU_UnitalBlistList_axiomcheck( bmat );
@@ -100,8 +100,8 @@ function( bls )
     else
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
-    SetPoints( u, pts );
-    SetBlocks( u, bls );
+    SetPointsOfUnital( u, pts );
+    SetBlocksOfUnital( u, bls );
     return u;
 end );
 
@@ -173,19 +173,19 @@ InstallMethod( \<, "for two abstract unitals",
 end );
 
 ###############################################################################
-##  BLOCKS, POINTS, INCIDENT DIGRAPHS, FULL POINTS
+##  BLOCKS, PointsOfUnital, INCIDENT DIGRAPHS, FULL PointsOfUnital
 ##  ---------------------------------------------------------------------------
 
-InstallMethod( Points, "for an abstract unital",
+InstallMethod( PointsOfUnital, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     return [ 1..Order( u )^3 + 1 ];
 end );
 
-InstallMethod( Blocks, "for an abstract unital",
+InstallMethod( BlocksOfUnital, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
-    return Set( u!.bmat, x -> ListBlist( Points( u ), x ) );
+    return Set( u!.bmat, x -> ListBlist( PointsOfUnital( u ), x ) );
 end );
 
 InstallMethod( IncidenceDigraph, "for an abstract unital",
