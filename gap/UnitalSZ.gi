@@ -101,7 +101,7 @@ function( bls )
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
     SetPointsOfUnital( u, pts );
-    SetBlocks( u, bls );
+    SetBlocksOfUnital( u, bls );
     return u;
 end );
 
