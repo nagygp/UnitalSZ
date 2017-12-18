@@ -142,7 +142,7 @@ Insert documentation for you function here
 <Heading>UnitalSZ automatic generated documentation of attributes</Heading>
 
 <ManSection>
-  <Attr Arg="arg" Name="Points" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="arg" Name="PointsOfUnital" Label="for IsAU_UnitalDesign"/>
  <Returns></Returns>
  <Description>
 Insert documentation for you function here
@@ -151,7 +151,7 @@ Insert documentation for you function here
 
 
 <ManSection>
-  <Attr Arg="arg" Name="Blocks" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="arg" Name="BlocksOfUnital" Label="for IsAU_UnitalDesign"/>
  <Returns></Returns>
  <Description>
 Insert documentation for you function here
