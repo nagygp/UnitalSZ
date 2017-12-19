@@ -19,4 +19,7 @@ DeclareGlobalFunction( "AU_BBTUnital" );
 DeclareGlobalFunction( "AU_KNPUnital" );
 #! @Description
 #!   Insert documentation for you function here
+DeclareGlobalFunction( "AU_KrcadinacUnital" );
+#! @Description
+#!   Insert documentation for you function here
 DeclareGlobalFunction( "AU_LibraryInfo" );

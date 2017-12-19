@@ -1,6 +1,6 @@
 #
 # AU libraries by Betten-Betten-Tonchev (order 3) and Krcadinac-Nakic-Pavcevic
-# (order 4)
+# (order 4) and Krcadinac (order 3)
 #
 # Implementations
 #
@@ -30,6 +30,7 @@ end );
 
 BindGlobal( "AU_LIBDATA_BBT", fail );
 BindGlobal( "AU_LIBDATA_KNP", fail );
+BindGlobal( "AU_LIBDATA_Krcadinac", fail );
 
 InstallGlobalFunction( AU_InitLibraryData,
 function()
@@ -47,10 +48,18 @@ function()
                     AU_ReadLibraryDataFromFiles( 1777, 4,
                                                  "krcadinac_incmats.txt.gz" ) );
     fi;
+    if AU_LIBDATA_Krcadinac = fail then
+        MakeReadWriteGlobal( "AU_LIBDATA_Krcadinac" );
+        UnbindGlobal( "AU_LIBDATA_Krcadinac" );
+        BindGlobal( "AU_LIBDATA_Krcadinac",
+                    AU_ReadLibraryDataFromFiles( 4466, 3,
+                                                 "krcadinac_o3_incmats.txt.gz" ) );
+    fi;
 end );
 
 BindGlobal( "AU_NrBBTUnitals", 909 );
 BindGlobal( "AU_NrKNPUnitals", 1777 );
+BindGlobal( "AU_NrKrcadinacUnitals", 4466 );
 
 InstallGlobalFunction( AU_BBTUnital,
 function( n )
@@ -76,9 +85,22 @@ function( n )
     return u;
 end );
 
+InstallGlobalFunction( AU_KrcadinacUnital,
+function( n )
+    local u;
+    if not ( IsPosInt( n ) and n <= 4466 ) then
+        Error( "the Krcadinac library knows 4466 unitals" );
+    fi;
+    AU_InitLibraryData();
+    u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_Krcadinac[ n ] ) );
+    SetName( u, Concatenation( "AU_KrcadinacUnital(", String( n ), ")" ) );
+    return u;
+end );
+
 InstallGlobalFunction( AU_LibraryInfo,
 function()
     Print( "# The UnitalSZ package has the following libraries of abstract unitals:\n" );
     Print( "#   909 unitals of order 3 by Betten-Betten-Tonchev: <AU_BBTUnital(n)>\n" );
     Print( "#  1777 unitals of order 4 by Krcadinac-Nakic-Pavcevic: <AU_KNPUnital(n)>\n" );
+    Print( "#  4466 unitals of order 3 by Krcadinac: <AU_KrcadinacUnital(n)>\n" );
 end );
