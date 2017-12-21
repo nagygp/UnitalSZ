@@ -173,7 +173,7 @@ InstallMethod( \<, "for two abstract unitals",
 end );
 
 ###############################################################################
-##  BLOCKS, PointsOfUnital, INCIDENT DIGRAPHS, FULL PointsOfUnital
+##  BLOCKS, POINTS, INCIDENT DIGRAPHS
 ##  ---------------------------------------------------------------------------
 
 InstallMethod( PointsOfUnital, "for an abstract unital",
