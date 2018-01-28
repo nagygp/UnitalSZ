@@ -56,7 +56,7 @@ function( bls )
     pts := Union( bls );
     q := Size( bls[ 1 ] ) - 1;
     if Length( bls ) <> q^2 * ( q^2 - q + 1 ) or Size( pts ) <> q^3 + 1 then
-        Error( "wrong number of PointsOfUnital or blocks" );
+        Error( "wrong number of points or blocks" );
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
     return AU_UnitalBlistList_axiomcheck( bmat );
@@ -100,8 +100,7 @@ function( bls )
     else
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
-    SetPointsOfUnital( u, pts );
-    SetBlocksOfUnital( u, bls );
+    SetPointNamesOfUnital( u, pts );
     return u;
 end );
 
@@ -177,6 +176,12 @@ end );
 ##  ---------------------------------------------------------------------------
 
 InstallMethod( PointsOfUnital, "for an abstract unital",
+    [ IsAU_UnitalDesign ],
+function( u )
+    return [ 1..Order( u )^3 + 1 ];
+end );
+
+InstallMethod( PointNamesOfUnital, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     return [ 1..Order( u )^3 + 1 ];

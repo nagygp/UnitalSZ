@@ -52,6 +52,9 @@ DeclareAttribute( "PointsOfUnital", IsAU_UnitalDesign );
 DeclareAttribute( "BlocksOfUnital", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
+DeclareAttribute( "PointNamesOfUnital", IsAU_UnitalDesign );
+#! @Description
+#!   Insert documentation for you function here
 DeclareAttribute( "IncidenceDigraph", IsAU_UnitalDesign );
 #! @Description
 #!   Insert documentation for you function here
