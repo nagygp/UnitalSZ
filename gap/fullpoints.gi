@@ -2,7 +2,7 @@
 ##  FULL POINTS
 ##  ---------------------------------------------------------------------------
 
-InstallMethod( FullPointsOfUnitalByIndices, "for an abstract unital",
+InstallMethod( FullPointsOfUnitalRepresentatives, "for an abstract unital",
     [ IsAU_UnitalDesign ],
 function( u )
     local bmattr, pts, nobls, bls, lsfullpoints, i, j, blocki, blockj,
@@ -43,7 +43,7 @@ InstallMethod( FullPointsOfUnital, "for an abstract unital",
 function( u )
     local lsfullpoints, r;
     lsfullpoints := [];
-    for r in FullPointsOfUnitalByIndices( u ) do
+    for r in FullPointsOfUnitalRepresentatives( u ) do
         Add( lsfullpoints,
              rec( block1 := BlocksOfUnital( u )[ r.block1 ],
                   block2 := BlocksOfUnital( u )[ r.block2 ],
@@ -61,7 +61,7 @@ function( u )
     bmattr := TransposedMat( u!.bmat );
     pts := [ 1..Order( u )^3 + 1 ];
     bls := [ 1..Order( u )^2 * ( Order( u )^2 - Order( u ) + 1 ) ];
-    lsfullpoints := FullPointsOfUnitalByIndices( u );
+    lsfullpoints := FullPointsOfUnitalRepresentatives( u );
     lsfullpointsgens := [];
     for i in lsfullpoints do
         p := i.fullpts[ 1 ];

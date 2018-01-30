@@ -9,9 +9,11 @@ fullpts_reps_1:=function( u )
     nobls := Order( u )^2 * ( Order( u )^2 - Order( u ) + 1 );
     bls := [ 1..nobls ];
     lsfullpoints := [];
+    # we compute the block pairs up to automorphisms
     g:=Action(AutomorphismGroup(u),BlocksOfUnital(u),OnSets);
     orbs:=List(List(Orbits(g,[1..nobls]),Minimum),i->List(Orbits(Stabilizer(g,i),[1..nobls]),o->[i,Minimum(o)]));
     orbs:=Filtered(orbs[1],x->x[1]<x[2]);
+    # main part
     for ij in orbs do
         blocki := u!.bmat[ ij[1] ];
         blockj := u!.bmat[ ij[2] ];
@@ -74,7 +76,7 @@ for i in [1..10000] do a:=meet_by_index_1(u,Random([1..Order(u)^4-Order(u)^3+Ord
 for i in [1..10000] do a:=meet_by_index_2(u,Random([1..Order(u)^4-Order(u)^3+Order(u)^2]),Random([1..Order(u)^4-Order(u)^3+Order(u)^2])); od; time;
 
 fullpts_reps_2:=function(u)
-    local nobls,g,orbs,lsfullpoints,i,b,fullpts,p,r;
+    local nobls,g,orbs,lsfullpoints,i,b,fullpts,p,r,non_p_pts;
     nobls := Order( u )^2 * ( Order( u )^2 - Order( u ) + 1 );
     g:=Action(AutomorphismGroup(u),BlocksOfUnital(u),OnSets);
     orbs:=List(List(Orbits(g,[1..nobls]),Minimum),i->List(Orbits(Stabilizer(g,i),[1..nobls]),o->[i,Minimum(o)]));
@@ -83,7 +85,8 @@ fullpts_reps_2:=function(u)
     for i in orbs do
         b:=BlocksOfUnital(u){i};
         fullpts:=[];
-        for p in Difference(PointsOfUnital(u),Union(b)) do
+        non_p_pts:=Difference(PointsOfUnital(u),Union(b));
+        for p in non_p_pts do
             r:=List(b[1],x->meet_by_index_1(u,index_of_span(u,x,p),i[2]));
             if not [] in r then
                 Add(fullpts,p);
@@ -96,7 +99,9 @@ fullpts_reps_2:=function(u)
     return lsfullpoints;
 end;
 
+u:=AU_HermitianAbstractUnital(8);
 fullpts_reps_1(u); time;
 
+u:=AU_HermitianAbstractUnital(8);
 fullpts_reps_2(u); time;
 

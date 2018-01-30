@@ -21,7 +21,8 @@ Insert documentation for you function here
  <Returns>true if <A>bmat</A> is the blist list of an abstract unital.
 </Returns>
  <Description>
-Each row of <A>bmat</A> corresponds to a block of the unital. We check the sizes of the blocks and the sizes of the intersections of the dual blocks.
+Each row of <A>bmat</A> corresponds to a block of the unital. We check the
+sizes of the blocks and the sizes of the intersections of the dual blocks.
 Wrong <A>bmat</A> matrix size drops error.
  </Description>
 </ManSection>
@@ -127,6 +128,15 @@ Insert documentation for you function here
 
 
 <ManSection>
+  <Func Arg="arg" Name="AU_KrcadinacUnital" />
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Func Arg="arg" Name="AU_LibraryInfo" />
  <Returns></Returns>
  <Description>
@@ -160,6 +170,15 @@ Insert documentation for you function here
 
 
 <ManSection>
+  <Attr Arg="arg" Name="PointNamesOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="arg" Name="IncidenceDigraph" Label="for IsAU_UnitalDesign"/>
  <Returns></Returns>
  <Description>
@@ -177,6 +196,36 @@ Insert documentation for you function here
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="U" Name="FullPointsOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns>The list of records containing the triples <M>(b_1,b_2,P)</M>, where <M>P</M> is a full point of <A>U</A> w.r.t. the blocks <M>b_1,b_2</M>.
+</Returns>
+ <Description>
+The point <M>P</M> is a full point of <A>U</A> w.r.t. the blocks <M>b_1,b_2</M>
+if <M>P</M> is not contained in <M>b_1</M> or <M>b_2</M>, and, the projection
+with center <M>P</M> from <M>b_1</M> to <M>b_2</M> is a well-defined bijection.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="arg" Name="FullPointsOfUnitalRepresentatives" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="arg" Name="GeneratorsOfProjectivityGroupsOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns></Returns>
+ <Description>
+Insert documentation for you function here
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
@@ -184,7 +233,7 @@ Insert documentation for you function here
 <Heading>UnitalSZ automatic generated documentation of methods</Heading>
 
 <ManSection>
-  <Oper Arg="arg1,arg2" Name="Isomorphism" Label="for IsAU_UnitalDesign,IsAU_UnitalDesign"/>
+  <Oper Arg="arg1,arg2" Name="Isomorphism" Label="for IsAU_UnitalDesign, IsAU_UnitalDesign"/>
  <Returns></Returns>
  <Description>
 Insert documentation for you function here
