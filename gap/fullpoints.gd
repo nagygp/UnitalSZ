@@ -1,34 +1,34 @@
-#! @Arguments U
-#! @Returns The list of records containing the triples <A>(b1, b2, list)</A>,
-#! where any member of the list <A>list</A> is a full point of <A>U</A> w.r.t.
-#! the blocks <A>b1, b2</A>.
-#! @Description The point <M>P</M> is a full point of <A>U</A> w.r.t. the blocks
-#!   <A>b1,b2</A> if <M>P</M> is not contained in <A>b1</A> or <A>b2</A>, and,
-#!   the projection with center <M>P</M> from <A>b1</A> to <A>b2</A> is a
+#! @Arguments u
+#! @Returns The list of records containing the triples <C>(b1, b2, list)</C>,
+#! where any member of the list <C>list</C> is a full point of <A>u</A> w.r.t.
+#! the blocks <C>b1, b2</C>.
+#! @Description The point <M>P</M> is a full point of <A>u</A> w.r.t. the blocks
+#!   <C>b1,b2</C> if <M>P</M> is not contained in <C>b1</C> or <C>b2</C>, and,
+#!   the projection with center <M>P</M> from <C>b1</C> to <C>b2</C> is a
 #!   well-defined bijection.
 DeclareAttribute( "FullPointsOfUnital", IsAU_UnitalDesign );
-#! @Arguments U
-#! @Returns The list of records containing the triples <A>(ind_b1, ind_b2,
-#!   ind_list)</A>, where any member of the list <A>ind_list</A> is an index of a full
-#!   point of <A>U</A> w.r.t. the blocks corresponding to <A>ind_b1, ind_b2</A>.
-#! @Description The point corresponding to the index <A>P</A> is a full point of
-#!   <A>U</A> w.r.t. the blocks corresponding to the indices <A>ind_b1,
-#!   ind_b2</A> if <A>P</A> is not contained in <A>ind_b1</A> or <A>ind_b2</A>,
-#!   and, the projection with center <A>P</A> from <A>ind_b1</A> to
-#!   <A>ind_b2</A> is a well-defined bijection.
+#! @Arguments u
+#! @Returns The list of records containing the triples <C>(ind_b1, ind_b2,
+#!   ind_list)</C>, where any member of the list <C>ind_list</C> is an index of a full
+#!   point of <A>u</A> w.r.t. the blocks corresponding to <C>ind_b1, ind_b2</C>.
+#! @Description The point corresponding to the index <C>P</C> is a full point of
+#!   <A>u</A> w.r.t. the blocks corresponding to the indices <C>ind_b1,
+#!   ind_b2</C> if <C>P</C> is not contained in <C>ind_b1</C> or <C>ind_b2</C>,
+#!   and, the projection with center <C>P</C> from <C>ind_b1</C> to
+#!   <C>ind_b2</C> is a well-defined bijection.
 DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAU_UnitalDesign );
-#! @Arguments U
-#! @Returns The list of records containing the quadruples <A>(ind_b1, ind_b2,
-#!   ind_list, perm_list)</A>, where any member of the list <A>ind_list</A> is
-#!   an index of a full point of <A>U</A> w.r.t. the blocks corresponding to
-#!   <A>ind_b1, ind_b2</A> and <A>perm_list</A> contains permutations of the
-#!   block <A>ind_b1</A> defined by projections between <A>ind_b1</A> and
-#!   <A>ind_b2</A> with centers from the list of full points <A>ind_list</A>.
-#! @Description The permutations in <A>perm_list</A> are constructed the
-#!   following way: first we project <A>ind_b1</A> to <A>ind_b2</A> with center
-#!   <A>P</A>, where <A>P</A> is the first element of the list of full points
-#!   <A>ind_list</A>, then we take all projections from <A>ind_b2</A> to
-#!   <A>ind_b1</A> with center <A>Q</A>, where <A>Q</A> ranges through
-#!   <A>ind_list</A>. All these projections define a permutation on
-#!   <A>ind_b1</A>, since the projections were well-defined bijections.
+#! @Arguments u
+#! @Returns The list of records containing the quadruples <C>(ind_b1, ind_b2,
+#!   ind_list, perm_list)</C>, where any member of the list <C>ind_list</C> is
+#!   an index of a full point of <A>u</A> w.r.t. the blocks corresponding to
+#!   <C>ind_b1, ind_b2</C> and <C>perm_list</C> contains permutations of the
+#!   block <C>ind_b1</C> defined by projections between <C>ind_b1</C> and
+#!   <C>ind_b2</C> with centers from the list of full points <C>ind_list</C>.
+#! @Description The permutations in <C>perm_list</C> are constructed the
+#!   following way: first we project <C>ind_b1</C> to <C>ind_b2</C> with center
+#!   <C>P</C>, where <C>P</C> is the first element of the list of full points
+#!   <C>ind_list</C>, then we take all projections from <C>ind_b2</C> to
+#!   <C>ind_b1</C> with center <C>Q</C>, where <C>Q</C> ranges through
+#!   <C>ind_list</C>. Cll these projections define a permutation on
+#!   <C>ind_b1</C>, since the projections were well-defined bijections.
 DeclareAttribute( "GeneratorsOfProjectivityGroupsOfUnital", IsAU_UnitalDesign );
