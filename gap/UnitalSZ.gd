@@ -84,23 +84,51 @@ DeclareGlobalFunction( "AU_UnitalByDesignBlocks" );
 DeclareGlobalFunction( "AU_UnitalByIncidenceMatrix" );
 
 
+#! @Arguments u
+#! @Returns
+#!   The range <C>[ 1..q^3 + 1 ]</C>.
 #! @Description
-#!   Insert documentation for you function here
+#!   If <A>u</A> is a unital of order <M>q</M>, then <A>u</A> has <M>q^3 + 1</M>
+#!   points.
 DeclareAttribute( "PointsOfUnital", IsAU_UnitalDesign );
+#! @Arguments u
+#! @Returns
+#!   The blocks of the unital <A>u</A>.
 #! @Description
-#!   Insert documentation for you function here
+#!   If <A>u</A> is a unital of order <M>q</M>, then each block is a subset of
+#!   the points of the unital with <M>q + 1</M> points. The function computes
+#!   the blocks with the help of its the boolean incidence matrix <C>bmat</C>
+#!   and <C>PointsOfUnital(<A>u</A>)</C>.
 DeclareAttribute( "BlocksOfUnital", IsAU_UnitalDesign );
+#! @Arguments u
+#! @Returns
+#!   The range <C>[ 1..q^3 + 1 ]</C>.
 #! @Description
-#!   Insert documentation for you function here
+#!   If <A>u</A> is a unital of order <M>q</M> then <A>u</A> has <M>q^3 + 1</M>
+#!   points.
 DeclareAttribute( "PointNamesOfUnital", IsAU_UnitalDesign );
-#! @Description
-#!   Insert documentation for you function here
+#! @Arguments u
+#! @Returns
+#!   The (bipartite) digraph constructed from the boolean incidence matrix
+#!   <C>bmat</C> of the unital <A>u</A>.
 DeclareAttribute( "IncidenceDigraph", IsAU_UnitalDesign );
+#! @Arguments u
+#! @Returns
+#!   The automorphism group of the unital <A>u</A>.
 #! @Description
-#!   Insert documentation for you function here
+#!   The function computes the automorphism group of <A>u</A> with the help of
+#!   its incidence digraph.
 DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
+#! @Arguments u1, u2
+#! @Returns
+#!   An isomorphism between the unitals <A>u1</A> and <A>u1</A> if they are
+#!   isomorphic, and <K>fail</K> otherwise.
 #! @Description
-#!   Insert documentation for you function here
+#!   The isomorphism is a permutation which sends the points of the unital
+#!   <A>u1</A> to the points of the unital <A>u2</A> such that the it preserves
+#!   the incidence between the points and the blocks. The function computes the
+#!   isomorphism with the help of the incidence digraphs of the unitals
+#!   <A>u1</A> and <A>u2</A>.
 DeclareOperation( "Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
 #! @Arguments q
 #! @Returns

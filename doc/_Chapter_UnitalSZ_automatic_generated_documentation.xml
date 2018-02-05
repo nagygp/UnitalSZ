@@ -109,7 +109,7 @@ the unital.
  <Description>
 The Hermitian curve has the following canonical equation: <M>X_0^{q + 1} +
 X_1^{q + 1} + X_2^{q + 1} = 0</M>. The function computes the blocks of the
-unital with the help of <C>PGU(3, <A>q</A>)</C> and calls
+unital with the help of <C>PGU(3,<A>q</A>)</C> and calls
 <C>AU_UnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
 <C>AU_HermitianAbstractUnital(<A>q</A>)</C>.
  </Description>
@@ -197,46 +197,56 @@ unitals.
 <Heading>UnitalSZ automatic generated documentation of attributes</Heading>
 
 <ManSection>
-  <Attr Arg="arg" Name="PointsOfUnital" Label="for IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Attr Arg="u" Name="PointsOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns>The range <C>[ 1..q^3 + 1 ]</C>.
+</Returns>
  <Description>
-Insert documentation for you function here
+If <A>u</A> is a unital of order <M>q</M>, then <A>u</A> has <M>q^3 + 1</M>
+points.
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Attr Arg="arg" Name="BlocksOfUnital" Label="for IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Attr Arg="u" Name="BlocksOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns>The blocks of the unital <A>u</A>.
+</Returns>
  <Description>
-Insert documentation for you function here
+If <A>u</A> is a unital of order <M>q</M>, then each block is a subset of
+the points of the unital with <M>q + 1</M> points. The function computes
+the blocks with the help of its the boolean incidence matrix <C>bmat</C>
+and <C>PointsOfUnital(<A>u</A>)</C>.
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Attr Arg="arg" Name="PointNamesOfUnital" Label="for IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Attr Arg="u" Name="PointNamesOfUnital" Label="for IsAU_UnitalDesign"/>
+ <Returns>The range <C>[ 1..q^3 + 1 ]</C>.
+</Returns>
  <Description>
-Insert documentation for you function here
+If <A>u</A> is a unital of order <M>q</M> then <A>u</A> has <M>q^3 + 1</M>
+points.
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Attr Arg="arg" Name="IncidenceDigraph" Label="for IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Attr Arg="u" Name="IncidenceDigraph" Label="for IsAU_UnitalDesign"/>
+ <Returns>The (bipartite) digraph constructed from the boolean incidence matrix <C>bmat</C> of the unital <A>u</A>.
+</Returns>
  <Description>
-Insert documentation for you function here
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Attr Arg="arg" Name="AutomorphismGroup" Label="for IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Attr Arg="u" Name="AutomorphismGroup" Label="for IsAU_UnitalDesign"/>
+ <Returns>The automorphism group of the unital <A>u</A>.
+</Returns>
  <Description>
-Insert documentation for you function here
+The function computes the automorphism group of <A>u</A> with the help of
+its incidence digraph.
  </Description>
 </ManSection>
 
@@ -291,10 +301,15 @@ following way: first we project <A>ind_b1</A> to <A>ind_b2</A> with center
 <Heading>UnitalSZ automatic generated documentation of methods</Heading>
 
 <ManSection>
-  <Oper Arg="arg1,arg2" Name="Isomorphism" Label="for IsAU_UnitalDesign, IsAU_UnitalDesign"/>
- <Returns></Returns>
+  <Oper Arg="u1, u2" Name="Isomorphism" Label="for IsAU_UnitalDesign, IsAU_UnitalDesign"/>
+ <Returns>An isomorphism between the unitals <A>u1</A> and <A>u1</A> if they are isomorphic, and <K>fail</K> otherwise.
+</Returns>
  <Description>
-Insert documentation for you function here
+The isomorphism is a permutation which sends the points of the unital
+<A>u1</A> to the points of the unital <A>u2</A> such that the it preserves
+the incidence between the points and the blocks. The function computes the
+isomorphism with the help of the incidence digraphs of the unitals
+<A>u1</A> and <A>u2</A>.
  </Description>
 </ManSection>
 
