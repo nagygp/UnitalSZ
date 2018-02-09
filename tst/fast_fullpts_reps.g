@@ -12,7 +12,7 @@ fullpts_reps_1:=function( u )
     # we compute the block pairs up to automorphisms
     g:=Action(AutomorphismGroup(u),BlocksOfUnital(u),OnSets);
     orbs:=List(List(Orbits(g,[1..nobls]),Minimum),i->List(Orbits(Stabilizer(g,i),[1..nobls]),o->[i,Minimum(o)]));
-    orbs:=Filtered(orbs[1],x->x[1]<x[2]);
+    orbs:=Filtered(List(Concatenation(orbs),Set),x->Length(x)=2);
     # main part
     for ij in orbs do
         blocki := u!.bmat[ ij[1] ];
