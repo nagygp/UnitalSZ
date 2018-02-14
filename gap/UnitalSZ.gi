@@ -27,7 +27,7 @@ function( bmat )
     return true;
 end );
 
-InstallGlobalFunction( IsAU_UnitalBlistList,
+InstallGlobalFunction( AU_IsUnitalBlistList,
 function( bmat )
     local q, i, j;
     q := SizeBlist( bmat[ 1 ] ) - 1;
@@ -38,7 +38,7 @@ function( bmat )
     return AU_UnitalBlistList_axiomcheck( bmat );
 end );
 
-InstallGlobalFunction( IsAU_UnitalIncidenceMatrix,
+InstallGlobalFunction( AU_IsUnitalIncidenceMatrix,
 function( incmat )
     local q, bmat;
     bmat := List( incmat, x -> List( x, IsOne ) );
@@ -50,7 +50,7 @@ function( incmat )
     return AU_UnitalBlistList_axiomcheck(bmat);
 end );
 
-InstallGlobalFunction( IsAU_UnitalBlockDesign,
+InstallGlobalFunction( AU_IsUnitalBlockDesign,
 function( bls )
     local q, bmat, pts;
     pts := Union( bls );
@@ -70,23 +70,23 @@ InstallGlobalFunction( AU_UnitalByBlistListNC,
 function( bmat )
     local q, uni;
     q := SizeBlist( bmat[ 1 ] ) - 1;
-    uni := Objectify( NewType( AU_UnitalDesignFamily, IsAU_UnitalDesign and
-                               IsAU_UnitalDesignRep ),
+    uni := Objectify( NewType( AU_UnitalDesignFamily, IsAbstractUnitalDesign and
+                               IsAbstractUnitalDesignRep ),
                       rec( bmat := Set( bmat ) ) );
     SetOrder( uni, q );
     return uni;
 end );
 
-InstallGlobalFunction( AU_UnitalByBlistList,
+InstallGlobalFunction( AbstractUnitalByBlistList,
 function( bmat )
-    if IsAU_UnitalBlistList( bmat ) then
+    if AU_IsUnitalBlistList( bmat ) then
         return AU_UnitalByBlistListNC( bmat );
     else
         Error( "argument must be the blist list of an abstract unital" );
     fi;
 end );
 
-InstallGlobalFunction( AU_UnitalByDesignBlocks,
+InstallGlobalFunction( AbstractUnitalByDesignBlocks,
 function( bls )
     local q, bmat, pts, u;
     pts := Union( bls );
@@ -104,7 +104,7 @@ function( bls )
     return u;
 end );
 
-InstallGlobalFunction( AU_UnitalByIncidenceMatrix,
+InstallGlobalFunction( AbstractUnitalByIncidenceMatrix,
 function( incmat )
     local q, bmat;
     bmat := List( incmat, x -> List( x, IsOne ) );
@@ -120,7 +120,7 @@ function( incmat )
     fi;
 end );
 
-InstallGlobalFunction( AU_HermitianAbstractUnital,
+InstallGlobalFunction( HermitianAbstractUnital,
 function( q )
     local pgl, bls, u;
     pgl := PGU( 3, q );
@@ -129,8 +129,8 @@ function( q )
                                                        OnTuples ) ),
                                    x -> Length( x ) = q - 1 ) );
     bls :=Set( Orbit( pgl, bls, OnSets ) );
-    u := AU_UnitalByDesignBlocks( bls );
-    SetName( u, Concatenation( "AU_HermitianAbstractUnital(", String( q ),
+    u := AbstractUnitalByDesignBlocks( bls );
+    SetName( u, Concatenation( "HermitianAbstractUnital(", String( q ),
                                ")" ) );
     return u;
 end );
@@ -140,33 +140,33 @@ end );
 ##  ---------------------------------------------------------------------------
 
 InstallMethod( ViewObj, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     Print( "AU_UnitalDesign<", Order( u ), ">" );
 end );
 
 InstallMethod( Display, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     Print( "Abstract unital of order ", Order( u ) );
 end );
 
 InstallMethod( PrintObj, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     Print( "AU_UnitalDesign<", Order( u ), ">" );
 end );
 
 InstallMethod( \=, "for two abstract unitals",
     IsIdenticalObj,
-    [ IsAU_UnitalDesign, IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ],
 function( u1, u2 )
     return u1!.bmat = u2!.bmat;
 end );
 
 InstallMethod( \<, "for two abstract unitals",
     IsIdenticalObj,
-    [ IsAU_UnitalDesign, IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ],
     function( u1, u2 )
         return u1!.bmat < u2!.bmat;
 end );
@@ -176,25 +176,25 @@ end );
 ##  ---------------------------------------------------------------------------
 
 InstallMethod( PointsOfUnital, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     return [ 1..Order( u )^3 + 1 ];
 end );
 
 InstallMethod( PointNamesOfUnital, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     return [ 1..Order( u )^3 + 1 ];
 end );
 
 InstallMethod( BlocksOfUnital, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     return Set( u!.bmat, x -> ListBlist( PointsOfUnital( u ), x ) );
 end );
 
 InstallMethod( IncidenceDigraph, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     local q;
     q := Order( u );
@@ -210,14 +210,14 @@ end );
 ##  ---------------------------------------------------------------------------
 
 InstallOtherMethod( \^, "for an abstract unitals and a permutation",
-    [ IsAU_UnitalDesign, IsPerm ],
+    [ IsAbstractUnitalDesign, IsPerm ],
     function( u, perm )
         return AU_UnitalByBlistListNC( List( u!.bmat,
                                              x -> Permuted( x, perm ) ) );
 end );
 
 InstallMethod( AutomorphismGroup, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     local g;
     g := AutomorphismGroup( IncidenceDigraph( u ) );
@@ -225,7 +225,7 @@ function( u )
 end );
 
 InstallMethod( Isomorphism, "for two abstract unitals",
-    [ IsAU_UnitalDesign, IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ],
     function( u1, u2 )
         local ret;
         if Order( u1 ) <> Order( u2 ) then

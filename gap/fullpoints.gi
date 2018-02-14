@@ -3,7 +3,7 @@
 ##  ---------------------------------------------------------------------------
 
 InstallMethod( FullPointsOfUnitalRepresentatives, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     local bmattr, pts, nobls, bls, lsfullpoints, i, j, blocki, blockj,
           nonincpts, fullpoints, p, bp, ibls, coveredpts;
@@ -39,7 +39,7 @@ function( u )
 end );
 
 InstallMethod( FullPointsOfUnital, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     local lsfullpoints, r;
     lsfullpoints := [];
@@ -54,7 +54,7 @@ function( u )
 end );
 
 InstallMethod( GeneratorsOfProjectivityGroupsOfUnital, "for an abstract unital",
-    [ IsAU_UnitalDesign ],
+    [ IsAbstractUnitalDesign ],
 function( u )
     local bmattr, pts, bls, lsfullpoints, lsfullpointsgens, i, p, ibls,
           imblock1, fullpointsgens, permblock1;

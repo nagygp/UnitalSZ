@@ -29,7 +29,7 @@ DeclareGlobalFunction( "AU_InitLibraryData" );
 #!   D.  Tonchev (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3
 #!   were constructed. The incidence matrices of these unitals are shipped with
 #!   the package.
-DeclareGlobalFunction( "AU_BBTUnital" );
+DeclareGlobalFunction( "BBTAbstractUnital" );
 #! @Arguments n
 #! @Returns
 #!   The <A>n</A>th (abstract) unital of order 4 of the unitals by Krčadinac,
@@ -40,7 +40,7 @@ DeclareGlobalFunction( "AU_BBTUnital" );
 #!   Pavčević (Journal of Combinatorial Designs 19, 2011, 290-303.) 1777 unitals
 #!   of order 4 were constructed. The incidence matrices of these unitals are
 #!   shipped with the package.
-DeclareGlobalFunction( "AU_KNPUnital" );
+DeclareGlobalFunction( "KNPAbstractUnital" );
 #! @Arguments n
 #! @Returns
 #!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
@@ -50,9 +50,9 @@ DeclareGlobalFunction( "AU_KNPUnital" );
 #!   unitals of order 3 were constructed. This library contains all the unitals
 #!   of order 3 with nontrivial automorphism group. The incidence matrices of
 #!   these unitals are shipped with the package.
-DeclareGlobalFunction( "AU_KrcadinacUnital" );
+DeclareGlobalFunction( "KrcadinacAbstractUnital" );
 #! @Arguments 
 #! @Description
 #!   The function prints the information about the available libraries of
 #!   unitals.
-DeclareGlobalFunction( "AU_LibraryInfo" );
+DeclareGlobalFunction( "AbstractUnitalLibraryInfo" );

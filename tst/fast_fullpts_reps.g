@@ -67,7 +67,7 @@ end;
 
 ###
 
-u:=AU_HermitianAbstractUnital(8);
+u:=HermitianAbstractUnital(8);
 
 for i in [1..10000] do a:=index_of_span(u,Random(PointsOfUnital(u)),Random(PointsOfUnital(u))); od; time;
 
@@ -99,9 +99,9 @@ fullpts_reps_2:=function(u)
     return lsfullpoints;
 end;
 
-u:=AU_HermitianAbstractUnital(8);
+u:=HermitianAbstractUnital(8);
 fullpts_reps_1(u); time;
 
-u:=AU_HermitianAbstractUnital(8);
+u:=HermitianAbstractUnital(8);
 fullpts_reps_2(u); time;
 

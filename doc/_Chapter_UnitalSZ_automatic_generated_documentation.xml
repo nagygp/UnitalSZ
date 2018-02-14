@@ -19,7 +19,7 @@ sizes of the blocks and the sizes of the intersections of the dual blocks.
 
 
 <ManSection>
-  <Func Arg="bmat" Name="IsAU_UnitalBlistList" />
+  <Func Arg="bmat" Name="AU_IsUnitalBlistList" />
  <Returns><K>true</K> if <A>bmat</A> is the blist list of an abstract unital.
 </Returns>
  <Description>
@@ -31,7 +31,7 @@ Wrong <A>bmat</A> matrix size drops error.
 
 
 <ManSection>
-  <Func Arg="incmat" Name="IsAU_UnitalIncidenceMatrix" />
+  <Func Arg="incmat" Name="AU_IsUnitalIncidenceMatrix" />
  <Returns><K>true</K> if <A>incmat</A> is the incidence matrix of an abstract unital.
 </Returns>
  <Description>
@@ -43,7 +43,7 @@ blocks. Wrong <A>incmat</A> matrix size drops error.
 
 
 <ManSection>
-  <Func Arg="blocklist" Name="IsAU_UnitalBlockDesign" />
+  <Func Arg="blocklist" Name="AU_IsUnitalBlockDesign" />
  <Returns><K>true</K> if <A>blocklist</A> is the list of blocks of an abstract unital.
 </Returns>
  <Description>
@@ -67,7 +67,7 @@ the sizes of the blocks and their intersections).
 
 
 <ManSection>
-  <Func Arg="bmat" Name="AU_UnitalByBlistList" />
+  <Func Arg="bmat" Name="AbstractUnitalByBlistList" />
  <Returns>The unital object corresponding to the blist list <A>bmat</A>.
 </Returns>
  <Description>
@@ -80,7 +80,7 @@ and sets the <C>Order</C> of the unital.
 
 
 <ManSection>
-  <Func Arg="blocklist" Name="AU_UnitalByDesignBlocks" />
+  <Func Arg="blocklist" Name="AbstractUnitalByDesignBlocks" />
  <Returns>The unital object corresponding to the list of blocks <A>blocklist</A>. We check the sizes of the blocks and the sizes of the intersections of the dual blocks. Wrong number of blocks or wrong number of points (union of the blocks in <A>blocklist</A>) drops error. The function stores <C>bmat</C>, which is based on <A>blocklist</A>, sets the <C>Order</C> of the unital and sets the names of the points, <C>PointNamesOfUnital</C> of the unital.
 </Returns>
  <Description>
@@ -89,7 +89,7 @@ and sets the <C>Order</C> of the unital.
 
 
 <ManSection>
-  <Func Arg="incmat" Name="AU_UnitalByIncidenceMatrix" />
+  <Func Arg="incmat" Name="AbstractUnitalByIncidenceMatrix" />
  <Returns>The unital object corresponding to the incidence matrix <A>incmat</A>.
 </Returns>
  <Description>
@@ -103,15 +103,15 @@ the unital.
 
 
 <ManSection>
-  <Func Arg="q" Name="AU_HermitianAbstractUnital" />
+  <Func Arg="q" Name="HermitianAbstractUnital" />
  <Returns>The classical unital object, which is the abstract unital of order <A>q</A> isomorphic to the Hermitian curve in the classical projective plane.
 </Returns>
  <Description>
 The Hermitian curve has the following canonical equation: <M>X_0^{q + 1} +
 X_1^{q + 1} + X_2^{q + 1} = 0</M>. The function computes the blocks of the
 unital with the help of <C>PGU(3,<A>q</A>)</C> and calls
-<C>AU_UnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
-<C>AU_HermitianAbstractUnital(<A>q</A>)</C>.
+<C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
+<C>HermitianAbstractUnital(<A>q</A>)</C>.
  </Description>
 </ManSection>
 
@@ -140,7 +140,7 @@ the package.
 
 
 <ManSection>
-  <Func Arg="n" Name="AU_BBTUnital" />
+  <Func Arg="n" Name="BBTAbstractUnital" />
  <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.
 </Returns>
  <Description>
@@ -153,7 +153,7 @@ the package.
 
 
 <ManSection>
-  <Func Arg="n" Name="AU_KNPUnital" />
+  <Func Arg="n" Name="KNPAbstractUnital" />
  <Returns>The <A>n</A>th (abstract) unital of order 4 of the unitals by Krčadinac, Nakić and Pavčević.
 </Returns>
  <Description>
@@ -167,7 +167,7 @@ shipped with the package.
 
 
 <ManSection>
-  <Func Arg="n" Name="AU_KrcadinacUnital" />
+  <Func Arg="n" Name="KrcadinacAbstractUnital" />
  <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
 </Returns>
  <Description>
@@ -181,7 +181,7 @@ these unitals are shipped with the package.
 
 
 <ManSection>
-  <Func Arg="" Name="AU_LibraryInfo" />
+  <Func Arg="" Name="AbstractUnitalLibraryInfo" />
  <Returns></Returns>
  <Description>
 The function prints the information about the available libraries of
@@ -197,7 +197,7 @@ unitals.
 <Heading>UnitalSZ automatic generated documentation of attributes</Heading>
 
 <ManSection>
-  <Attr Arg="u" Name="PointsOfUnital" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="PointsOfUnital" Label="for IsAbstractUnitalDesign"/>
  <Returns>The range <C>[ 1..q^3 + 1 ]</C>.
 </Returns>
  <Description>
@@ -208,7 +208,7 @@ points.
 
 
 <ManSection>
-  <Attr Arg="u" Name="BlocksOfUnital" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="BlocksOfUnital" Label="for IsAbstractUnitalDesign"/>
  <Returns>The blocks of the unital <A>u</A>.
 </Returns>
  <Description>
@@ -221,7 +221,7 @@ and <C>PointsOfUnital(<A>u</A>)</C>.
 
 
 <ManSection>
-  <Attr Arg="u" Name="PointNamesOfUnital" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="PointNamesOfUnital" Label="for IsAbstractUnitalDesign"/>
  <Returns>The range <C>[ 1..q^3 + 1 ]</C>.
 </Returns>
  <Description>
@@ -232,7 +232,7 @@ points.
 
 
 <ManSection>
-  <Attr Arg="u" Name="IncidenceDigraph" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="IncidenceDigraph" Label="for IsAbstractUnitalDesign"/>
  <Returns>The (bipartite) digraph constructed from the boolean incidence matrix <C>bmat</C> of the unital <A>u</A>.
 </Returns>
  <Description>
@@ -241,7 +241,7 @@ points.
 
 
 <ManSection>
-  <Attr Arg="u" Name="AutomorphismGroup" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="AutomorphismGroup" Label="for IsAbstractUnitalDesign"/>
  <Returns>The automorphism group of the unital <A>u</A>.
 </Returns>
  <Description>
@@ -252,7 +252,7 @@ its incidence digraph.
 
 
 <ManSection>
-  <Attr Arg="u" Name="FullPointsOfUnital" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="FullPointsOfUnital" Label="for IsAbstractUnitalDesign"/>
  <Returns>The list of records containing the triples <C>(b1, b2, list)</C>, where any member of the list <C>list</C> is a full point of <A>u</A> w.r.t. the blocks <C>b1, b2</C>.
 </Returns>
  <Description>
@@ -265,7 +265,7 @@ well-defined bijection.
 
 
 <ManSection>
-  <Attr Arg="u" Name="FullPointsOfUnitalRepresentatives" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="FullPointsOfUnitalRepresentatives" Label="for IsAbstractUnitalDesign"/>
  <Returns>The list of records containing the triples <C>(ind_b1, ind_b2, ind_list)</C>, where any member of the list <C>ind_list</C> is an index of a full point of <A>u</A> w.r.t. the blocks corresponding to <C>ind_b1, ind_b2</C>.
 </Returns>
  <Description>
@@ -279,7 +279,7 @@ and, the projection with center <C>P</C> from <C>ind_b1</C> to
 
 
 <ManSection>
-  <Attr Arg="u" Name="GeneratorsOfProjectivityGroupsOfUnital" Label="for IsAU_UnitalDesign"/>
+  <Attr Arg="u" Name="GeneratorsOfProjectivityGroupsOfUnital" Label="for IsAbstractUnitalDesign"/>
  <Returns>The list of records containing the quadruples <C>(ind_b1, ind_b2, ind_list, perm_list)</C>, where any member of the list <C>ind_list</C> is an index of a full point of <A>u</A> w.r.t. the blocks corresponding to <C>ind_b1, ind_b2</C> and <C>perm_list</C> contains permutations of the block <C>ind_b1</C> defined by projections between <C>ind_b1</C> and <C>ind_b2</C> with centers from the list of full points <C>ind_list</C>.
 </Returns>
  <Description>
@@ -301,7 +301,7 @@ following way: first we project <C>ind_b1</C> to <C>ind_b2</C> with center
 <Heading>UnitalSZ automatic generated documentation of methods</Heading>
 
 <ManSection>
-  <Oper Arg="u1, u2" Name="Isomorphism" Label="for IsAU_UnitalDesign, IsAU_UnitalDesign"/>
+  <Oper Arg="u1, u2" Name="Isomorphism" Label="for IsAbstractUnitalDesign, IsAbstractUnitalDesign"/>
  <Returns>An isomorphism between the unitals <A>u1</A> and <A>u1</A> if they are isomorphic, and <K>fail</K> otherwise.
 </Returns>
  <Description>

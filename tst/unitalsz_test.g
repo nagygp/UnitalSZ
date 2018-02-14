@@ -1,9 +1,9 @@
 LoadPackage("unitalsz");
 
-her := AU_HermitianAbstractUnital( 4 );
+her := HermitianAbstractUnital( 4 );
 KnownAttributesOfObject( her );
 
-knps := List( [ 1..AU_NrKNPUnitals ], i -> AU_KNPUnital( i ) );; time;
+knps := List( [ 1..AU_NrKNPUnitals ], i -> KNPAbstractUnital( i ) );; time;
 knps[ 4 ];
 List( knps, AutomorphismGroup );; time;
 Collected( List( knps, x -> Size( AutomorphismGroup( x ) ) ) ); time;
@@ -47,12 +47,12 @@ od;
 # there are disjoint blocks such that the generated group contains elements of order p=2.
 # this implies that the unital cannot be embedded in PG(2,q^2), q=4.
 
-bbts := List( [ 1..AU_NrBBTUnitals ], i -> AU_BBTUnital( i ) );; time;
+bbts := List( [ 1..AU_NrBBTUnitals ], i -> BBTAbstractUnital( i ) );; time;
 
 info:=[];
 for i in [ 1..AU_NrBBTUnitals ] do 
     Print(i,"/",AU_NrBBTUnitals,"\r");
-    u := AU_BBTUnital( i );
+    u := BBTAbstractUnital( i );
     fp:=FullPointsOfUnital(u);
     for r in fp do
         if Length(r.fullpts)>1 then

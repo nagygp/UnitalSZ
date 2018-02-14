@@ -33,8 +33,8 @@ BB_unitals:=function(n)
             Add(B,Set(A0,x->Position(pts,[x[1],gamma^j*x[2]]))); 
         od;
         BB:=Union(List(B,x->Orbit(Group(perm),x,OnSets)));
-        if Length(BB)=(p-1)^2*q and IsAU_UnitalBlockDesign(BB) then
-            BB:=AU_UnitalByDesignBlocks(BB);
+        if Length(BB)=(p-1)^2*q and AU_IsUnitalBlockDesign(BB) then
+            BB:=AbstractUnitalByDesignBlocks(BB);
             SetName(BB,Concatenation("BagchiBagchiCyclicUnital<",String(n),",",String(Length(ret)+1),">"));
             Add(ret,BB);
         fi;

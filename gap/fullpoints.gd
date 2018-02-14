@@ -6,7 +6,7 @@
 #!   <C>b1,b2</C> if <M>P</M> is not contained in <C>b1</C> or <C>b2</C>, and,
 #!   the projection with center <M>P</M> from <C>b1</C> to <C>b2</C> is a
 #!   well-defined bijection.
-DeclareAttribute( "FullPointsOfUnital", IsAU_UnitalDesign );
+DeclareAttribute( "FullPointsOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns The list of records containing the triples <C>(ind_b1, ind_b2,
 #!   ind_list)</C>, where any member of the list <C>ind_list</C> is an index of a full
@@ -16,7 +16,7 @@ DeclareAttribute( "FullPointsOfUnital", IsAU_UnitalDesign );
 #!   ind_b2</C> if <C>P</C> is not contained in <C>ind_b1</C> or <C>ind_b2</C>,
 #!   and, the projection with center <C>P</C> from <C>ind_b1</C> to
 #!   <C>ind_b2</C> is a well-defined bijection.
-DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAU_UnitalDesign );
+DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns The list of records containing the quadruples <C>(ind_b1, ind_b2,
 #!   ind_list, perm_list)</C>, where any member of the list <C>ind_list</C> is
@@ -31,4 +31,4 @@ DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAU_UnitalDesign );
 #!   <C>ind_b1</C> with center <C>Q</C>, where <C>Q</C> ranges through
 #!   <C>ind_list</C>. Cll these projections define a permutation on
 #!   <C>ind_b1</C>, since the projections were well-defined bijections.
-DeclareAttribute( "GeneratorsOfProjectivityGroupsOfUnital", IsAU_UnitalDesign );
+DeclareAttribute( "GeneratorsOfProjectivityGroupsOfUnital", IsAbstractUnitalDesign );

@@ -4,11 +4,10 @@
 # Declarations
 #
 
-DeclareCategory( "IsAU_UnitalDesign", IsObject );
-DeclareSynonym( "IsAU_Unital", IsAU_UnitalDesign );
-DeclareSynonym( "IsAU_AbstractUnital", IsAU_UnitalDesign );
+DeclareCategory( "IsAbstractUnitalDesign", IsObject );
+DeclareSynonym( "IsAbstractUnital", IsAbstractUnitalDesign );
 
-DeclareRepresentation( "IsAU_UnitalDesignRep", IsComponentObjectRep and
+DeclareRepresentation( "IsAbstractUnitalDesignRep", IsComponentObjectRep and
                        IsAttributeStoringRep, [ "bmat" ] );
 AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
 
@@ -26,7 +25,7 @@ DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
 #!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 #!   Wrong <A>bmat</A> matrix size drops error.
-DeclareGlobalFunction( "IsAU_UnitalBlistList" );
+DeclareGlobalFunction( "AU_IsUnitalBlistList" );
 #! @Arguments incmat
 #! @Returns
 #!   <K>true</K> if <A>incmat</A> is the incidence matrix of an abstract unital.
@@ -34,7 +33,7 @@ DeclareGlobalFunction( "IsAU_UnitalBlistList" );
 #!   Each row of <A>incmat</A> corresponds to a block of the unital. We check
 #!   the sizes of the blocks and the sizes of the intersections of the dual
 #!   blocks. Wrong <A>incmat</A> matrix size drops error.
-DeclareGlobalFunction( "IsAU_UnitalIncidenceMatrix" );
+DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
 #! @Arguments blocklist
 #! @Returns
 #!   <K>true</K> if <A>blocklist</A> is the list of blocks of an abstract
@@ -43,7 +42,7 @@ DeclareGlobalFunction( "IsAU_UnitalIncidenceMatrix" );
 #!   We check the sizes of the blocks and the sizes of the intersections of the
 #!   dual blocks. Wrong number of blocks or wrong number of points (union of the
 #!   blocks in <A>blocklist</A>) drops error.
-DeclareGlobalFunction( "IsAU_UnitalBlockDesign" );
+DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
 
 #! @Arguments bmat
 #! @Returns
@@ -61,7 +60,7 @@ DeclareGlobalFunction( "AU_UnitalByBlistListNC" );
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 #!   Wrong <A>bmat</A> matrix size drops error. The function stores <A>bmat</A>
 #!   and sets the <C>Order</C> of the unital.
-DeclareGlobalFunction( "AU_UnitalByBlistList" );
+DeclareGlobalFunction( "AbstractUnitalByBlistList" );
 #! @Arguments blocklist
 #! @Returns
 #!   The unital object corresponding to the list of blocks <A>blocklist</A>.
@@ -71,7 +70,7 @@ DeclareGlobalFunction( "AU_UnitalByBlistList" );
 #!   blocks in <A>blocklist</A>) drops error. The function stores <C>bmat</C>,
 #!   which is based on <A>blocklist</A>, sets the <C>Order</C> of the unital and
 #!   sets the names of the points, <C>PointNamesOfUnital</C> of the unital.
-DeclareGlobalFunction( "AU_UnitalByDesignBlocks" );
+DeclareGlobalFunction( "AbstractUnitalByDesignBlocks" );
 #! @Arguments incmat
 #! @Returns
 #!   The unital object corresponding to the incidence matrix <A>incmat</A>.
@@ -81,7 +80,7 @@ DeclareGlobalFunction( "AU_UnitalByDesignBlocks" );
 #!   blocks. Wrong <A>incmat</A> matrix size drops error. The function stores
 #!   <C>bmat</C>, which is based on <A>incmat</A> and sets the <C>Order</C> of
 #!   the unital.
-DeclareGlobalFunction( "AU_UnitalByIncidenceMatrix" );
+DeclareGlobalFunction( "AbstractUnitalByIncidenceMatrix" );
 
 
 #! @Arguments u
@@ -90,7 +89,7 @@ DeclareGlobalFunction( "AU_UnitalByIncidenceMatrix" );
 #! @Description
 #!   If <A>u</A> is a unital of order <M>q</M>, then <A>u</A> has <M>q^3 + 1</M>
 #!   points.
-DeclareAttribute( "PointsOfUnital", IsAU_UnitalDesign );
+DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
 #!   The blocks of the unital <A>u</A>.
@@ -99,26 +98,26 @@ DeclareAttribute( "PointsOfUnital", IsAU_UnitalDesign );
 #!   the points of the unital with <M>q + 1</M> points. The function computes
 #!   the blocks with the help of its the boolean incidence matrix <C>bmat</C>
 #!   and <C>PointsOfUnital(<A>u</A>)</C>.
-DeclareAttribute( "BlocksOfUnital", IsAU_UnitalDesign );
+DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
 #!   The range <C>[ 1..q^3 + 1 ]</C>.
 #! @Description
 #!   If <A>u</A> is a unital of order <M>q</M> then <A>u</A> has <M>q^3 + 1</M>
 #!   points.
-DeclareAttribute( "PointNamesOfUnital", IsAU_UnitalDesign );
+DeclareAttribute( "PointNamesOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
 #!   The (bipartite) digraph constructed from the boolean incidence matrix
 #!   <C>bmat</C> of the unital <A>u</A>.
-DeclareAttribute( "IncidenceDigraph", IsAU_UnitalDesign );
+DeclareAttribute( "IncidenceDigraph", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
 #!   The automorphism group of the unital <A>u</A>.
 #! @Description
 #!   The function computes the automorphism group of <A>u</A> with the help of
 #!   its incidence digraph.
-DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
+DeclareAttribute( "AutomorphismGroup", IsAbstractUnitalDesign );
 #! @Arguments u1, u2
 #! @Returns
 #!   An isomorphism between the unitals <A>u1</A> and <A>u1</A> if they are
@@ -129,7 +128,7 @@ DeclareAttribute( "AutomorphismGroup", IsAU_UnitalDesign );
 #!   the incidence between the points and the blocks. The function computes the
 #!   isomorphism with the help of the incidence digraphs of the unitals
 #!   <A>u1</A> and <A>u2</A>.
-DeclareOperation( "Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
+DeclareOperation( "Isomorphism", [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ] );
 #! @Arguments q
 #! @Returns
 #!   The classical unital object, which is the abstract unital of order <A>q</A>
@@ -138,6 +137,6 @@ DeclareOperation( "Isomorphism", [ IsAU_UnitalDesign, IsAU_UnitalDesign ] );
 #!   The Hermitian curve has the following canonical equation: <M>X_0^{q + 1} +
 #!   X_1^{q + 1} + X_2^{q + 1} = 0</M>. The function computes the blocks of the
 #!   unital with the help of <C>PGU(3,<A>q</A>)</C> and calls
-#!   <C>AU_UnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
-#!   <C>AU_HermitianAbstractUnital(<A>q</A>)</C>.
-DeclareGlobalFunction( "AU_HermitianAbstractUnital" );
+#!   <C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
+#!   <C>HermitianAbstractUnital(<A>q</A>)</C>.
+DeclareGlobalFunction( "HermitianAbstractUnital" );

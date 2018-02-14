@@ -61,7 +61,7 @@ BindGlobal( "AU_NrBBTUnitals", 909 );
 BindGlobal( "AU_NrKNPUnitals", 1777 );
 BindGlobal( "AU_NrKrcadinacUnitals", 4466 );
 
-InstallGlobalFunction( AU_BBTUnital,
+InstallGlobalFunction( BBTAbstractUnital,
 function( n )
     local u;
     if not ( IsPosInt( n ) and n <= 909 ) then
@@ -69,11 +69,11 @@ function( n )
     fi;
     AU_InitLibraryData();
     u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_BBT[ n ] ) );
-    SetName( u, Concatenation( "AU_BBTUnital(", String( n ), ")" ) );
+    SetName( u, Concatenation( "BBTAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
 
-InstallGlobalFunction( AU_KNPUnital,
+InstallGlobalFunction( KNPAbstractUnital,
 function( n )
     local u;
     if not ( IsPosInt( n ) and n <= 1777 ) then
@@ -81,11 +81,11 @@ function( n )
     fi;
     AU_InitLibraryData();
     u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_KNP[ n ] ) );
-    SetName( u, Concatenation( "AU_KNPUnital(", String( n ), ")" ) );
+    SetName( u, Concatenation( "KNPAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
 
-InstallGlobalFunction( AU_KrcadinacUnital,
+InstallGlobalFunction( KrcadinacAbstractUnital,
 function( n )
     local u;
     if not ( IsPosInt( n ) and n <= 4466 ) then
@@ -93,14 +93,14 @@ function( n )
     fi;
     AU_InitLibraryData();
     u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_Krcadinac[ n ] ) );
-    SetName( u, Concatenation( "AU_KrcadinacUnital(", String( n ), ")" ) );
+    SetName( u, Concatenation( "KrcadinacAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
 
-InstallGlobalFunction( AU_LibraryInfo,
+InstallGlobalFunction( AbstractUnitalLibraryInfo,
 function()
     Print( "# The UnitalSZ package has the following libraries of abstract unitals:\n" );
-    Print( "#   909 unitals of order 3 by Betten-Betten-Tonchev: <AU_BBTUnital(n)>\n" );
-    Print( "#  1777 unitals of order 4 by Krcadinac-Nakic-Pavcevic: <AU_KNPUnital(n)>\n" );
-    Print( "#  4466 unitals of order 3 by Krcadinac: <AU_KrcadinacUnital(n)>\n" );
+    Print( "#   909 unitals of order 3 by Betten-Betten-Tonchev: <BBTAbstractUnital(n)>\n" );
+    Print( "#  1777 unitals of order 4 by Krcadinac-Nakic-Pavcevic: <KNPAbstractUnital(n)>\n" );
+    Print( "#  4466 unitals of order 3 by Krcadinac: <KrcadinacAbstractUnital(n)>\n" );
 end );
