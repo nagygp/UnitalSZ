@@ -213,20 +213,20 @@ points.
 </Returns>
  <Description>
 If <A>u</A> is a unital of order <M>q</M>, then each block is a subset of
-the points of the unital with <M>q + 1</M> points. The function computes
-the blocks with the help of its the boolean incidence matrix <C>bmat</C>
-and <C>PointsOfUnital(<A>u</A>)</C>.
+the points of the unital with <M>q + 1</M> points. The blocks of an abstract
+unital form a <M>2-(q^3+1,q+1,1)</M> design.
  </Description>
 </ManSection>
 
 
 <ManSection>
   <Attr Arg="u" Name="PointNamesOfUnital" Label="for IsAbstractUnitalDesign"/>
- <Returns>The range <C>[ 1..q^3 + 1 ]</C>.
+ <Returns>The names of the <M>q^3+1</M> points of <A>u</A>.
 </Returns>
  <Description>
-If <A>u</A> is a unital of order <M>q</M> then <A>u</A> has <M>q^3 + 1</M>
-points.
+The names of the points of <A>u</A> is a list of length <M>q^3+1</M> of
+arbitrary &GAP; objects. It may be set by <Code>SetPointNamesOfUnital</Code>.
+The default is the range <C>[ 1..q^3 + 1 ]</C>.
  </Description>
 </ManSection>
 

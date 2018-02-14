@@ -38,6 +38,7 @@ BB_unitals:=function(n)
             SetName(BB,Concatenation("BagchiBagchiCyclicUnital<",String(n),",",String(Length(ret)+1),">"));
             Add(ret,BB);
         fi;
+        SetPointNamesOfUnital(BB,pts); # sense???
     od;
     return ret;
 end;

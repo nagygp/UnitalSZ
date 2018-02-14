@@ -95,16 +95,16 @@ DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
 #!   The blocks of the unital <A>u</A>.
 #! @Description
 #!   If <A>u</A> is a unital of order <M>q</M>, then each block is a subset of
-#!   the points of the unital with <M>q + 1</M> points. The function computes
-#!   the blocks with the help of its the boolean incidence matrix <C>bmat</C>
-#!   and <C>PointsOfUnital(<A>u</A>)</C>.
+#!   the points of the unital with <M>q + 1</M> points. The blocks of an abstract
+#!   unital form a <M>2-(q^3+1,q+1,1)</M> design. 
 DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
-#!   The range <C>[ 1..q^3 + 1 ]</C>.
+#!   The names of the <M>q^3+1</M> points of <A>u</A>.
 #! @Description
-#!   If <A>u</A> is a unital of order <M>q</M> then <A>u</A> has <M>q^3 + 1</M>
-#!   points.
+#!   The names of the points of <A>u</A> is a list of length <M>q^3+1</M> of 
+#!   arbitrary &GAP; objects. It may be set by <Code>SetPointNamesOfUnital</Code>.
+#!   The default is the range <C>[ 1..q^3 + 1 ]</C>.
 DeclareAttribute( "PointNamesOfUnital", IsAbstractUnitalDesign );
 #! @Arguments u
 #! @Returns
@@ -129,14 +129,4 @@ DeclareAttribute( "AutomorphismGroup", IsAbstractUnitalDesign );
 #!   isomorphism with the help of the incidence digraphs of the unitals
 #!   <A>u1</A> and <A>u2</A>.
 DeclareOperation( "Isomorphism", [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ] );
-#! @Arguments q
-#! @Returns
-#!   The classical unital object, which is the abstract unital of order <A>q</A>
-#!   isomorphic to the Hermitian curve in the classical projective plane.
-#! @Description
-#!   The Hermitian curve has the following canonical equation: <M>X_0^{q + 1} +
-#!   X_1^{q + 1} + X_2^{q + 1} = 0</M>. The function computes the blocks of the
-#!   unital with the help of <C>PGU(3,<A>q</A>)</C> and calls
-#!   <C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
-#!   <C>HermitianAbstractUnital(<A>q</A>)</C>.
-DeclareGlobalFunction( "HermitianAbstractUnital" );
+
