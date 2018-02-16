@@ -16,30 +16,14 @@ Isomorphism( her, knps[ 2 ] );
 # u^last = u^p;
 
 u:=knps[9];
-fp:=FullPointsOfUnital(u);;time;
+fp:=FullPointsOfUnitalRepresentatives(u);;time;
 List(fp,r->Size(r.fullpts));
 
-projection_perm:=function(u,b1,b2,p)
-    local pbls,isect;
-    pbls:=Filtered(BlocksOfUnital(u),b->p in b);
-    isect:=List(b1,x->Intersection(b2,First(pbls,b->x in b)));
-    if [] in isect then 
-        return fail;
-    fi;
-    return PermList(List(isect,x->Position(b2,x[1])));
-end;
+ugens:=GeneratorsOfProjectivityGroupsOfUnital(u);
 
-GeneratorsOfProjectivityGroupsOfFullPoints:=function(u,r)
-    local gens;
-    gens:=List(r.fullpts,p->projection_perm(u,r.block1,r.block2,p));
-    gens:=List([2..Length(gens)],i->gens[i]*gens[1]^-1);
-    return gens;
-end;
-
-for r in fp do
+for r in ugens do
     if Length(r.fullpts)>1 then
-        gens:=GeneratorsOfProjectivityGroupsOfFullPoints(u,r);
-        g:=Group(gens);
+        g:=Group(r.projgens);
         Print("# ",Size(Intersection(r.block1,r.block2))," ",StructureDescription(g)," ", NrMovedPoints(g), "\n");
     fi;
 od;
@@ -53,11 +37,10 @@ info:=[];
 for i in [ 1..AU_NrBBTUnitals ] do 
     Print(i,"/",AU_NrBBTUnitals,"\r");
     u := BBTAbstractUnital( i );
-    fp:=FullPointsOfUnital(u);
-    for r in fp do
+    ugens:=GeneratorsOfProjectivityGroupsOfUnital(u);
+    for r in ugens do
         if Length(r.fullpts)>1 then
-            gens:=GeneratorsOfProjectivityGroupsOfFullPoints(u,r);
-            g:=Group(gens);
+            g:=Group(r.projgens);
             Add(info, [i,Size(Intersection(r.block1,r.block2)),StructureDescription(g), NrMovedPoints(g)]);
             #Print("# ",Size(Intersection(r.block1,r.block2))," ",StructureDescription(g)," ", NrMovedPoints(g), "\n");
         fi;
