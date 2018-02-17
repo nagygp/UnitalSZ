@@ -53,3 +53,9 @@ u6:=BB_unitals(6)[1];
 a:=AutomorphismGroup(u6);
 Size(a);
 StructureDescription(a);
+
+b1:=Random(BlocksOfUnital(u6));
+b2:=Random(BlocksOfUnital(u6));
+PerspectivityGroupOfUnitalsBlocks(u6,b1,b2);
+FullPointsOfUnitalRepresentatives(u6);
+

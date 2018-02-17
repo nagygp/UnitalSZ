@@ -19,11 +19,9 @@ u:=knps[9];
 fp:=FullPointsOfUnitalRepresentatives(u);;time;
 List(fp,r->Size(r.fullpts));
 
-ugens:=GeneratorsOfProjectivityGroupsOfUnital(u);
-
-for r in ugens do
+for r in fp do
     if Length(r.fullpts)>1 then
-        g:=Group(r.projgens);
+        g:=PerspectivityGroupOfUnitalsBlocks(u,r.block1,r.block2,r.fullpts);
         Print("# ",Size(Intersection(r.block1,r.block2))," ",StructureDescription(g)," ", NrMovedPoints(g), "\n");
     fi;
 od;
@@ -37,10 +35,10 @@ info:=[];
 for i in [ 1..AU_NrBBTUnitals ] do 
     Print(i,"/",AU_NrBBTUnitals,"\r");
     u := BBTAbstractUnital( i );
-    ugens:=GeneratorsOfProjectivityGroupsOfUnital(u);
-    for r in ugens do
+    fp:=FullPointsOfUnitalRepresentatives(u);
+    for r in fp do
         if Length(r.fullpts)>1 then
-            g:=Group(r.projgens);
+            g:=PerspectivityGroupOfUnitalsBlocks(u,r.block1,r.block2,r.fullpts);
             Add(info, [i,Size(Intersection(r.block1,r.block2)),StructureDescription(g), NrMovedPoints(g)]);
             #Print("# ",Size(Intersection(r.block1,r.block2))," ",StructureDescription(g)," ", NrMovedPoints(g), "\n");
         fi;

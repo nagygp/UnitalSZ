@@ -4,6 +4,7 @@
 # Declarations
 #
 
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
 #!   The classical unital object, which is the abstract unital of order <A>q</A>

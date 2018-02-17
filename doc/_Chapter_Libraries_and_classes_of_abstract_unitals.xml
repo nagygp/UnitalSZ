@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Libraries_and_classes_of_abstract_unitals">
+<Heading>Libraries and classes of abstract unitals</Heading>
+
+<Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Classes_of_abstract_unitals">
+<Heading>Classes of abstract unitals</Heading>
+
+<ManSection>
+  <Func Arg="q" Name="HermitianAbstractUnital" />
+ <Returns>The classical unital object, which is the abstract unital of order <A>q</A> isomorphic to the Hermitian curve in the classical projective plane.
+</Returns>
+ <Description>
+The Hermitian curve has the following canonical equation: <M>X_0^{q + 1} +
+X_1^{q + 1} + X_2^{q + 1} = 0</M>. The function computes the blocks of the
+unital with the help of <C>PGU(3,<A>q</A>)</C> and calls
+<C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set as
+<C>HermitianAbstractUnital(<A>q</A>)</C>.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Global_functions_for_internal_usage">
+<Heading>Global functions for internal usage</Heading>
+
+<ManSection>
+  <Func Arg="nr, q, filename" Name="AU_ReadLibraryDataFromFiles" />
+ <Returns>The list of boolean incidence matrices of size <M>(q^3 + 1) \times q^2(q^2 - q + 1)</M> read from <A>filename</A>.
+</Returns>
+ <Description>
+The file <A>filename</A> must be gzipped and must contain <A>nr</A>
+matrices of dimension mentioned above. The matrices must be 0-1 matrices
+without any whitespace between the entries in one row and there must not be
+any empty lines between matrices.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="AU_InitLibraryData" />
+ <Returns></Returns>
+ <Description>
+Reads in the incidence matrices from the libraries of unitals shipped with
+the package.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="n" Name="BBTAbstractUnital" />
+ <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.
+</Returns>
+ <Description>
+In the paper Unitals and codes by Anton Betten, Dieter Betten and Vladimir
+D. Tonchev (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3
+were constructed. The incidence matrices of these unitals are shipped with
+the package.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Libraries">
+<Heading>Libraries</Heading>
+
+<ManSection>
+  <Func Arg="n" Name="KNPAbstractUnital" />
+ <Returns>The <A>n</A>th (abstract) unital of order 4 of the unitals by Krčadinac, Nakić and Pavčević.
+</Returns>
+ <Description>
+In the paper The Kramer-Mesner method with tactical decompositions: some
+new unitals on 65 points by Vedran Krčadinac, Anamari Nakić and Mario Osvin
+Pavčević (Journal of Combinatorial Designs 19, 2011, 290-303.) 1777 unitals
+of order 4 were constructed. The incidence matrices of these unitals are
+shipped with the package.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="n" Name="KrcadinacAbstractUnital" />
+ <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
+</Returns>
+ <Description>
+In the paper Steiner 2-designs S(2, 4, 28) with nontrivial automorphisms by
+Vedran Krčadinac (Glasnik Matematički, Vol. 37 (57), 2002, 259-268.) 4466
+unitals of order 3 were constructed. This library contains all the unitals
+of order 3 with nontrivial automorphism group. The incidence matrices of
+these unitals are shipped with the package.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="AbstractUnitalLibraryInfo" />
+ <Returns></Returns>
+ <Description>
+The function prints the information about the available libraries of
+unitals.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

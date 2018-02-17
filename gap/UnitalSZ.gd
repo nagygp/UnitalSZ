@@ -11,6 +11,7 @@ DeclareRepresentation( "IsAbstractUnitalDesignRep", IsComponentObjectRep and
                        IsAttributeStoringRep, [ "bmat" ] );
 AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
 
+#! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
 #! @Returns
 #!   <K>true</K> if <A>bmat</A> is the blist list of an abstract unital.
@@ -18,6 +19,8 @@ AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
 #!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
+
+#! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
 #! @Returns
 #!   <K>true</K> if <A>bmat</A> is the blist list of an abstract unital.
@@ -26,6 +29,8 @@ DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 #!   Wrong <A>bmat</A> matrix size drops error.
 DeclareGlobalFunction( "AU_IsUnitalBlistList" );
+
+#! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments incmat
 #! @Returns
 #!   <K>true</K> if <A>incmat</A> is the incidence matrix of an abstract unital.
@@ -34,6 +39,8 @@ DeclareGlobalFunction( "AU_IsUnitalBlistList" );
 #!   the sizes of the blocks and the sizes of the intersections of the dual
 #!   blocks. Wrong <A>incmat</A> matrix size drops error.
 DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
+
+#! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments blocklist
 #! @Returns
 #!   <K>true</K> if <A>blocklist</A> is the list of blocks of an abstract
@@ -43,7 +50,9 @@ DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
 #!   dual blocks. Wrong number of blocks or wrong number of points (union of the
 #!   blocks in <A>blocklist</A>) drops error.
 DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
-
+#####################################################
+#####################################################
+#! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
 #! @Returns
 #!   The unital object corresponding to the blist list <A>bmat</A>.
@@ -52,6 +61,8 @@ DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
 #!   function <E>do not check</E> the necessary conditions (the size of bmat,
 #!   the sizes of the blocks and their intersections).
 DeclareGlobalFunction( "AU_UnitalByBlistListNC" );
+
+#! @ChapterInfo Abstract unitals, Constructing abstract unitals
 #! @Arguments bmat
 #! @Returns
 #!   The unital object corresponding to the blist list <A>bmat</A>.
@@ -61,6 +72,8 @@ DeclareGlobalFunction( "AU_UnitalByBlistListNC" );
 #!   Wrong <A>bmat</A> matrix size drops error. The function stores <A>bmat</A>
 #!   and sets the <C>Order</C> of the unital.
 DeclareGlobalFunction( "AbstractUnitalByBlistList" );
+
+#! @ChapterInfo Abstract unitals, Constructing abstract unitals
 #! @Arguments blocklist
 #! @Returns
 #!   The unital object corresponding to the list of blocks <A>blocklist</A>.
@@ -71,6 +84,8 @@ DeclareGlobalFunction( "AbstractUnitalByBlistList" );
 #!   which is based on <A>blocklist</A>, sets the <C>Order</C> of the unital and
 #!   sets the names of the points, <C>PointNamesOfUnital</C> of the unital.
 DeclareGlobalFunction( "AbstractUnitalByDesignBlocks" );
+
+#! @ChapterInfo Abstract unitals, Constructing abstract unitals
 #! @Arguments incmat
 #! @Returns
 #!   The unital object corresponding to the incidence matrix <A>incmat</A>.
@@ -81,8 +96,9 @@ DeclareGlobalFunction( "AbstractUnitalByDesignBlocks" );
 #!   <C>bmat</C>, which is based on <A>incmat</A> and sets the <C>Order</C> of
 #!   the unital.
 DeclareGlobalFunction( "AbstractUnitalByIncidenceMatrix" );
-
-
+#####################################################
+#####################################################
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
 #!   The range <C>[ 1..q^3 + 1 ]</C>.
@@ -90,6 +106,8 @@ DeclareGlobalFunction( "AbstractUnitalByIncidenceMatrix" );
 #!   If <A>u</A> is a unital of order <M>q</M>, then <A>u</A> has <M>q^3 + 1</M>
 #!   points.
 DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
+
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
 #!   The blocks of the unital <A>u</A>.
@@ -98,6 +116,8 @@ DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
 #!   the points of the unital with <M>q + 1</M> points. The blocks of an abstract
 #!   unital form a <M>2-(q^3+1,q+1,1)</M> design. 
 DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
+
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
 #!   The names of the <M>q^3+1</M> points of <A>u</A>.
@@ -106,11 +126,15 @@ DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
 #!   arbitrary &GAP; objects. It may be set by <Code>SetPointNamesOfUnital</Code>.
 #!   The default is the range <C>[ 1..q^3 + 1 ]</C>.
 DeclareAttribute( "PointNamesOfUnital", IsAbstractUnitalDesign );
+
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
 #!   The (bipartite) digraph constructed from the boolean incidence matrix
 #!   <C>bmat</C> of the unital <A>u</A>.
 DeclareAttribute( "IncidenceDigraph", IsAbstractUnitalDesign );
+
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
 #!   The automorphism group of the unital <A>u</A>.
@@ -118,6 +142,8 @@ DeclareAttribute( "IncidenceDigraph", IsAbstractUnitalDesign );
 #!   The function computes the automorphism group of <A>u</A> with the help of
 #!   its incidence digraph.
 DeclareAttribute( "AutomorphismGroup", IsAbstractUnitalDesign );
+
+#! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u1, u2
 #! @Returns
 #!   An isomorphism between the unitals <A>u1</A> and <A>u1</A> if they are
