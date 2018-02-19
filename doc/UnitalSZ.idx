@@ -1,0 +1,24 @@
+\indexentry{AUUnitalBlistListaxiomcheck@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {List{\textunderscore }axiomcheck}|hyperpage}{3}
+\indexentry{AUIsUnitalBlistList@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {List}|hyperpage}{3}
+\indexentry{AUIsUnitalIncidenceMatrix@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Incidence}\discretionary {-}{}{}\texttt  {Matrix}|hyperpage}{3}
+\indexentry{AUIsUnitalBlockDesign@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Block}\discretionary {-}{}{}\texttt  {Design}|hyperpage}{3}
+\indexentry{AUUnitalByBlistListNC@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {By}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {ListNC}|hyperpage}{3}
+\indexentry{AbstractUnitalByBlistList@\texttt  {AbstractUnitalByBlistList}|hyperpage}{4}
+\indexentry{AbstractUnitalByDesignBlocks@\texttt  {AbstractUnitalByDesignBlocks}|hyperpage}{4}
+\indexentry{AbstractUnitalByIncidenceMatrix@\texttt  {AbstractUnitalByIncidenceMatrix}|hyperpage}{4}
+\indexentry{PointsOfUnital@\texttt  {PointsOfUnital}!for IsAbstractUnitalDesign|hyperpage}{4}
+\indexentry{BlocksOfUnital@\texttt  {BlocksOfUnital}!for IsAbstractUnitalDesign|hyperpage}{4}
+\indexentry{PointNamesOfUnital@\texttt  {PointNamesOfUnital}!for IsAbstractUnitalDesign|hyperpage}{5}
+\indexentry{IncidenceDigraph@\texttt  {IncidenceDigraph}!for IsAbstractUnitalDesign|hyperpage}{5}
+\indexentry{AutomorphismGroup@\texttt  {AutomorphismGroup}!for IsAbstractUnitalDesign|hyperpage}{5}
+\indexentry{Isomorphism@\texttt  {Isomorphism}!for IsAbstractUnitalDesign, IsAbstractUnitalDesign|hyperpage}{5}
+\indexentry{HermitianAbstractUnital@\texttt  {HermitianAbstractUnital}|hyperpage}{6}
+\indexentry{AUReadLibraryDataFromFiles@\texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Read}\discretionary {-}{}{}\texttt  {Library}\discretionary {-}{}{}\texttt  {Data}\discretionary {-}{}{}\texttt  {From}\discretionary {-}{}{}\texttt  {Files}|hyperpage}{6}
+\indexentry{AUInitLibraryData@\texttt  {AU{\textunderscore }InitLibraryData}|hyperpage}{6}
+\indexentry{BBTAbstractUnital@\texttt  {BBTAbstractUnital}|hyperpage}{6}
+\indexentry{KNPAbstractUnital@\texttt  {KNPAbstractUnital}|hyperpage}{7}
+\indexentry{KrcadinacAbstractUnital@\texttt  {KrcadinacAbstractUnital}|hyperpage}{7}
+\indexentry{AbstractUnitalLibraryInfo@\texttt  {AbstractUnitalLibraryInfo}|hyperpage}{7}
+\indexentry{FullPointsOfUnitalsBlocks@\texttt  {FullPointsOfUnitalsBlocks}!for IsAbstractUnitalDesign, IsPosInt, IsPosInt|hyperpage}{8}
+\indexentry{FullPointsOfUnitalRepresentatives@\texttt  {FullPointsOfUnitalRepresentatives}!for IsAbstractUnitalDesign|hyperpage}{8}
+\indexentry{PerspectivityGroupOfUnitalsBlocks@\texttt  {PerspectivityGroupOfUnitalsBlocks}!for IsAbstractUnitalDesign, IsList, IsList, IsList|hyperpage}{8}

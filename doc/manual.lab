@@ -1,0 +1,39 @@
+\GAPDocLabFile{unitalsz}
+\makelabel{unitalsz:Title page}{}{X7D2C85EC87DD46E5}
+\makelabel{unitalsz:Table of Contents}{}{X8537FEB07AF2BEC8}
+\makelabel{unitalsz:Abstract unitals}{1}{X875A7A347D46F6FB}
+\makelabel{unitalsz:Global functions for internal usage}{1.1}{X79CB9BDF7CD35881}
+\makelabel{unitalsz:Constructing abstract unitals}{1.2}{X7FA3A66B79866C24}
+\makelabel{unitalsz:Methods for abstract unitals}{1.3}{X86DD62B07AF0A93F}
+\makelabel{unitalsz:Libraries and classes of abstract unitals}{2}{X83223EF97BFFD950}
+\makelabel{unitalsz:Classes of abstract unitals}{2.1}{X862FDB387AA2BECC}
+\makelabel{unitalsz:Global functions for internal usage}{2.2}{X79CB9BDF7CD35881}
+\makelabel{unitalsz:Libraries}{2.3}{X816D4F8581DED995}
+\makelabel{unitalsz:Full points and perspectivities}{3}{X854CDC7081F6B299}
+\makelabel{unitalsz:Full points of unitals}{3.1}{X83BF0F62862451C9}
+\makelabel{unitalsz:Group of perspectivities}{3.2}{X86A7B9B1794427DD}
+\makelabel{unitalsz:Index}{Ind}{X83A0356F839C696F}
+\makelabel{unitalsz:AUUnitalBlistListaxiomcheck}{1.1.1}{X869410DB81D004F4}
+\makelabel{unitalsz:AUIsUnitalBlistList}{1.1.2}{X82985A2E796D7C37}
+\makelabel{unitalsz:AUIsUnitalIncidenceMatrix}{1.1.3}{X81B6FFAA844D760B}
+\makelabel{unitalsz:AUIsUnitalBlockDesign}{1.1.4}{X85C6163178FBA37F}
+\makelabel{unitalsz:AUUnitalByBlistListNC}{1.1.5}{X85D358AD87A25E8B}
+\makelabel{unitalsz:AbstractUnitalByBlistList}{1.2.1}{X84B17219824CF3E0}
+\makelabel{unitalsz:AbstractUnitalByDesignBlocks}{1.2.2}{X801DFE0785B65033}
+\makelabel{unitalsz:AbstractUnitalByIncidenceMatrix}{1.2.3}{X7BA110B485BCA94C}
+\makelabel{unitalsz:PointsOfUnital for isabstractunitaldesign}{1.3.1}{X7ED4BFFE806EA9CF}
+\makelabel{unitalsz:BlocksOfUnital for isabstractunitaldesign}{1.3.2}{X801EE0DE7CA291A4}
+\makelabel{unitalsz:PointNamesOfUnital for isabstractunitaldesign}{1.3.3}{X78133B917ECB1DD9}
+\makelabel{unitalsz:IncidenceDigraph for isabstractunitaldesign}{1.3.4}{X7880F5F97CC6CDCA}
+\makelabel{unitalsz:AutomorphismGroup for isabstractunitaldesign}{1.3.5}{X7A90B0197EFC6179}
+\makelabel{unitalsz:Isomorphism for isabstractunitaldesign, isabstractunitaldesign}{1.3.6}{X841EF6D47D298FA3}
+\makelabel{unitalsz:HermitianAbstractUnital}{2.1.1}{X838B7FC8821DD458}
+\makelabel{unitalsz:AUReadLibraryDataFromFiles}{2.2.1}{X85E7203A78843422}
+\makelabel{unitalsz:AUInitLibraryData}{2.2.2}{X8014516A7CBCA8BC}
+\makelabel{unitalsz:BBTAbstractUnital}{2.2.3}{X7801F7627CCD8BB3}
+\makelabel{unitalsz:KNPAbstractUnital}{2.3.1}{X7CCF744581EB8E44}
+\makelabel{unitalsz:KrcadinacAbstractUnital}{2.3.2}{X7B3CB10A79955EA7}
+\makelabel{unitalsz:AbstractUnitalLibraryInfo}{2.3.3}{X7D89C3858378B174}
+\makelabel{unitalsz:FullPointsOfUnitalsBlocks for isabstractunitaldesign, isposint, isposint}{3.1.1}{X79CCD18E8741A288}
+\makelabel{unitalsz:FullPointsOfUnitalRepresentatives for isabstractunitaldesign}{3.1.2}{X7BDC745F7F552133}
+\makelabel{unitalsz:PerspectivityGroupOfUnitalsBlocks for isabstractunitaldesign, islist, islist, islist}{3.2.1}{X807DFEFE8647525F}

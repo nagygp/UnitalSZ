@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_bubu">
+<Heading>bubu</Heading>
+
+<Section Label="Chapter_bubu_Section_aaa">
+<Heading>aaa</Heading>
+
+<ManSection>
+  <Oper Arg="u, b1, b2" Name="FullPointsOfUnitalsBlocks" Label="for IsAbstractUnitalDesign, IsPosInt, IsPosInt"/>
+ <Returns>The list full point of <A>u</A> w.r.t. the blocks <A>b1,b2</A>. The arguments <A>b1,b2</A> are either blocks of the unital <A>u</A>, or indices of blocks in <C>BlocksOfUnital( u )</C>.
+</Returns>
+ <Description>
+The point <M>P</M> is a <E>full point</E> of the unital <M>U</M> w.r.t. the blocks
+<M>b_1,b_2</M> if <M>P</M> is not contained in <M>b_1</M> or <M>b_2</M>, and,
+the projection with center <M>P</M> from <M>b_1</M> to <M>b_2</M> is a
+well-defined bijection.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

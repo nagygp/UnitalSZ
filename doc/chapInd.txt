@@ -1,0 +1,31 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XAbstractUnitalByBlistList[102X 1.2-1 
+  [2XAbstractUnitalByDesignBlocks[102X 1.2-2 
+  [2XAbstractUnitalByIncidenceMatrix[102X 1.2-3 
+  [2XAbstractUnitalLibraryInfo[102X 2.3-3 
+  [2XAU_InitLibraryData[102X 2.2-2 
+  [2XAU_IsUnitalBlistList[102X 1.1-2 
+  [2XAU_IsUnitalBlockDesign[102X 1.1-4 
+  [2XAU_IsUnitalIncidenceMatrix[102X 1.1-3 
+  [2XAU_ReadLibraryDataFromFiles[102X 2.2-1 
+  [2XAU_UnitalBlistList_axiomcheck[102X 1.1-1 
+  [2XAU_UnitalByBlistListNC[102X 1.1-5 
+  [2XAutomorphismGroup[102X, for IsAbstractUnitalDesign 1.3-5 
+  [2XBBTAbstractUnital[102X 2.2-3 
+  [2XBlocksOfUnital[102X, for IsAbstractUnitalDesign 1.3-2 
+  [2XFullPointsOfUnitalRepresentatives[102X, for IsAbstractUnitalDesign 3.1-2 
+  [2XFullPointsOfUnitalsBlocks[102X, for IsAbstractUnitalDesign, IsPosInt, IsPosInt 3.1-1 
+  [2XHermitianAbstractUnital[102X 2.1-1 
+  [2XIncidenceDigraph[102X, for IsAbstractUnitalDesign 1.3-4 
+  [2XIsomorphism[102X, for IsAbstractUnitalDesign, IsAbstractUnitalDesign 1.3-6 
+  [2XKNPAbstractUnital[102X 2.3-1 
+  [2XKrcadinacAbstractUnital[102X 2.3-2 
+  [2XPerspectivityGroupOfUnitalsBlocks[102X, for IsAbstractUnitalDesign, IsList, IsList, IsList 3.2-1 
+  [2XPointNamesOfUnital[102X, for IsAbstractUnitalDesign 1.3-3 
+  [2XPointsOfUnital[102X, for IsAbstractUnitalDesign 1.3-1 
+  
+  
+  -------------------------------------------------------

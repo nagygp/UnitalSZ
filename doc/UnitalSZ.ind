@@ -1,0 +1,64 @@
+\begin{theindex}
+
+  \item \texttt  {AbstractUnitalByBlistList}, \hyperpage{4}
+  \item \texttt  {AbstractUnitalByDesignBlocks}, \hyperpage{4}
+  \item \texttt  {AbstractUnitalByIncidenceMatrix}, \hyperpage{4}
+  \item \texttt  {AbstractUnitalLibraryInfo}, \hyperpage{7}
+  \item \texttt  {AU{\textunderscore }InitLibraryData}, \hyperpage{6}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {List}, 
+		\hyperpage{3}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Block}\discretionary {-}{}{}\texttt  {Design}, 
+		\hyperpage{3}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Is}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Incidence}\discretionary {-}{}{}\texttt  {Matrix}, 
+		\hyperpage{3}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Read}\discretionary {-}{}{}\texttt  {Library}\discretionary {-}{}{}\texttt  {Data}\discretionary {-}{}{}\texttt  {From}\discretionary {-}{}{}\texttt  {Files}, 
+		\hyperpage{6}
+  \item \texttt  {AutomorphismGroup}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{5}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {List{\textunderscore }axiomcheck}, 
+		\hyperpage{3}
+  \item \texttt  {AU{\textunderscore }}\discretionary {-}{}{}\texttt  {Unital}\discretionary {-}{}{}\texttt  {By}\discretionary {-}{}{}\texttt  {Blist}\discretionary {-}{}{}\texttt  {ListNC}, 
+		\hyperpage{3}
+
+  \indexspace
+
+  \item \texttt  {BBTAbstractUnital}, \hyperpage{6}
+  \item \texttt  {BlocksOfUnital}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{4}
+
+  \indexspace
+
+  \item \texttt  {FullPointsOfUnitalRepresentatives}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{8}
+  \item \texttt  {FullPointsOfUnitalsBlocks}
+    \subitem for IsAbstractUnitalDesign, IsPosInt, IsPosInt, 
+		\hyperpage{8}
+
+  \indexspace
+
+  \item \texttt  {HermitianAbstractUnital}, \hyperpage{6}
+
+  \indexspace
+
+  \item \texttt  {IncidenceDigraph}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{5}
+  \item \texttt  {Isomorphism}
+    \subitem for IsAbstractUnitalDesign, IsAbstractUnitalDesign, 
+		\hyperpage{5}
+
+  \indexspace
+
+  \item \texttt  {KNPAbstractUnital}, \hyperpage{7}
+  \item \texttt  {KrcadinacAbstractUnital}, \hyperpage{7}
+
+  \indexspace
+
+  \item \texttt  {PerspectivityGroupOfUnitalsBlocks}
+    \subitem for IsAbstractUnitalDesign, IsList, IsList, IsList, 
+		\hyperpage{8}
+  \item \texttt  {PointNamesOfUnital}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{5}
+  \item \texttt  {PointsOfUnital}
+    \subitem for IsAbstractUnitalDesign, \hyperpage{4}
+
+\end{theindex}
