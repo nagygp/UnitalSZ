@@ -44,3 +44,44 @@ function( q )
     fi;
     return parampairs;
 end );
+
+InstallGlobalFunction( BuekenhoutTitsAbstractUnital,
+function(q)
+    local tau, delta, bt_points, xy, v, bmat, a, line, blist, mb, u;
+    if not IsPrimePowerInt( q ) or IsOddInt( q ) then
+        Error( "the parameter must be power of 2 with odd exponent at least 3" );
+    fi;
+    if IsEvenInt( Dimension( GF(q) ) ) then
+        Error( "the parameter must be power of 2 with odd exponent at least 3" );
+    fi;
+    tau := 2^( (Dimension( GF(q) ) + 1) / 2 );
+    delta := First( GF(q^2), d -> d^q=d+1 and d<>d^(q-1) );
+    bt_points := [];
+    for xy in Tuples( GF(q), 3 ) do;
+        v := [ xy[1] + xy[2]*delta,
+               xy[3] + ( xy[1]^( tau + 2 ) + xy[2]^tau + xy[1]*xy[2] )*delta,
+               One(GF(q^2)) ];
+        Add( bt_points, v );
+    od;
+    v := [ Zero(GF(q^2)), One(GF(q^2)), Zero(GF(q^2)) ];
+    Add( bt_points, v );
+    bmat := [];
+    for a in GF(q^2) do;
+        line := [ One(GF(q^2)), Zero(GF(q^2)), a ];
+        blist := List( bt_points, p -> line * p = Zero(GF(q^2)) );
+        if SizeBlist( blist ) = q + 1 then
+            Add( bmat, blist );
+        fi;
+    od;
+    for mb in Tuples( GF(q^2), 2 ) do;
+        line := [ mb[1], One(GF(q^2)), mb[2] ];
+        blist := List( bt_points, p -> line * p = Zero(GF(q^2)) );
+        if SizeBlist( blist ) = q + 1 then
+            Add( bmat, blist );
+        fi;
+    od;
+    u := AbstractUnitalByBlistList( bmat );
+    SetName( u, Concatenation( "BuekenhoutTitsAbstractUnital(", String(q), ")" ) );
+    SetPointNamesOfUnital( u, bt_points );
+    return u;
+end );

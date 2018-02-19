@@ -4,8 +4,7 @@
 # Declarations
 #
 
-#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract
-#!  unitals
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
 #!   The classical unital object, which is the abstract unital of order <A>q</A>
@@ -17,6 +16,7 @@
 #!   <C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set
 #!   as <C>HermitianAbstractUnital(<A>q</A>)</C>.
 DeclareGlobalFunction( "HermitianAbstractUnital" );
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
 #!  All the pairs of <M>GF(q^2)</M> which are possible parameters of a(n
@@ -33,5 +33,23 @@ DeclareGlobalFunction( "HermitianAbstractUnital" );
 #!  1}(\beta^q + \beta)^2</M> has absolute trace 0.
 #!
 #!  In both cases $\alpha = 0$ yields the Hermitian classical unital, hence we
-#!  we omit the tuples with <M>\alpha = 0</M>.
+#!  omit the tuples with <M>\alpha = 0</M>.
 DeclareGlobalFunction( "AllBuekenhoutMetzAbstractUnitalParameters" );
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
+#! @Arguments q
+#! @Returns
+#!  The unital object, which is the abstract unital of order <A>q</A>
+#!  isomorphic to the Buekenhout-Tits unital in the classical projective plane.
+#! @Description
+#!  The argument <A>q</A> must be a power of 2, such that the exponent is an
+#!  odd integer at least 3.
+#!  The point set <M>U_T = \left\{ ( x_0 + x_1 \delta, y_0 + (x_0^{\tau + 2} +
+#!  x_1^\tau + x_0x_1)\delta, 1) \colon x_0, x_1, y_0 \in GF(q)\right\} \cup
+#!  \left\{ (0,1,0) \right\}</M> in <M>PG(2,q^2)</M> is a unital (called the
+#!  Buekenhout-Tits unital) if <M>\delta \in GF(q^2) \setminus GF(4)</M> and
+#!  <M>\delta^q = 1 + \delta</M>. This <M>\delta</M> is just a basis element
+#!  along with 1 in <M>GF(q^2)</M> over <M>GF(q)</M>, hence we can omit it as a
+#!  parameter. The function <M>\tau \colon GF(q) \rightarrow GF(q)</M> assigns
+#!  to the field element <M>x</M> the following: <M>x \mapsto x^{2^\frac{k +
+#!  1}{2}}</M>, where <M>q = 2^k</M>.
+DeclareGlobalFunction( "BuekenhoutTitsAbstractUnital" );
