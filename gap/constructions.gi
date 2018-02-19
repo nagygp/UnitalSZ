@@ -19,3 +19,28 @@ function( q )
     return u;
 end );
 
+InstallGlobalFunction( AllBuekenhoutMetzAbstractUnitalParameters,
+function( q )
+    local y, filt, parampairs;
+    if not IsPrimePowerInt( q ) then
+        Error( "the argument must be a prime power" );
+    fi;
+    if IsOddInt( q ) then
+        y := X( GF(q), "y" );
+        filt := Filtered( Tuples( GF(q^2), 2 ), c -> c[1] <> Zero(GF(q^2)) );
+        parampairs := Filtered( filt,
+                                c -> RootsOfUPol( GF(q),
+                                                  y^2 - ((c[2]^q - c[2])^2 +
+                                                  4 * c[1]^(q + 1)) )
+                                     = [] );
+    fi;
+    if IsEvenInt( q ) then
+        filt := Filtered( Tuples( GF(q^2), 2 ), c -> c[1] <> Zero(GF(q^2)) and
+                                                     not ( c[2] in GF(q) ) );
+        parampairs := Filtered( filt,
+                                c -> Trace( GF(q), c[1]^(q + 1) / (c[2]^q +
+                                                   c[2])^2 )
+                                     = Zero( GF(2) ) );
+    fi;
+    return parampairs;
+end );
