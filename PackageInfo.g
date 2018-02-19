@@ -8,7 +8,7 @@
 SetPackageInfo( rec(
 
 PackageName := "UnitalSZ",
-Subtitle := "Algorithms and library of unitals of projective planes",
+Subtitle := "Algorithms and library of abstract unitals and their embeddings",
 Version := "0.2",
 Date := "8/11/2017", # dd/mm/yyyy format
 
