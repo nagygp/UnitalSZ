@@ -1,0 +1,44 @@
+name: UnitalSZ
+version: 0.29
+date: 19/02/2018
+description: |
+    Algorithms and library of abstract unitals and their embeddings
+
+authors:
+    - name: Gábor Péter Nagy
+      url: http://www.math.u-szeged.hu/~nagyg
+    - name: Dávid Mezőfi
+      url: http://www.math.u-szeged.hu/~mezofi
+
+maintainers:
+    - name: Gábor Péter Nagy
+      url: http://www.math.u-szeged.hu/~nagyg
+    - name: Dávid Mezőfi
+      url: http://www.math.u-szeged.hu/~mezofi
+
+GAP: ">= 4.8"
+
+needed-pkgs:
+    - name: "GAPDoc"
+      version: ">= 1.5"
+      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
+    - name: "Digraphs"
+      version: ">= 0.10.1"
+      url: "https://gap-packages.github.io/Digraphs"
+    - name: "io"
+      version: ">=4.4.6"
+      url: "https://gap-packages.github.io/io"
+
+www: https://nagygp.github.io/UnitalSZ/
+readme: README.md
+packageinfo: https://nagygp.github.io/UnitalSZ/PackageInfo.g
+
+downloads:
+    - name: .tar.gz
+      url: https://github.com/nagygp/UnitalSZ/releases/download/v0.29/UnitalSZ-0.29.tar.gz
+
+abstract: |
+
+status: dev
+doc-html: doc/chap0.html
+doc-pdf: doc/manual.pdf
