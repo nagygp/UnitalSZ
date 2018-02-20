@@ -24,7 +24,10 @@ DeclareGlobalFunction( "AU_ReadLibraryDataFromFiles" );
 #!   the package.
 DeclareGlobalFunction( "AU_InitLibraryData" );
 
-#! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
+#####################################################
+#####################################################
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n
 #! @Returns
 #!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten,
@@ -35,8 +38,6 @@ DeclareGlobalFunction( "AU_InitLibraryData" );
 #!   were constructed. The incidence matrices of these unitals are shipped with
 #!   the package.
 DeclareGlobalFunction( "BBTAbstractUnital" );
-#####################################################
-#####################################################
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n

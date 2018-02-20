@@ -109,6 +109,12 @@ the package.
 </ManSection>
 
 
+</Section>
+
+
+<Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Libraries">
+<Heading>Libraries</Heading>
+
 <ManSection>
   <Func Arg="n" Name="BBTAbstractUnital" />
  <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.
@@ -121,12 +127,6 @@ the package.
  </Description>
 </ManSection>
 
-
-</Section>
-
-
-<Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Libraries">
-<Heading>Libraries</Heading>
 
 <ManSection>
   <Func Arg="n" Name="KNPAbstractUnital" />

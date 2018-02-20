@@ -16,6 +16,7 @@
 #!   <C>AbstractUnitalByDesignBlocks</C>. The <C>Name</C> of the unital is set
 #!   as <C>HermitianAbstractUnital(<A>q</A>)</C>.
 DeclareGlobalFunction( "HermitianAbstractUnital" );
+
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
@@ -37,6 +38,7 @@ DeclareGlobalFunction( "HermitianAbstractUnital" );
 #!  In both cases $\alpha = 0$ yields the Hermitian classical unital, hence we
 #!  omit the tuples with <M>\alpha = 0</M>.
 DeclareGlobalFunction( "AllBuekenhoutMetzAbstractUnitalParameters" );
+
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q, alpha, beta
 #! @Returns
@@ -56,6 +58,7 @@ DeclareGlobalFunction( "AllBuekenhoutMetzAbstractUnitalParameters" );
 #!  \beta)</M> satisfies the conditions explained in the description of
 #!  <C>AllBuekenhoutMetzAbstractUnitalParameters(</C><A>q</A><C>)</C>.
 DeclareGlobalFunction( "OrthogonalBuekenhoutMetzAbstractUnital" );
+
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
