@@ -45,8 +45,61 @@ function( q )
     return parampairs;
 end );
 
+InstallGlobalFunction( OrthogonalBuekenhoutMetzAbstractUnital,
+function( q, alpha, beta )
+    local y, bm_points, x, r, v, bmat, a, line, blist, mb, u;
+    if not IsPrimePowerInt( q ) then
+        Error( "the first parameter must be a prime power" );
+    fi;
+    if IsOddInt( q ) then
+        y := X( GF(q), "y" );
+        if RootsOfUPol( GF(q),
+                        y^2 - ((beta^q - beta)^2 + 4 * alpha^(q + 1)) )
+           <> [] then
+           Error( "(beta^q - beta)^2 + 4 * alpha^(q + 1) must be a nonsquare over GF(q) for odd q" );
+        fi;
+    fi;
+    if IsEvenInt( q ) then
+        if Trace( GF(q), alpha^(q + 1) / (beta^q + beta)^2 ) <> Zero( GF(2) )
+            then
+           Error( "alpha^(q + 1) / (beta^q + beta)^2 must have absolute trace 0 for even q" );
+        fi;
+        if q < 4 then
+            Error( "if q is even, then it must be at least 4" );
+        fi;
+    fi;
+    bm_points := [];
+    for x in GF(q^2) do;
+        for r in GF(q) do;
+            v := [ x, alpha*x^2 + beta*x^(q + 1) + r, One(GF(q^2)) ];
+            Add( bm_points, v );
+        od;
+    od;
+    v := [ Zero(GF(q^2)), One(GF(q^2)), Zero(GF(q^2)) ];
+    Add( bm_points, v );
+    bmat := [];
+    for a in GF(q^2) do;
+        line := [ One(GF(q^2)), Zero(GF(q^2)), a ];
+        blist := List( bm_points, p -> line * p = Zero(GF(q^2)) );
+        if SizeBlist( blist ) = q + 1 then
+            Add( bmat, blist );
+        fi;
+    od;
+    for mb in Tuples( GF(q^2), 2 ) do;
+        line := [ mb[1], One(GF(q^2)), mb[2] ];
+        blist := List( bm_points, p -> line * p = Zero(GF(q^2)) );
+        if SizeBlist( blist ) = q + 1 then
+            Add( bmat, blist );
+        fi;
+    od;
+    u := AbstractUnitalByBlistList( bmat );
+    SetName( u, Concatenation( "OrthogonalBuekenhoutMetzAbstractUnital(", String(q), ",", String(alpha), ",", String(beta), ")" ) );
+    SetPointNamesOfUnital( u, bm_points );
+    return u;
+end );
+
 InstallGlobalFunction( BuekenhoutTitsAbstractUnital,
-function(q)
+function( q )
     local tau, delta, bt_points, xy, v, bmat, a, line, blist, mb, u;
     if not IsPrimePowerInt( q ) or IsOddInt( q ) then
         Error( "the parameter must be power of 2 with odd exponent at least 3" );

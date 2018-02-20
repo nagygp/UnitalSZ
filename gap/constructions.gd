@@ -19,9 +19,11 @@ DeclareGlobalFunction( "HermitianAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
-#!  All the pairs of <M>GF(q^2)</M> which are possible parameters of a(n
+#!  All the pairs over <M>GF(q^2)</M> which are possible parameters of a(n
 #!  orthogonal) Buekenhout-Metz unital of order <A>q</A>.
 #! @Description
+#!  The argument <A>q</A> must be a prime power (if even, then at least 4).
+#!
 #!  If <A>q</A> is an odd prime power and <M>(\alpha, \beta)</M> is 2-tuple of
 #!  <M>GF(q^2)</M>, then this pair is a suitable parameter of an orthogonal
 #!  Buekenhout-Metz unital, if <M>(\beta^q - \beta)^2 + 4 \alpha^{q + 1}</M> is
@@ -35,6 +37,25 @@ DeclareGlobalFunction( "HermitianAbstractUnital" );
 #!  In both cases $\alpha = 0$ yields the Hermitian classical unital, hence we
 #!  omit the tuples with <M>\alpha = 0</M>.
 DeclareGlobalFunction( "AllBuekenhoutMetzAbstractUnitalParameters" );
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
+#! @Arguments q, alpha, beta
+#! @Returns
+#!  The unital object, which is the abstract unital of order <A>q</A>
+#!  isomorphic to the orthogonal Buekenhout-Metz unital with parameters
+#!  <A>alpha</A> and <A>beta</A> in the classical projective plane.
+#! @Description
+#!  The argument <A>q</A> must be a prime power (if even, then at least 4), the
+#!  other arguments <A>alpha</A> and <A>beta</A> - elements of <M>GF(q^2)</M> -
+#!  must be a pair from
+#!  <C>AllBuekenhoutMetzAbstractUnitalParameters(</C><A>q</A><C>)</C>.
+#!
+#!  The point set <M>U_{\alpha, \beta} = \left\{ ( x, \alpha x^2 + \beta x^{q +
+#!  1} + r, 1) \colon x \in GF(q^2), r \in GF(q) \right\} \cup
+#!  \left\{ (0, 1, 0) \right\}</M> in <M>PG(2,q^2)</M> is a unital (called the
+#!  orthogonal Buekenhout-Metz unital) if the pair of parameters <M>(\alpha,
+#!  \beta)</M> satisfies the conditions explained in the description of
+#!  <C>AllBuekenhoutMetzAbstractUnitalParameters(</C><A>q</A><C>)</C>.
+DeclareGlobalFunction( "OrthogonalBuekenhoutMetzAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
