@@ -1,6 +1,6 @@
 name: UnitalSZ
-version: 0.29
-date: 19/02/2018
+version: 0.3
+date: 20/02/2018
 description: |
     Algorithms and library of abstract unitals and their embeddings
 
@@ -35,7 +35,7 @@ packageinfo: https://nagygp.github.io/UnitalSZ/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/nagygp/UnitalSZ/releases/download/v0.29/UnitalSZ-0.29.tar.gz
+      url: https://github.com/nagygp/UnitalSZ/releases/download/v0.3/UnitalSZ-0.3.tar.gz
 
 abstract: |
 

@@ -9,8 +9,8 @@ SetPackageInfo( rec(
 
 PackageName := "UnitalSZ",
 Subtitle := "Algorithms and library of abstract unitals and their embeddings",
-Version := "0.29",
-Date := "19/02/2018", # dd/mm/yyyy format
+Version := "0.3",
+Date := "20/02/2018", # dd/mm/yyyy format
 
 Persons := [
     rec(

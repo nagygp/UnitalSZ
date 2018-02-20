@@ -26,20 +26,23 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X838B7FC8821DD458">2.1-1 HermitianAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85E8EC42791B21C6">2.1-2 AllBuekenhoutMetzAbstractUnitalParameters</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8796EEE986A849D6">2.1-3 OrthogonalBuekenhoutMetzAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8335B3AE80E67140">2.1-4 BuekenhoutTitsAbstractUnital</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X79CB9BDF7CD35881">2.2 <span class="Heading">Global functions for internal usage</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85E7203A78843422">2.2-1 AU_ReadLibraryDataFromFiles</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8014516A7CBCA8BC">2.2-2 AU_InitLibraryData</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7801F7627CCD8BB3">2.2-3 BBTAbstractUnital</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X816D4F8581DED995">2.3 <span class="Heading">Libraries</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CCF744581EB8E44">2.3-1 KNPAbstractUnital</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7B3CB10A79955EA7">2.3-2 KrcadinacAbstractUnital</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D89C3858378B174">2.3-3 AbstractUnitalLibraryInfo</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7801F7627CCD8BB3">2.3-1 BBTAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CCF744581EB8E44">2.3-2 KNPAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7B3CB10A79955EA7">2.3-3 KrcadinacAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D89C3858378B174">2.3-4 AbstractUnitalLibraryInfo</a></span>
 </div></div>
 </div>
 
@@ -57,6 +60,33 @@
 <p>Returns: The classical unital object, which is the abstract unital of order <var class="Arg">q</var> isomorphic to the Hermitian curve in the classical projective plane.</p>
 
 <p>The Hermitian curve has the following canonical equation: <span class="SimpleMath">X_0^q + 1 + X_1^q + 1 + X_2^q + 1 = 0</span>. The function computes the blocks of the unital with the help of <code class="code">PGU(3,<var class="Arg">q</var>)</code> and calls <code class="code">AbstractUnitalByDesignBlocks</code>. The <code class="code">Name</code> of the unital is set as <code class="code">HermitianAbstractUnital(<var class="Arg">q</var>)</code>.</p>
+
+<p><a id="X85E8EC42791B21C6" name="X85E8EC42791B21C6"></a></p>
+
+<h5>2.1-2 AllBuekenhoutMetzAbstractUnitalParameters</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AllBuekenhoutMetzAbstractUnitalParameters</code>( <var class="Arg">q</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>Returns: All the pairs over <span class="SimpleMath">GF(q^2)</span> which are possible parameters of a(n orthogonal) Buekenhout-Metz unital of order <var class="Arg">q</var>.</p>
+
+<p>The argument <var class="Arg">q</var> must be a prime power (if even, then at least 4). If <var class="Arg">q</var> is an odd prime power and <span class="SimpleMath">(α, β)</span> is 2-tuple of <span class="SimpleMath">GF(q^2)</span>, then this pair is a suitable parameter of an orthogonal Buekenhout-Metz unital, if <span class="SimpleMath">(β^q - β)^2 + 4 α^q + 1</span> is a nonsquare in <span class="SimpleMath">GF(q)</span>. If <var class="Arg">q</var> is an even prime power and <span class="SimpleMath">(α, β)</span> is 2-tuple of <span class="SimpleMath">GF(q^2)</span>, then this pair is a suitable parameter of an orthogonal Buekenhout-Metz unital, if <span class="SimpleMath">β not\in GF(q)</span> and <span class="SimpleMath">α^q + 1(β^q + β)^2</span> has absolute trace 0. In both cases <span class="Math">\alpha = 0</span> yields the Hermitian classical unital, hence we omit the tuples with <span class="SimpleMath">α = 0</span>.</p>
+
+<p><a id="X8796EEE986A849D6" name="X8796EEE986A849D6"></a></p>
+
+<h5>2.1-3 OrthogonalBuekenhoutMetzAbstractUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrthogonalBuekenhoutMetzAbstractUnital</code>( <var class="Arg">q</var>, <var class="Arg">alpha</var>, <var class="Arg">beta</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>Returns: The unital object, which is the abstract unital of order <var class="Arg">q</var> isomorphic to the orthogonal Buekenhout-Metz unital with parameters <var class="Arg">alpha</var> and <var class="Arg">beta</var> in the classical projective plane.</p>
+
+<p>The argument <var class="Arg">q</var> must be a prime power (if even, then at least 4), the other arguments <var class="Arg">alpha</var> and <var class="Arg">beta</var> - elements of <span class="SimpleMath">GF(q^2)</span> - must be a pair from <code class="code">AllBuekenhoutMetzAbstractUnitalParameters(</code><var class="Arg">q</var><code class="code">)</code>. The point set <span class="SimpleMath">U_α, β = { ( x, α x^2 + β x^q + 1 + r, 1) : x ∈ GF(q^2), r ∈ GF(q) } ∪ { (0, 1, 0) }</span> in <span class="SimpleMath">PG(2,q^2)</span> is a unital (called the orthogonal Buekenhout-Metz unital) if the pair of parameters <span class="SimpleMath">(α, β)</span> satisfies the conditions explained in the description of <code class="code">AllBuekenhoutMetzAbstractUnitalParameters(</code><var class="Arg">q</var><code class="code">)</code>.</p>
+
+<p><a id="X8335B3AE80E67140" name="X8335B3AE80E67140"></a></p>
+
+<h5>2.1-4 BuekenhoutTitsAbstractUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BuekenhoutTitsAbstractUnital</code>( <var class="Arg">q</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>Returns: The unital object, which is the abstract unital of order <var class="Arg">q</var> isomorphic to the Buekenhout-Tits unital in the classical projective plane.</p>
+
+<p>The argument <var class="Arg">q</var> must be a power of 2, such that the exponent is an odd integer at least 3. The point set <span class="SimpleMath">U_T = { ( x_0 + x_1 δ, y_0 + (x_0^τ + 2 + x_1^τ + x_0x_1)δ, 1) : x_0, x_1, y_0 ∈ GF(q)} ∪ { (0,1,0) }</span> in <span class="SimpleMath">PG(2,q^2)</span> is a unital (called the Buekenhout-Tits unital) if <span class="SimpleMath">δ ∈ GF(q^2) ∖ GF(4)</span> and <span class="SimpleMath">δ^q = 1 + δ</span>. This <span class="SimpleMath">δ</span> is just a basis element along with 1 in <span class="SimpleMath">GF(q^2)</span> over <span class="SimpleMath">GF(q)</span>, hence we can omit it as a parameter. The function <span class="SimpleMath">τ : GF(q) → GF(q)</span> assigns to the field element <span class="SimpleMath">x</span> the following: <span class="SimpleMath">x ↦ x^2^frack + 12}</span>, where <span class="SimpleMath">q = 2^k</span>.</p>
 
 <p><a id="X79CB9BDF7CD35881" name="X79CB9BDF7CD35881"></a></p>
 
@@ -78,22 +108,22 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AU_InitLibraryData</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Reads in the incidence matrices from the libraries of unitals shipped with the package.</p>
 
+<p><a id="X816D4F8581DED995" name="X816D4F8581DED995"></a></p>
+
+<h4>2.3 <span class="Heading">Libraries</span></h4>
+
 <p><a id="X7801F7627CCD8BB3" name="X7801F7627CCD8BB3"></a></p>
 
-<h5>2.2-3 BBTAbstractUnital</h5>
+<h5>2.3-1 BBTAbstractUnital</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BBTAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.</p>
 
 <p>In the paper Unitals and codes by Anton Betten, Dieter Betten and Vladimir D. Tonchev (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3 were constructed. The incidence matrices of these unitals are shipped with the package.</p>
 
-<p><a id="X816D4F8581DED995" name="X816D4F8581DED995"></a></p>
-
-<h4>2.3 <span class="Heading">Libraries</span></h4>
-
 <p><a id="X7CCF744581EB8E44" name="X7CCF744581EB8E44"></a></p>
 
-<h5>2.3-1 KNPAbstractUnital</h5>
+<h5>2.3-2 KNPAbstractUnital</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; KNPAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 4 of the unitals by Krčadinac, Nakić and Pavčević.</p>
@@ -102,7 +132,7 @@
 
 <p><a id="X7B3CB10A79955EA7" name="X7B3CB10A79955EA7"></a></p>
 
-<h5>2.3-2 KrcadinacAbstractUnital</h5>
+<h5>2.3-3 KrcadinacAbstractUnital</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; KrcadinacAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 3 of the unitals by Krčadinac.</p>
@@ -111,7 +141,7 @@
 
 <p><a id="X7D89C3858378B174" name="X7D89C3858378B174"></a></p>
 
-<h5>2.3-3 AbstractUnitalLibraryInfo</h5>
+<h5>2.3-4 AbstractUnitalLibraryInfo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AbstractUnitalLibraryInfo</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
 <p>The function prints the information about the available libraries of unitals.</p>
