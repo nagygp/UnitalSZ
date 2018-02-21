@@ -23,7 +23,7 @@ as <C>HermitianAbstractUnital(<A>q</A>)</C>.
 
 <ManSection>
   <Func Arg="q" Name="AllBuekenhoutMetzAbstractUnitalParameters" />
- <Returns>All the pairs over <Math>GF(q^2)</Math> which are possible parameters of a(n orthogonal) Buekenhout-Metz unital of order <A>q</A>.
+ <Returns>All the pairs of parameters over <M>GF(q^2)</M> which result non-isomorphic (orthogonal) Buekenhout-Metz unitals of order <A>q</A>.
 </Returns>
  <Description>
 The argument <A>q</A> must be a prime power (if even, then at least 4).

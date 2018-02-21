@@ -25,8 +25,8 @@ DeclareGlobalFunction( "HermitianAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q
 #! @Returns
-#!  All the pairs over $GF(q^2)$ which are possible parameters of a(n
-#!  orthogonal) Buekenhout-Metz unital of order <A>q</A>.
+#!  All the pairs of parameters over $GF(q^2)$ which result non-isomorphic
+#!  (orthogonal) Buekenhout-Metz unitals of order <A>q</A>.
 #! @Description
 #!  The argument <A>q</A> must be a prime power (if even, then at least 4).
 #!

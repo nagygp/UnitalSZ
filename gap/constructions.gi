@@ -21,7 +21,8 @@ end );
 
 InstallGlobalFunction( AllBuekenhoutMetzAbstractUnitalParameters,
 function( q )
-    local y, filt, parampairs;
+    local y, filt, parampairs, noniso_params, autgr, mulgr_q2, mulgr_q,
+        current_param, a, b, over, u, v, gamma, tau;
     if not IsPrimePowerInt( q ) then
         Error( "the argument must be a prime power" );
     fi;
@@ -42,7 +43,39 @@ function( q )
                                                    c[2])^2 )
                                      = Zero( GF(2) ) );
     fi;
-    return parampairs;
+
+    noniso_params := [];
+
+    autgr := Group( FrobeniusAutomorphism( GF(q^2) ) );
+    mulgr_q2 := Group( PrimitiveElement( GF(q^2) ) );
+    mulgr_q := Group( PrimitiveElement( GF(q) ) );
+
+    while parampairs <> [] do
+        over := false;
+        current_param := Remove( parampairs );
+        a := current_param[1];
+        b := current_param[2];
+        Add( noniso_params, current_param );
+        for u in GF(q) do
+            for v in mulgr_q do
+                for gamma in mulgr_q2 do
+                    for tau in autgr do
+                        parampairs := Filtered( parampairs, param -> not (
+                                        param[1] = a^tau * gamma^2 * v and
+                                        param[2] = b^tau * gamma^(q+1)*v + u ));
+                        if parampairs = [] then
+                            over := true;
+                            break;
+                        fi;
+                    od;
+                    if over then break; fi;
+                od;
+                if over then break; fi;
+            od;
+            if over then break; fi;
+        od;
+    od;
+    return noniso_params;
 end );
 
 InstallGlobalFunction( OrthogonalBuekenhoutMetzAbstractUnital,
