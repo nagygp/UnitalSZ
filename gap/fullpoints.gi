@@ -1,6 +1,11 @@
 ###############################################################################
 ##  FULL POINTS
 ##  ---------------------------------------------------------------------------
+#
+# fullpoints: Full points of unitals
+#
+# Implementations
+#
 
 InstallMethod( FullPointsOfUnitalsBlocks, "for an abstract unital and indices of two blocks",
     [ IsAbstractUnitalDesign, IsPosInt, IsPosInt ],

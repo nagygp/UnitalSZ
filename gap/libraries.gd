@@ -8,8 +8,8 @@
 #! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
 #! @Arguments nr, q, filename
 #! @Returns
-#!  The list of boolean incidence matrices of size <M>(q^3 + 1) \times q^2(q^2 -
-#!  q + 1)</M> read from <A>filename</A>.
+#!  The list of boolean incidence matrices of size $(q^3 + 1) \times q^2(q^2 -
+#!  q + 1)$ read from <A>filename</A>.
 #! @Description
 #!  The file <A>filename</A> must be gzipped and must contain <A>nr</A>
 #!  matrices of dimension mentioned above. The matrices must be 0-1 matrices

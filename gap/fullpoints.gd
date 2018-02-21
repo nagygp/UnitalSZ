@@ -1,11 +1,22 @@
+#
+# fullpoints: Full points of unitals
+#
+# Declarations
+#
+
+#! @Chapter Full points and perspectivities
+#! @Section Full points of unitals
+#! @Section Group of perspectivities
+
+
 #! @ChapterInfo Full points and perspectivities, Full points of unitals
 #! @Arguments u, b1, b2
 #! @Returns The list full point of <A>u</A> w.r.t. the blocks <A>b1,b2</A>. The arguments
 #!   <A>b1,b2</A> are either blocks of the unital <A>u</A>, or indices of blocks in 
 #!   <C>BlocksOfUnital( u )</C>.
-#! @Description The point <M>P</M> is a <E>full point</E> of the unital <M>U</M> w.r.t. the blocks
-#!   <M>b_1,b_2</M> if <M>P</M> is not contained in <M>b_1</M> or <M>b_2</M>, and,
-#!   the projection with center <M>P</M> from <M>b_1</M> to <M>b_2</M> is a
+#! @Description The point $P$ is a **full point** of the unital $U$ w.r.t. the blocks
+#!   $b_1,b_2$ if $P$ is not contained in $b_1$ or $b_2$, and,
+#!   the projection with center $P$ from $b_1$ to $b_2$ is a
 #!   well-defined bijection.
 DeclareOperation( "FullPointsOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsPosInt, IsPosInt ] );
 #! @ChapterInfo Full points and perspectivities, Full points of unitals
@@ -14,8 +25,8 @@ DeclareOperation( "FullPointsOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsPosIn
 #!   where <C>r.fullpts</C> is the set of full point of <A>u</A> w.r.t.
 #!   the blocks <C>r.block1, r.block2</C>. The returned list contains all possible full points 
 #!   of <A>u</A> up to the automorphism group of <A>u</A>.
-#!   That is, if <M>P</M> is a full point w.r.t. the blocks <M>b_1,b_2</M>, then there is an
-#!   automorphism <M>\alpha</M> of <M>U</M> such that <M>P^\alpha, b_1^\alpha, b_2^\alpha</M> are 
+#!   That is, if $P$ is a full point w.r.t. the blocks $b_1,b_2$, then there is an
+#!   automorphism $\alpha$ of $U$ such that $P^\alpha, b_1^\alpha, b_2^\alpha$ are 
 #!   in the list. 
 DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #! @ChapterInfo Full points and perspectivities, Group of perspectivities
@@ -24,7 +35,7 @@ DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #!   of the unital <A>u</A>. Notice that the returned group consists of permutations
 #!   of <C>[1..Order(u)+1]</C>. A list of full points can be given as 4th argument. 
 #!   It is not checked if the elements of <A>fullpts</A> are full points. 
-#! @Description Perspectivities between blocks <M>b_1, b_2</M> of an abstract unital <M>U</M>
-#!   are projections from <M>b_1</M> to <M>b_2</M> from a center <M>P</M>. In order the 
-#!   perspectivity be well-defined, <M>P</M> must be a full point w.r.t. <M>b_1, b_2</M>. 
+#! @Description Perspectivities between blocks $b_1, b_2$ of an abstract unital $U$
+#!   are projections from $b_1$ to $b_2$ from a center $P$. In order the 
+#!   perspectivity be well-defined, $P$ must be a full point w.r.t. $b_1, b_2$. 
 DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsList, IsList, IsList ] );
