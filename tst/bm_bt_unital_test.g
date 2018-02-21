@@ -17,14 +17,6 @@ time;
 
 ###################################
 
-ab:=Random(params);
-bm_unital2 :=  OrthogonalBuekenhoutMetzAbstractUnital(q,ab[1],ab[2]);
-ag2 := AutomorphismGroup(bm_unital2);
-OrbitLengths(ag2);
-FullPointsOfUnitalRepresentatives(bm_unital2);
-
-###################################
-
 bt_unital := BuekenhoutTitsAbstractUnital(q);
 
 ag := AutomorphismGroup(bt_unital);
