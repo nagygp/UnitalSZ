@@ -4,6 +4,11 @@
 # Declarations
 #
 
+#! @Chapter Abstract unitals
+#! @Section Constructing abstract unitals
+#! @Section Methods for abstract unitals
+#! @Section Global functions for internal usage
+
 DeclareCategory( "IsAbstractUnitalDesign", IsObject );
 DeclareSynonym( "IsAbstractUnital", IsAbstractUnitalDesign );
 
@@ -58,7 +63,7 @@ DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
 #!   The unital object corresponding to the blist list <A>bmat</A>.
 #! @Description
 #!   The function stores <A>bmat</A> and sets the order of the unital. The
-#!   function <E>do not check</E> the necessary conditions (the size of bmat,
+#!   function **do not check** the necessary conditions (the size of bmat,
 #!   the sizes of the blocks and their intersections).
 DeclareGlobalFunction( "AU_UnitalByBlistListNC" );
 
@@ -103,7 +108,7 @@ DeclareGlobalFunction( "AbstractUnitalByIncidenceMatrix" );
 #! @Returns
 #!   The range <C>[ 1..q^3 + 1 ]</C>.
 #! @Description
-#!   If <A>u</A> is a unital of order <M>q</M>, then <A>u</A> has <M>q^3 + 1</M>
+#!   If <A>u</A> is a unital of order $q$, then <A>u</A> has $q^3 + 1$
 #!   points.
 DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
 
@@ -112,17 +117,17 @@ DeclareAttribute( "PointsOfUnital", IsAbstractUnitalDesign );
 #! @Returns
 #!   The blocks of the unital <A>u</A>.
 #! @Description
-#!   If <A>u</A> is a unital of order <M>q</M>, then each block is a subset of
-#!   the points of the unital with <M>q + 1</M> points. The blocks of an abstract
-#!   unital form a <M>2-(q^3+1,q+1,1)</M> design. 
+#!   If <A>u</A> is a unital of order $q$, then each block is a subset of
+#!   the points of the unital with $q + 1$ points. The blocks of an abstract
+#!   unital form a $2-(q^3+1,q+1,1)$ design. 
 DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
 
 #! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
-#!   The names of the <M>q^3+1</M> points of <A>u</A>.
+#!   The names of the $q^3+1$ points of <A>u</A>.
 #! @Description
-#!   The names of the points of <A>u</A> is a list of length <M>q^3+1</M> of 
+#!   The names of the points of <A>u</A> is a list of length $q^3+1$ of 
 #!   arbitrary &GAP; objects. It may be set by <Code>SetPointNamesOfUnital</Code>.
 #!   The default is the range <C>[ 1..q^3 + 1 ]</C>.
 DeclareAttribute( "PointNamesOfUnital", IsAbstractUnitalDesign );
