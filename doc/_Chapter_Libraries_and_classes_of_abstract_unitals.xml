@@ -7,6 +7,11 @@
 <Section Label="Chapter_Libraries_and_classes_of_abstract_unitals_Section_Classes_of_abstract_unitals">
 <Heading>Classes of abstract unitals</Heading>
 
+Basic references on Hermitian polarities, Hermitian curves and the classical Hermitian
+unital are <Cite Key="HirschfeldPG" Where="Section II.5"/> and <Cite Key="BarwickEbert2008" Where="Chapter 2"/>.
+On Buekenhout's construction of
+unitals embedded in translation planes, see <Cite Key="BarwickEbert2008" Where="Chapter 4"/>.
+The cyclic unital of order six is due to Bagchi and Bagchi <Cite Key="BagchiBagchi1989"/>.
 <ManSection>
   <Func Arg="q" Name="HermitianAbstractUnital" />
  <Returns>The classical unital object, which is the abstract unital of order <A>q</A> isomorphic to the Hermitian curve in the classical projective plane.
@@ -80,6 +85,17 @@ to the field element <Math>x</Math> the following: <Math>x \mapsto x^{2^\frac{k 
 </ManSection>
 
 
+<ManSection>
+  <Func Arg="n" Name="BagchiBagchiCyclicUnital" />
+ <Returns>A unital object of order <C>n</C>, with a cyclic automorphism group acting on the points.
+</Returns>
+ <Description>
+The construction method needs a positive integer <Math>n</Math> such that <Math>n+1</Math> and <Math>n^2-n+1</Math> are primes.
+For <Math>n\leq 20</Math>, only the parameters <Math>n=4</Math> and <Math>n=6</Math> yield an abstract unital.
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
@@ -91,8 +107,7 @@ to the field element <Math>x</Math> the following: <Math>x \mapsto x^{2^\frac{k 
  <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.
 </Returns>
  <Description>
-In the paper Unitals and codes by Anton Betten, Dieter Betten and Vladimir
-D. Tonchev (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3
+In the paper <Cite Key="BBT2003"/> by Betten, Betten and Tonchev, 909 unitals of order 3
 were constructed. The incidence matrices of these unitals are shipped with
 the package.
  </Description>
@@ -104,9 +119,7 @@ the package.
  <Returns>The <A>n</A>th (abstract) unital of order 4 of the unitals by Krčadinac, Nakić and Pavčević.
 </Returns>
  <Description>
-In the paper The Kramer-Mesner method with tactical decompositions: some
-new unitals on 65 points by Vedran Krčadinac, Anamari Nakić and Mario Osvin
-Pavčević (Journal of Combinatorial Designs 19, 2011, 290-303.) 1777 unitals
+In the paper <Cite Key="KNP2011"/> by Krčadinac, Nakić and Pavčević, 1777 unitals
 of order 4 were constructed. The incidence matrices of these unitals are
 shipped with the package.
  </Description>
@@ -118,8 +131,7 @@ shipped with the package.
  <Returns>The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
 </Returns>
  <Description>
-In the paper Steiner 2-designs S(2, 4, 28) with nontrivial automorphisms by
-Vedran Krčadinac (Glasnik Matematički, Vol. 37 (57), 2002, 259-268.) 4466
+In the paper <Cite Key="Krc2006"/> by Krčadinac, 4466
 unitals of order 3 were constructed. This library contains all the unitals
 of order 3 with nontrivial automorphism group. The incidence matrices of
 these unitals are shipped with the package.

@@ -33,8 +33,7 @@ DeclareGlobalFunction( "AU_InitLibraryData" );
 #!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Betten,
 #!   Betten and Tonchev.
 #! @Description
-#!   In the paper Unitals and codes by Anton Betten, Dieter Betten and Vladimir
-#!   D.  Tonchev (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3
+#!   In the paper <Cite Key="BBT2003"/> by Betten, Betten and Tonchev, 909 unitals of order 3
 #!   were constructed. The incidence matrices of these unitals are shipped with
 #!   the package.
 DeclareGlobalFunction( "BBTAbstractUnital" );
@@ -45,9 +44,7 @@ DeclareGlobalFunction( "BBTAbstractUnital" );
 #!   The <A>n</A>th (abstract) unital of order 4 of the unitals by Krčadinac,
 #!   Nakić and Pavčević.
 #! @Description
-#!   In the paper The Kramer-Mesner method with tactical decompositions: some
-#!   new unitals on 65 points by Vedran Krčadinac, Anamari Nakić and Mario Osvin
-#!   Pavčević (Journal of Combinatorial Designs 19, 2011, 290-303.) 1777 unitals
+#!   In the paper <Cite Key="KNP2011"/> by Krčadinac, Nakić and Pavčević, 1777 unitals
 #!   of order 4 were constructed. The incidence matrices of these unitals are
 #!   shipped with the package.
 DeclareGlobalFunction( "KNPAbstractUnital" );
@@ -57,8 +54,7 @@ DeclareGlobalFunction( "KNPAbstractUnital" );
 #! @Returns
 #!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
 #! @Description
-#!   In the paper Steiner 2-designs S(2, 4, 28) with nontrivial automorphisms by
-#!   Vedran Krčadinac (Glasnik Matematički, Vol. 37 (57), 2002, 259-268.) 4466
+#!   In the paper <Cite Key="Krc2006"/> by Krčadinac, 4466
 #!   unitals of order 3 were constructed. This library contains all the unitals
 #!   of order 3 with nontrivial automorphism group. The incidence matrices of
 #!   these unitals are shipped with the package.

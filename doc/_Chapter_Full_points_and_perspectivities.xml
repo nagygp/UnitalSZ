@@ -12,7 +12,8 @@
  <Returns>The list full point of <A>u</A> w.r.t. the blocks <A>b1,b2</A>. The arguments <A>b1,b2</A> are either blocks of the unital <A>u</A>, or indices of blocks in <C>BlocksOfUnital( u )</C>.
 </Returns>
  <Description>
-The point <Math>P</Math> is a <Emph>full point</Emph> of the unital <Math>U</Math> w.r.t. the blocks
+According to the paper <Cite Key="KSSz2018"/> by Korchmáros, Siciliano and Szőnyi,
+the point <Math>P</Math> is a <Emph>full point</Emph> of the unital <Math>U</Math> w.r.t. the blocks
 <Math>b_1,b_2</Math> if <Math>P</Math> is not contained in <Math>b_1</Math> or <Math>b_2</Math>, and,
 the projection with center <Math>P</Math> from <Math>b_1</Math> to <Math>b_2</Math> is a
 well-defined bijection.

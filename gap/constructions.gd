@@ -6,6 +6,12 @@
 
 #! @Chapter Libraries and classes of abstract unitals
 #! @Section Classes of abstract unitals
+#!   Basic references on Hermitian polarities, Hermitian curves and the classical Hermitian 
+#!   unital are <Cite Key="HirschfeldPG" Where="Section II.5"/> and <Cite Key="BarwickEbert2008" Where="Chapter 2"/>. 
+#!   On Buekenhout's construction of
+#!   unitals embedded in translation planes, see <Cite Key="BarwickEbert2008" Where="Chapter 4"/>.
+#!   The cyclic unital of order six is due to Bagchi and Bagchi <Cite Key="BagchiBagchi1989"/>.
+#!   
 #! @Section Libraries
 #! @Section Global functions for internal usage
 
@@ -82,3 +88,12 @@ DeclareGlobalFunction( "OrthogonalBuekenhoutMetzAbstractUnital" );
 #!  to the field element $x$ the following: $x \mapsto x^{2^\frac{k +
 #!  1}{2}}$, where $q = 2^k$.
 DeclareGlobalFunction( "BuekenhoutTitsAbstractUnital" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
+#! @Arguments n
+#! @Returns 
+#!  A unital object of order <C>n</C>, with a cyclic automorphism group acting on the points.
+#! @Description
+#!  The construction method needs a positive integer $n$ such that $n+1$ and $n^2-n+1$ are primes.
+#!  For $n\leq 20$, only the parameters $n=4$ and $n=6$ yield an abstract unital.
+DeclareGlobalFunction("BagchiBagchiCyclicUnital");
