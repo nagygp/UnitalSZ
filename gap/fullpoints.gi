@@ -58,6 +58,7 @@ function( u )
         List( Orbits( Stabilizer( g, i ), [ 1..nobls ] ), o -> [ i, Minimum( o ) ] ) 
     );
     orbs := Filtered( List( Concatenation( orbs ), Set ), x -> Length( x ) = 2 );
+    Info( InfoUnitalSZ, 2, Concatenation( String( Length( orbs ) ), " block pair(s) up to automorphisms computed" ) );
     # main part
     lsfullpoints := [];
     for ij in orbs do
@@ -68,6 +69,7 @@ function( u )
                 block2 := BlocksOfUnital( u )[ ij[2] ], 
                 fullpts := fullpoints 
             ) );
+            Info( InfoUnitalSZ, 2, Concatenation( String( Length( lsfullpoints ) ), " full point(s) found" ) );
         fi;
     od;
     return lsfullpoints;

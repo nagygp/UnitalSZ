@@ -9,7 +9,12 @@
 #! @Section Methods for abstract unitals
 #! @Section Global functions for internal usage
 
+#! @ChapterInfo Abstract unitals, Constructing abstract unitals
+#! @Arguments object
+#! @Description
+#!   A &GAP; category of abstract unitals. Synonym is <C>IsAbstractUnital</C>.
 DeclareCategory( "IsAbstractUnitalDesign", IsObject );
+
 DeclareSynonym( "IsAbstractUnital", IsAbstractUnitalDesign );
 
 DeclareRepresentation( "IsAbstractUnitalDesignRep", IsComponentObjectRep and
@@ -55,6 +60,7 @@ DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
 #!   dual blocks. Wrong number of blocks or wrong number of points (union of the
 #!   blocks in <A>blocklist</A>) drops error.
 DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
+
 #####################################################
 #####################################################
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
@@ -101,6 +107,7 @@ DeclareGlobalFunction( "AbstractUnitalByDesignBlocks" );
 #!   <C>bmat</C>, which is based on <A>incmat</A> and sets the <C>Order</C> of
 #!   the unital.
 DeclareGlobalFunction( "AbstractUnitalByIncidenceMatrix" );
+
 #####################################################
 #####################################################
 #! @ChapterInfo Abstract unitals, Methods for abstract unitals
@@ -161,3 +168,7 @@ DeclareAttribute( "AutomorphismGroup", IsAbstractUnitalDesign );
 #!   <A>u1</A> and <A>u2</A>.
 DeclareOperation( "Isomorphism", [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ] );
 
+#! @ChapterInfo Abstract unitals, Constructing abstract unitals
+#! @Description
+#!   An infoclass for the package. Its default value is $0$.
+DeclareInfoClass( "InfoUnitalSZ" );

@@ -8,6 +8,16 @@
 <Heading>Constructing abstract unitals</Heading>
 
 <ManSection>
+  <Filt Arg="object" Name="IsAbstractUnitalDesign" Label="for IsObject"/>
+ <Returns><C>true</C> or <C>false</C>
+</Returns>
+ <Description>
+A &GAP; category of abstract unitals. Synonym is <C>IsAbstractUnital</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Func Arg="bmat" Name="AbstractUnitalByBlistList" />
  <Returns>The unital object corresponding to the blist list <A>bmat</A>.
 </Returns>
@@ -39,6 +49,14 @@ the sizes of the blocks and the sizes of the intersections of the dual
 blocks. Wrong <A>incmat</A> matrix size drops error. The function stores
 <C>bmat</C>, which is based on <A>incmat</A> and sets the <C>Order</C> of
 the unital.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <InfoClass Name="InfoUnitalSZ" />
+ <Description>
+An infoclass for the package. Its default value is <Math>0</Math>.
  </Description>
 </ManSection>
 

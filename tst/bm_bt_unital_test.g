@@ -1,4 +1,5 @@
 LoadPackage("unitalsz");
+SetInfoLevel(InfoUnitalSZ,2);
 
 her := HermitianAbstractUnital( 4 );
 KnownAttributesOfObject( her );
