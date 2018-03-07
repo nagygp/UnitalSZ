@@ -109,16 +109,15 @@ Of course there are options for **constructing** your own **unital**:
 There is also access to different attributes of a unital:
 
 -   **points**: `PointsOfUnital( u )`;
--   names of the points: `PointNamesOfUnital( u )`;
-
-    If there is any. It comes handy when the (abstract) unital can be
-    represented in a more structured way (e.g., Buekenhout--Metz unital).
--   **blocks**: `BlocksOfUnital( u )`;
+-   names of the points: `PointNamesOfUnital( u )`. If there is any. It comes
+    handy when the (abstract) unital can be represented in a more structured
+    way (e.g., Buekenhout--Metz unital).
+-   **Blocks**: `BlocksOfUnital( u )`;
 -   incidence (di)graph: `IncidenceDigraph( u )`;
 -   **automorphism group**: `AutomorphismGroup( u )`.
 
-And as in the example above, one can check isomorphism between two unitals `u1`
-and `u2` with `Isomorphism( u1, u2 )`.
+And as in the example above, one can check **isomorphism** between two unitals
+`u1` and `u2` with `Isomorphism( u1, u2 )`.
 
 Available libraries of unitals
 ------------------------------
