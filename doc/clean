@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-rm -f *.{aux,lab,log,dvi,ps,pdf,bbl,ilg,ind,idx,out,html,tex,pnr,txt,blg,toc,six,brf,css,js} _Chapter*.xml title.xml _AutoDocMainFile.xml AutoDoc.xml ../VERSION
+echo "Cleaning up."
 
+rm -f *.{aux,lab,log,dvi,ps,bbl,ilg,ind,idx,out,pnr,blg,toc,brf} 
+rm -f _Chapter*.xml title.xml _AutoDocMainFile.xml AutoDoc.xml ../VERSION
+
+rm -f *.xml.bib
