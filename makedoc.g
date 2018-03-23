@@ -7,6 +7,7 @@ if fail = LoadPackage( "AutoDoc", "2016.02.16" ) then
     Error( "AutoDoc version 2016.02.16 or newer is required." );
 fi;
 
-AutoDoc( rec( scaffold := rec( bib := "UnitalSZ.bib.xml" ), autodoc := true ) );
+#AutoDoc( rec( scaffold := rec( bib := "UnitalSZ.bib.xml" ), autodoc := true ) );
+AutoDoc( rec( autodoc := true ) );
 
 QUIT;
