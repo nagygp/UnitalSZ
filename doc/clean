@@ -3,6 +3,7 @@
 echo "Cleaning up."
 
 rm -f *.{aux,lab,log,dvi,ps,bbl,ilg,ind,idx,out,pnr,blg,toc,brf} 
+#rm -f *.{pdf,html,tex,txt,six,css,js}
 rm -f _Chapter*.xml title.xml _AutoDocMainFile.xml AutoDoc.xml ../VERSION
-
 rm -f *.xml.bib
+
