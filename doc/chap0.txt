@@ -3,13 +3,13 @@
                                    [1X UnitalSZ [101X
   
   
-       [1X Algorithms and library of abstract unitals and their embeddings [101X
+      [1X Algorithms and libraries of abstract unitals and their embeddings [101X
   
   
-                                      0.3
+                                      0.5
   
   
-                                20 February 2018
+                                 23 March 2018
   
   
                                 Gábor Péter Nagy
@@ -37,37 +37,40 @@
   [1XContents (UnitalSZ)[101X
   
   1 [33X[0;0YAbstract unitals[133X
-    1.1 [33X[0;0YGlobal functions for internal usage[133X
-      1.1-1 AU_UnitalBlistList_axiomcheck
-      1.1-2 AU_IsUnitalBlistList
-      1.1-3 AU_IsUnitalIncidenceMatrix
-      1.1-4 AU_IsUnitalBlockDesign
-      1.1-5 AU_UnitalByBlistListNC
-    1.2 [33X[0;0YConstructing abstract unitals[133X
-      1.2-1 AbstractUnitalByBlistList
-      1.2-2 AbstractUnitalByDesignBlocks
-      1.2-3 AbstractUnitalByIncidenceMatrix
-    1.3 [33X[0;0YMethods for abstract unitals[133X
-      1.3-1 PointsOfUnital
-      1.3-2 BlocksOfUnital
-      1.3-3 PointNamesOfUnital
-      1.3-4 IncidenceDigraph
-      1.3-5 AutomorphismGroup
-      1.3-6 Isomorphism
+    1.1 [33X[0;0YConstructing abstract unitals[133X
+      1.1-1 IsAbstractUnitalDesign
+      1.1-2 AbstractUnitalByBlistList
+      1.1-3 AbstractUnitalByDesignBlocks
+      1.1-4 AbstractUnitalByIncidenceMatrix
+      1.1-5 InfoUnitalSZ
+    1.2 [33X[0;0YMethods for abstract unitals[133X
+      1.2-1 PointsOfUnital
+      1.2-2 BlocksOfUnital
+      1.2-3 PointNamesOfUnital
+      1.2-4 IncidenceDigraph
+      1.2-5 AutomorphismGroup
+      1.2-6 Isomorphism
+    1.3 [33X[0;0YGlobal functions for internal usage[133X
+      1.3-1 AU_UnitalBlistList_axiomcheck
+      1.3-2 AU_IsUnitalBlistList
+      1.3-3 AU_IsUnitalIncidenceMatrix
+      1.3-4 AU_IsUnitalBlockDesign
+      1.3-5 AU_UnitalByBlistListNC
   2 [33X[0;0YLibraries and classes of abstract unitals[133X
     2.1 [33X[0;0YClasses of abstract unitals[133X
       2.1-1 HermitianAbstractUnital
       2.1-2 AllBuekenhoutMetzAbstractUnitalParameters
       2.1-3 OrthogonalBuekenhoutMetzAbstractUnital
       2.1-4 BuekenhoutTitsAbstractUnital
-    2.2 [33X[0;0YGlobal functions for internal usage[133X
-      2.2-1 AU_ReadLibraryDataFromFiles
-      2.2-2 AU_InitLibraryData
-    2.3 [33X[0;0YLibraries[133X
-      2.3-1 BBTAbstractUnital
-      2.3-2 KNPAbstractUnital
-      2.3-3 KrcadinacAbstractUnital
-      2.3-4 AbstractUnitalLibraryInfo
+      2.1-5 BagchiBagchiCyclicUnital
+    2.2 [33X[0;0YLibraries[133X
+      2.2-1 BBTAbstractUnital
+      2.2-2 KNPAbstractUnital
+      2.2-3 KrcadinacAbstractUnital
+      2.2-4 AbstractUnitalLibraryInfo
+    2.3 [33X[0;0YGlobal functions for internal usage[133X
+      2.3-1 AU_ReadLibraryDataFromFiles
+      2.3-2 AU_InitLibraryData
   3 [33X[0;0YFull points and perspectivities[133X
     3.1 [33X[0;0YFull points of unitals[133X
       3.1-1 FullPointsOfUnitalsBlocks

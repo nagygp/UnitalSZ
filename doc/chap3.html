@@ -15,9 +15,9 @@
 <body class="chap3"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
-<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapInd.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
 <p><a id="X854CDC7081F6B299" name="X854CDC7081F6B299"></a></p>
@@ -45,17 +45,17 @@
 
 <h5>3.1-1 FullPointsOfUnitalsBlocks</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FullPointsOfUnitalsBlocks</code>( <var class="Arg">u</var>, <var class="Arg">b1</var>, <var class="Arg">b2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FullPointsOfUnitalsBlocks</code>( <var class="Arg">u</var>, <var class="Arg">b1</var>, <var class="Arg">b2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: The list full point of <var class="Arg">u</var> w.r.t. the blocks <var class="Arg">b1,b2</var>. The arguments <var class="Arg">b1,b2</var> are either blocks of the unital <var class="Arg">u</var>, or indices of blocks in <code class="code">BlocksOfUnital( u )</code>.</p>
 
-<p>The point <span class="SimpleMath">P</span> is a <em>full point</em> of the unital <span class="SimpleMath">U</span> w.r.t. the blocks <span class="SimpleMath">b_1,b_2</span> if <span class="SimpleMath">P</span> is not contained in <span class="SimpleMath">b_1</span> or <span class="SimpleMath">b_2</span>, and, the projection with center <span class="SimpleMath">P</span> from <span class="SimpleMath">b_1</span> to <span class="SimpleMath">b_2</span> is a well-defined bijection.</p>
+<p>According to the paper <a href="chapBib.html#biBKSSz2018">[KSS18]</a> by Korchmáros, Siciliano and Szőnyi, the point <span class="Math">P</span> is a <em>full point</em> of the unital <span class="Math">U</span> w.r.t. the blocks <span class="Math">b_1,b_2</span> if <span class="Math">P</span> is not contained in <span class="Math">b_1</span> or <span class="Math">b_2</span>, and, the projection with center <span class="Math">P</span> from <span class="Math">b_1</span> to <span class="Math">b_2</span> is a well-defined bijection.</p>
 
 <p><a id="X7BDC745F7F552133" name="X7BDC745F7F552133"></a></p>
 
 <h5>3.1-2 FullPointsOfUnitalRepresentatives</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FullPointsOfUnitalRepresentatives</code>( <var class="Arg">u</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<p>Returns: A list of records <code class="code">r</code> containing the fields <code class="code">r.block1, r.block2, r.fullpts</code>, where <code class="code">r.fullpts</code> is the set of full point of <var class="Arg">u</var> w.r.t. the blocks <code class="code">r.block1, r.block2</code>. The returned list contains all possible full points of <var class="Arg">u</var> up to the automorphism group of <var class="Arg">u</var>. That is, if <span class="SimpleMath">P</span> is a full point w.r.t. the blocks <span class="SimpleMath">b_1,b_2</span>, then there is an automorphism <span class="SimpleMath">α</span> of <span class="SimpleMath">U</span> such that <span class="SimpleMath">P^α, b_1^α, b_2^α</span> are in the list.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FullPointsOfUnitalRepresentatives</code>( <var class="Arg">u</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list of records <code class="code">r</code> containing the fields <code class="code">r.block1, r.block2, r.fullpts</code>, where <code class="code">r.fullpts</code> is the set of full point of <var class="Arg">u</var> w.r.t. the blocks <code class="code">r.block1, r.block2</code>. The returned list contains all possible full points of <var class="Arg">u</var> up to the automorphism group of <var class="Arg">u</var>. That is, if <span class="Math">P</span> is a full point w.r.t. the blocks <span class="Math">b_1,b_2</span>, then there is an automorphism <span class="Math">\alpha</span> of <span class="Math">U</span> such that <span class="Math">P^\alpha, b_1^\alpha, b_2^\alpha</span> are in the list.</p>
 
 <p><a id="X86A7B9B1794427DD" name="X86A7B9B1794427DD"></a></p>
 
@@ -65,16 +65,16 @@
 
 <h5>3.2-1 PerspectivityGroupOfUnitalsBlocks</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PerspectivityGroupOfUnitalsBlocks</code>( <var class="Arg">u</var>, <var class="Arg">b1</var>, <var class="Arg">b2</var>[, <var class="Arg">fullpts</var>] )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PerspectivityGroupOfUnitalsBlocks</code>( <var class="Arg">u</var>, <var class="Arg">b1</var>, <var class="Arg">b2</var>[, <var class="Arg">fullpts</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: The group generated by perspectivies from block <var class="Arg">b1</var> to block <var class="Arg">b2</var> of the unital <var class="Arg">u</var>. Notice that the returned group consists of permutations of <code class="code">[1..Order(u)+1]</code>. A list of full points can be given as 4th argument. It is not checked if the elements of <var class="Arg">fullpts</var> are full points.</p>
 
-<p>Perspectivities between blocks <span class="SimpleMath">b_1, b_2</span> of an abstract unital <span class="SimpleMath">U</span> are projections from <span class="SimpleMath">b_1</span> to <span class="SimpleMath">b_2</span> from a center <span class="SimpleMath">P</span>. In order the perspectivity be well-defined, <span class="SimpleMath">P</span> must be a full point w.r.t. <span class="SimpleMath">b_1, b_2</span>.</p>
+<p>Perspectivities between blocks <span class="Math">b_1, b_2</span> of an abstract unital <span class="Math">U</span> are projections from <span class="Math">b_1</span> to <span class="Math">b_2</span> from a center <span class="Math">P</span>. In order the perspectivity be well-defined, <span class="Math">P</span> must be a full point w.r.t. <span class="Math">b_1, b_2</span>.</p>
 
 
-<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapInd.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

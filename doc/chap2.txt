@@ -4,125 +4,147 @@
   
   [1X2.1 [33X[0;0YClasses of abstract unitals[133X[101X
   
+  [33X[0;0YBasic references on Hermitian polarities, Hermitian curves and the classical
+  Hermitian  unital  are  [Hir98,  Section  II.5]  and  [BE08,  Chapter 2]. On
+  Buekenhout's  construction  of  unitals  embedded in translation planes, see
+  [BE08,  Chapter  4].  The  cyclic  unital  of order six is due to Bagchi and
+  Bagchi [BB89].[133X
+  
   [1X2.1-1 HermitianAbstractUnital[101X
   
-  [29X[2XHermitianAbstractUnital[102X( [3Xq[103X ) [32X function
+  [33X[1;0Y[29X[2XHermitianAbstractUnital[102X( [3Xq[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe classical unital object, which is the abstract unital of order
             [3Xq[103X  isomorphic  to  the Hermitian curve in the classical projective
             plane.[133X
   
-  [33X[0;0YThe  Hermitian curve has the following canonical equation: [22XX_0^q + 1 + X_1^q
-  + 1 + X_2^q + 1 = 0[122X. The function computes the blocks of the unital with the
-  help  of  [10XPGU(3,[3Xq[103X[10X)[110X  and  calls [10XAbstractUnitalByDesignBlocks[110X. The [10XName[110X of the
-  unital is set as [10XHermitianAbstractUnital([3Xq[103X[10X)[110X.[133X
+  [33X[0;0YThe  Hermitian  curve  has  the  following canonical equation: [23XX_0^{q + 1} +
+  X_1^{q  +  1}  +  X_2^{q  +  1} = 0[123X. The function computes the blocks of the
+  unital with the help of [10XPGU(3,[3Xq[103X[10X)[110X and calls [10XAbstractUnitalByDesignBlocks[110X. The
+  [10XName[110X of the unital is set as [10XHermitianAbstractUnital([3Xq[103X[10X)[110X.[133X
   
   [1X2.1-2 AllBuekenhoutMetzAbstractUnitalParameters[101X
   
-  [29X[2XAllBuekenhoutMetzAbstractUnitalParameters[102X( [3Xq[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10YAll  the  pairs  over [22XGF(q^2)[122X which are possible parameters of a(n
-            orthogonal) Buekenhout-Metz unital of order [3Xq[103X.[133X
+  [33X[1;0Y[29X[2XAllBuekenhoutMetzAbstractUnitalParameters[102X( [3Xq[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YAll   the   pairs   of   parameters   over  [23XGF(q^2)[123X  which  result
+            non-isomorphic (orthogonal) Buekenhout-Metz unitals of order [3Xq[103X.[133X
   
-  [33X[0;0YThe  argument [3Xq[103X must be a prime power (if even, then at least 4). If [3Xq[103X is an
-  odd  prime  power  and  [22X(α,  β)[122X  is  2-tuple of [22XGF(q^2)[122X, then this pair is a
-  suitable parameter of an orthogonal Buekenhout-Metz unital, if [22X(β^q - β)^2 +
-  4 α^q + 1[122X is a nonsquare in [22XGF(q)[122X. If [3Xq[103X is an even prime power and [22X(α, β)[122X is
-  2-tuple  of [22XGF(q^2)[122X, then this pair is a suitable parameter of an orthogonal
-  Buekenhout-Metz  unital,  if  [22Xβ  not\in  GF(q)[122X  and  [22Xα^q  + 1(β^q + β)^2[122X has
-  absolute  trace  0.  In both cases [23X\alpha = 0[123X yields the Hermitian classical
-  unital, hence we omit the tuples with [22Xα = 0[122X.[133X
+  [33X[0;0YThe argument [3Xq[103X must be a prime power (if even, then at least 4).[133X
+  
+  [33X[0;0YIf  [3Xq[103X  is an odd prime power and [23X(\alpha, \beta)[123X is 2-tuple of [23XGF(q^2)[123X, then
+  this  pair  is a suitable parameter of an orthogonal Buekenhout-Metz unital,
+  if [23X(\beta^q - \beta)^2 + 4 \alpha^{q + 1}[123X is a nonsquare in [23XGF(q)[123X.[133X
+  
+  [33X[0;0YIf  [3Xq[103X is an even prime power and [23X(\alpha, \beta)[123X is 2-tuple of [23XGF(q^2)[123X, then
+  this  pair  is a suitable parameter of an orthogonal Buekenhout-Metz unital,
+  if  [23X\beta  \not\in  GF(q)[123X and [23X\alpha^{q + 1}(\beta^q + \beta)^2[123X has absolute
+  trace 0.[133X
+  
+  [33X[0;0YIn  both  cases  [23X\alpha  = 0[123X yields the Hermitian classical unital, hence we
+  omit the tuples with [23X\alpha = 0[123X.[133X
   
   [1X2.1-3 OrthogonalBuekenhoutMetzAbstractUnital[101X
   
-  [29X[2XOrthogonalBuekenhoutMetzAbstractUnital[102X( [3Xq[103X, [3Xalpha[103X, [3Xbeta[103X ) [32X function
+  [33X[1;0Y[29X[2XOrthogonalBuekenhoutMetzAbstractUnital[102X( [3Xq[103X, [3Xalpha[103X, [3Xbeta[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe  unital  object,  which  is  the  abstract  unital  of order [3Xq[103X
             isomorphic   to   the   orthogonal   Buekenhout-Metz  unital  with
             parameters [3Xalpha[103X and [3Xbeta[103X in the classical projective plane.[133X
   
   [33X[0;0YThe  argument  [3Xq[103X must be a prime power (if even, then at least 4), the other
-  arguments  [3Xalpha[103X  and  [3Xbeta[103X  -  elements  of  [22XGF(q^2)[122X  - must be a pair from
-  [10XAllBuekenhoutMetzAbstractUnitalParameters([110X[3Xq[103X[10X)[110X.  The point set [22XU_α, β = { ( x,
-  α  x^2  +  β  x^q  + 1 + r, 1) : x ∈ GF(q^2), r ∈ GF(q) } ∪ { (0, 1, 0) }[122X in
-  [22XPG(2,q^2)[122X  is a unital (called the orthogonal Buekenhout-Metz unital) if the
-  pair  of  parameters  [22X(α,  β)[122X  satisfies  the  conditions  explained  in the
-  description of [10XAllBuekenhoutMetzAbstractUnitalParameters([110X[3Xq[103X[10X)[110X.[133X
+  arguments  [3Xalpha[103X  and  [3Xbeta[103X  -  elements  of  [23XGF(q^2)[123X  - must be a pair from
+  [10XAllBuekenhoutMetzAbstractUnitalParameters([110X[3Xq[103X[10X)[110X.[133X
+  
+  [33X[0;0YThe  point set [23XU_{\alpha, \beta} = \left\{ ( x, \alpha x^2 + \beta x^{q + 1}
+  +  r,  1)  \colon x \in GF(q^2), r \in GF(q) \right\} \cup \left\{ (0, 1, 0)
+  \right\}[123X  in  [23XPG(2,q^2)[123X  is  a unital (called the orthogonal Buekenhout-Metz
+  unital)  if  the pair of parameters [23X(\alpha, \beta)[123X satisfies the conditions
+  explained             in            the            description            of
+  [10XAllBuekenhoutMetzAbstractUnitalParameters([110X[3Xq[103X[10X)[110X.[133X
   
   [1X2.1-4 BuekenhoutTitsAbstractUnital[101X
   
-  [29X[2XBuekenhoutTitsAbstractUnital[102X( [3Xq[103X ) [32X function
+  [33X[1;0Y[29X[2XBuekenhoutTitsAbstractUnital[102X( [3Xq[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe  unital  object,  which  is  the  abstract  unital  of order [3Xq[103X
             isomorphic   to   the  Buekenhout-Tits  unital  in  the  classical
             projective plane.[133X
   
   [33X[0;0YThe  argument  [3Xq[103X  must  be  a  power  of 2, such that the exponent is an odd
-  integer  at least 3. The point set [22XU_T = { ( x_0 + x_1 δ, y_0 + (x_0^τ + 2 +
-  x_1^τ  + x_0x_1)δ, 1) : x_0, x_1, y_0 ∈ GF(q)} ∪ { (0,1,0) }[122X in [22XPG(2,q^2)[122X is
-  a  unital (called the Buekenhout-Tits unital) if [22Xδ ∈ GF(q^2) ∖ GF(4)[122X and [22Xδ^q
-  =  1 + δ[122X. This [22Xδ[122X is just a basis element along with 1 in [22XGF(q^2)[122X over [22XGF(q)[122X,
-  hence  we can omit it as a parameter. The function [22Xτ : GF(q) → GF(q)[122X assigns
-  to the field element [22Xx[122X the following: [22Xx ↦ x^2^frack + 12}[122X, where [22Xq = 2^k[122X.[133X
+  integer  at  least  3. The point set [23XU_T = \left\{ ( x_0 + x_1 \delta, y_0 +
+  (x_0^{\tau  +  2}  +  x_1^\tau  + x_0x_1)\delta, 1) \colon x_0, x_1, y_0 \in
+  GF(q)\right\} \cup \left\{ (0,1,0) \right\}[123X in [23XPG(2,q^2)[123X is a unital (called
+  the  Buekenhout-Tits  unital)  if  [23X\delta  \in  GF(q^2)  \setminus GF(4)[123X and
+  [23X\delta^q  =  1 + \delta[123X. This [23X\delta[123X is just a basis element along with 1 in
+  [23XGF(q^2)[123X  over  [23XGF(q)[123X, hence we can omit it as a parameter. The function [23X\tau
+  \colon GF(q) \rightarrow GF(q)[123X assigns to the field element [23Xx[123X the following:
+  [23Xx \mapsto x^{2^\frac{k + 1}{2}}[123X, where [23Xq = 2^k[123X.[133X
+  
+  [1X2.1-5 BagchiBagchiCyclicUnital[101X
+  
+  [33X[1;0Y[29X[2XBagchiBagchiCyclicUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA  unital  object  of  order  [10Xn[110X,  with a cyclic automorphism group
+            acting on the points.[133X
+  
+  [33X[0;0YThe construction method needs a positive integer [23Xn[123X such that [23Xn+1[123X and [23Xn^2-n+1[123X
+  are  primes. For [23Xn\leq 20[123X, only the parameters [23Xn=4[123X and [23Xn=6[123X yield an abstract
+  unital.[133X
   
   
-  [1X2.2 [33X[0;0YGlobal functions for internal usage[133X[101X
+  [1X2.2 [33X[0;0YLibraries[133X[101X
   
-  [1X2.2-1 AU_ReadLibraryDataFromFiles[101X
+  [1X2.2-1 BBTAbstractUnital[101X
   
-  [29X[2XAU_ReadLibraryDataFromFiles[102X( [3Xnr[103X, [3Xq[103X, [3Xfilename[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10YThe list of boolean incidence matrices of size [22X(q^3 + 1) × q^2(q^2
-            - q + 1)[122X read from [3Xfilename[103X.[133X
+  [33X[1;0Y[29X[2XBBTAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth  (abstract)  unital  of order 3 of the unitals by Betten,
+            Betten and Tonchev.[133X
+  
+  [33X[0;0YIn  the  paper [BBT03] by Betten, Betten and Tonchev, 909 unitals of order 3
+  were  constructed.  The incidence matrices of these unitals are shipped with
+  the package.[133X
+  
+  [1X2.2-2 KNPAbstractUnital[101X
+  
+  [33X[1;0Y[29X[2XKNPAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth (abstract) unital of order 4 of the unitals by Krčadinac,
+            Nakić and Pavčević.[133X
+  
+  [33X[0;0YIn the paper [KNP11] by Krčadinac, Nakić and Pavčević, 1777 unitals of order
+  4 were constructed. The incidence matrices of these unitals are shipped with
+  the package.[133X
+  
+  [1X2.2-3 KrcadinacAbstractUnital[101X
+  
+  [33X[1;0Y[29X[2XKrcadinacAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe [3Xn[103Xth (abstract) unital of order 3 of the unitals by Krčadinac.[133X
+  
+  [33X[0;0YIn  the  paper  [Kr{\v  c}06]  by  Krčadinac,  4466  unitals of order 3 were
+  constructed.  This  library  contains  all  the  unitals  of  order  3  with
+  nontrivial  automorphism  group. The incidence matrices of these unitals are
+  shipped with the package.[133X
+  
+  [1X2.2-4 AbstractUnitalLibraryInfo[101X
+  
+  [33X[1;0Y[29X[2XAbstractUnitalLibraryInfo[102X(  ) [32X function[133X
+  
+  [33X[0;0YThe  function  prints  the  information  about  the  available  libraries of
+  unitals.[133X
+  
+  
+  [1X2.3 [33X[0;0YGlobal functions for internal usage[133X[101X
+  
+  [1X2.3-1 AU_ReadLibraryDataFromFiles[101X
+  
+  [33X[1;0Y[29X[2XAU_ReadLibraryDataFromFiles[102X( [3Xnr[103X, [3Xq[103X, [3Xfilename[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe  list  of  boolean incidence matrices of size [23X(q^3 + 1) \times
+            q^2(q^2 - q + 1)[123X read from [3Xfilename[103X.[133X
   
   [33X[0;0YThe  file [3Xfilename[103X must be gzipped and must contain [3Xnr[103X matrices of dimension
   mentioned  above.  The  matrices must be 0-1 matrices without any whitespace
   between the entries in one row and there must not be any empty lines between
   matrices.[133X
   
-  [1X2.2-2 AU_InitLibraryData[101X
+  [1X2.3-2 AU_InitLibraryData[101X
   
-  [29X[2XAU_InitLibraryData[102X(  ) [32X function
+  [33X[1;0Y[29X[2XAU_InitLibraryData[102X(  ) [32X function[133X
   
   [33X[0;0YReads  in  the incidence matrices from the libraries of unitals shipped with
   the package.[133X
-  
-  
-  [1X2.3 [33X[0;0YLibraries[133X[101X
-  
-  [1X2.3-1 BBTAbstractUnital[101X
-  
-  [29X[2XBBTAbstractUnital[102X( [3Xn[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth  (abstract)  unital  of order 3 of the unitals by Betten,
-            Betten and Tonchev.[133X
-  
-  [33X[0;0YIn  the  paper Unitals and codes by Anton Betten, Dieter Betten and Vladimir
-  D.  Tonchev  (Discrete Mathematics 267, 2003, 23-33.) 909 unitals of order 3
-  were  constructed.  The incidence matrices of these unitals are shipped with
-  the package.[133X
-  
-  [1X2.3-2 KNPAbstractUnital[101X
-  
-  [29X[2XKNPAbstractUnital[102X( [3Xn[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth (abstract) unital of order 4 of the unitals by Krčadinac,
-            Nakić and Pavčević.[133X
-  
-  [33X[0;0YIn the paper The Kramer-Mesner method with tactical decompositions: some new
-  unitals  on  65  points  by  Vedran Krčadinac, Anamari Nakić and Mario Osvin
-  Pavčević  (Journal of Combinatorial Designs 19, 2011, 290-303.) 1777 unitals
-  of  order  4  were  constructed. The incidence matrices of these unitals are
-  shipped with the package.[133X
-  
-  [1X2.3-3 KrcadinacAbstractUnital[101X
-  
-  [29X[2XKrcadinacAbstractUnital[102X( [3Xn[103X ) [32X function
-  [6XReturns:[106X  [33X[0;10YThe [3Xn[103Xth (abstract) unital of order 3 of the unitals by Krčadinac.[133X
-  
-  [33X[0;0YIn  the paper Steiner 2-designs S(2, 4, 28) with nontrivial automorphisms by
-  Vedran  Krčadinac  (Glasnik  Matematički, Vol. 37 (57), 2002, 259-268.) 4466
-  unitals  of  order 3 were constructed. This library contains all the unitals
-  of  order  3  with  nontrivial automorphism group. The incidence matrices of
-  these unitals are shipped with the package.[133X
-  
-  [1X2.3-4 AbstractUnitalLibraryInfo[101X
-  
-  [29X[2XAbstractUnitalLibraryInfo[102X(  ) [32X function
-  
-  [33X[0;0YThe  function  prints  the  information  about  the  available  libraries of
-  unitals.[133X
   
