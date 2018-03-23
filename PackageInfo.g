@@ -8,9 +8,9 @@
 SetPackageInfo( rec(
 
 PackageName := "UnitalSZ",
-Subtitle := "Algorithms and library of abstract unitals and their embeddings",
-Version := "0.3",
-Date := "20/02/2018", # dd/mm/yyyy format
+Subtitle := "Algorithms and libraries of abstract unitals and their embeddings",
+Version := "0.4",
+Date := "23/03/2018", # dd/mm/yyyy format
 
 Persons := [
     rec(
@@ -62,7 +62,13 @@ ArchiveFormats := ".tar.gz",
 ##
 Status := "dev",
 
-AbstractHTML   :=  "",
+AbstractHTML   :=  Concatenation( 
+    "<p>This is a GAP package containing ",
+    "methods for abstract unitals as block designs.</p> ",
+    "<p>There are methods for automorphisms and isomorphisms ",
+    "and for the embeddings of unitals in the finite Desarguesian ",
+    "projective plane. There are functions for constructing unitals ",
+    "and some libraries of unitals os small order.</p>" ),
 
 PackageDoc := rec(
     BookName  := "UnitalSZ",
@@ -70,15 +76,15 @@ PackageDoc := rec(
     HTMLStart := "doc/chap0.html",
     PDFFile   := "doc/manual.pdf",
     SixFile   := "doc/manual.six",
-    LongTitle := "Algorithms and library of unitals of projective planes",
+    LongTitle := "Algorithms and libraries of abstract unitals and their embeddings",
 ),
 
 Dependencies := rec(
     GAP := ">= 4.8",
     NeededOtherPackages := [
-        [ "GAPDoc", ">= 1.5" ],
-        [ "Digraphs", ">= 0.10.1" ],
-        [ "io", ">=4.4.6" ]
+        [ "GAPDoc", ">= 1.6" ],
+        [ "Digraphs", ">= 0.11" ],
+        [ "io", ">=4.5" ]
     ],
     SuggestedOtherPackages := [ ],
     ExternalConditions := [ ],
@@ -90,6 +96,6 @@ AvailabilityTest := function()
 
 TestFile := "tst/testall.g",
 
-#Keywords := [ "TODO" ],
+Keywords := [ "unital", "abstract unital", "projective embedding", "unital design" ],
 
 ));
