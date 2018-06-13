@@ -39,8 +39,8 @@ InstallOtherMethod( FullPointsOfUnitalsBlocks, "for an abstract unital and two b
     [ IsAbstractUnitalDesign, IsList, IsList ],
 function( u, b1, b2 )
     local bmattr, pts, nobls, bls, ib1, ib2, nonincpts, fullpoints, p, bp, ibls, coveredpts;
-    ib1 := u!.bmat[ PositionSorted( BlocksOfUnital( u ), b1 ) ];
-    ib2 := u!.bmat[ PositionSorted( BlocksOfUnital( u ), b2 ) ];
+    ib1 := PositionSorted( BlocksOfUnital( u ), b1 );
+    ib2 := PositionSorted( BlocksOfUnital( u ), b2 );
     if b1=b2 or b1 <> BlocksOfUnital( u )[ib1] or b2 <> BlocksOfUnital( u )[ib2] then 
         Error("arguments 2 and 3 must be different blocks of the unital");
     fi;
