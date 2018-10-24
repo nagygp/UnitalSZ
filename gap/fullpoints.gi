@@ -58,6 +58,7 @@ function( u )
         List( Orbits( Stabilizer( g, i ), [ 1..nobls ] ), o -> [ i, Minimum( o ) ] ) 
     );
     orbs := Filtered( List( Concatenation( orbs ), Set ), x -> Length( x ) = 2 );
+    orbs := Set( orbs );
     Info( InfoUnitalSZ, 2, Concatenation( String( Length( orbs ) ), " block pair(s) up to automorphisms computed" ) );
     # main part
     lsfullpoints := [];
