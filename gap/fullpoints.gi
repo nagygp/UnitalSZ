@@ -129,3 +129,21 @@ function( u, b1, b2 )
     fi;
     return PerspectivityGroupOfUnitalsBlocks( u, b1, b2, FullPointsOfUnitalsBlocks( u, ib1, ib2 ) );
 end );
+
+InstallMethod( AbstractPolarTrianglesOfUnitalRepresentatives, "for an abstract unital",
+    [ IsAbstractUnitalDesign ],
+function( u )
+    local fullpts, polartris, thirdblocks, fp, b3;
+    fullpts := Filtered( FullPointsOfUnitalRepresentatives( u ),
+                         x -> ForAny( BlocksOfUnital( u ),
+                                      b -> IsSubset( x.fullpts, b ) ) );
+    polartris := [];
+    for fp in fullpts do
+        thirdblocks := Filtered( BlocksOfUnital( u ),
+                                 b -> IsSubset( fp.fullpts, b ) );
+        for b3 in thirdblocks do
+            Add( polartris, SortedList( [ fp.block1, fp.block2, b3 ] ) );
+        od;
+    od;
+    return Set( polartris );
+end );

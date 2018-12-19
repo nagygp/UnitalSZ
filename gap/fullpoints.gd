@@ -40,3 +40,4 @@ DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #!   are projections from $b_1$ to $b_2$ from a center $P$. In order the 
 #!   perspectivity be well-defined, $P$ must be a full point w.r.t. $b_1, b_2$. 
 DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsList, IsList, IsList ] );
+DeclareAttribute( "AbstractPolarTrianglesOfUnitalRepresentatives", IsAbstractUnitalDesign );
