@@ -148,6 +148,46 @@ function( u )
     return Set( polartris );
 end );
 
+InstallOtherMethod( LatinSquareOfAbstractPolarTriangle, "for an abstract unital and an abstract polar triangle",
+    [ IsAbstractUnitalDesign, IsList ],
+function( u, polartriangle )
+    local n, b1, b2, b3, latinsquare, block, p, permcols, permrows, i, j;
+##  If the unital u has order q then the blocks contain n = q + 1 points
+    n := Order( u ) + 1;
+    b1 := polartriangle[1];
+    b2 := polartriangle[2];
+    b3 := polartriangle[3];
+    
+    if Intersection( b1, b2 ) <> [] or Intersection( b1, b3 ) <> [] or
+       Intersection( b2, b3 ) <> [] then
+        Error( "The blocks in an abstract polar triangle must be pairwise disjoint" );
+    fi;
+
+    latinsquare := List( [ 1..n ], x -> EmptyPlist( n ) );
+
+##  For each pair of points from the blocks b1 and b2 we compute the unique
+##  block containing both points and the (unique) intersection of this block
+##  with b3. Then the (i, j)th element of the latin square is the "position" of
+##  the intersection p in the block b3. 
+    for i in [ 1..n ] do
+        for j in [ 1..n ] do
+            block := First( BlocksOfUnital( u ),
+                            x -> IsSubset( x, [b1[i], b2[j]] ) );
+            p := Intersection( block, b3 );
+            if p = [] then
+                Error( "The given blocks do not form an abstract polar triangle" );
+            else
+                latinsquare[i][j] := Position( b3, p[1] );
+            fi;
+        od;
+    od;
+    permcols := PermutationMat( PermList( latinsquare[1] ), n );
+    latinsquare := latinsquare * permcols;
+    permrows := PermutationMat( PermList( TransposedMat( latinsquare )[1] ), n );
+    latinsquare := TransposedMat( permrows ) * latinsquare;
+    return latinsquare;
+end );
+
 InstallMethod( IsFullPointRegularUnital, "an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )

@@ -43,3 +43,4 @@ DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign,
 DeclareAttribute( "AbstractPolarTrianglesOfUnitalRepresentatives", IsAbstractUnitalDesign );
 DeclareAttribute( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
 DeclareAttribute( "IsStronglyFullPointRegularUnital", IsAbstractUnitalDesign );
+DeclareOperation( "LatinSquareOfAbstractPolarTriangle", [ IsAbstractUnitalDesign, IsList ] );
