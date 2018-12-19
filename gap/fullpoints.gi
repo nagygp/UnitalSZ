@@ -147,3 +147,35 @@ function( u )
     od;
     return Set( polartris );
 end );
+
+InstallMethod( IsFullPointRegularUnital, "an abstract unital",
+    [ IsAbstractUnitalDesign ],
+function( u )
+    local fp, reginfo;
+    fp := Filtered( FullPointsOfUnitalRepresentatives( u ),
+                    r -> Size( Intersection( r.block1, r.block2 ) ) = 0 );
+    return ForAll( fp,
+                   r -> ForAny( BlocksOfUnital( u ),
+                                c -> IsSubset( c, r.fullpts ) and
+                                     Size( Intersection( r.block1, c ) ) = 0 and
+                                     Size( Intersection( r.block1, c ) ) = 0 ) );
+end );
+
+InstallMethod( IsStronglyFullPointRegularUnital, "an abstract unital",
+    [ IsAbstractUnitalDesign ],
+function( u )
+    local fp, persp_group, r;
+    if not IsFullPointRegularUnital( u ) then
+        return false;
+    fi;
+    fp := Filtered( FullPointsOfUnitalRepresentatives( u ),
+                    r -> Size( Intersection( r.block1, r.block2 ) ) = 0 );
+    for r in fp do
+        persp_group := PerspectivityGroupOfUnitalsBlocks( u, r.block1,
+                                                          r.block2, r.fullpts );
+        if not ( IsSemiRegular( persp_group ) and IsCyclic( persp_group ) ) then
+            return false;
+        fi;
+    od;
+    return true;
+end );

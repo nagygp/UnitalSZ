@@ -41,3 +41,5 @@ DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #!   perspectivity be well-defined, $P$ must be a full point w.r.t. $b_1, b_2$. 
 DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsList, IsList, IsList ] );
 DeclareAttribute( "AbstractPolarTrianglesOfUnitalRepresentatives", IsAbstractUnitalDesign );
+DeclareAttribute( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
+DeclareAttribute( "IsStronglyFullPointRegularUnital", IsAbstractUnitalDesign );
