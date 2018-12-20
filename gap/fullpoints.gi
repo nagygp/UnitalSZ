@@ -198,7 +198,7 @@ function( u )
                    r -> ForAny( BlocksOfUnital( u ),
                                 c -> IsSubset( c, r.fullpts ) and
                                      Size( Intersection( r.block1, c ) ) = 0 and
-                                     Size( Intersection( r.block1, c ) ) = 0 ) );
+                                     Size( Intersection( r.block2, c ) ) = 0 ) );
 end );
 
 InstallMethod( IsStronglyFullPointRegularUnital, "an abstract unital",
