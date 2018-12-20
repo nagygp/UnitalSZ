@@ -64,7 +64,7 @@ DeclareOperation( "LatinSquareOfAbstractPolarTriangle", [ IsAbstractUnitalDesign
 #! @Description The unital $U$ is said to be full point regular, if for each
 #! non-intersecting pair of blocks $b_1, b_2$ the triple $(U, b_1, b_2)$ is full
 #! point regular.
-DeclareAttribute( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
+DeclareProperty( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
 #! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
 #! @Arguments u
 #! @Returns The boolean <C>true</C> if the unital <A>u</A> is strongly full point
@@ -72,4 +72,4 @@ DeclareAttribute( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
 #! @Description The unital $U$ is said to be strongly full point regular, if for
 #! each non-intersecting pair of blocks $b_1, b_2$ the triple $(U, b_1, b_2)$ is
 #! full point regular.
-DeclareAttribute( "IsStronglyFullPointRegularUnital", IsAbstractUnitalDesign );
+DeclareProperty( "IsStronglyFullPointRegularUnital", IsAbstractUnitalDesign );
