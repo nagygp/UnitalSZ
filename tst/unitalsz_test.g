@@ -128,7 +128,7 @@ bls := [ [1,2,55,64,65],   [1,3,32,46,63],   [1,4,7,34,45],    [1,5,11,31,44],
 
 u := AbstractUnitalByDesignBlocks( bls );
 apoltrs := AbstractPolarTrianglesOfUnitalRepresentatives( u );
-ls : =List( apoltrs, t -> LatinSquareOfAbstractPolarTriangle( u, t ) );
+ls := List( apoltrs, t -> LatinSquareOfAbstractPolarTriangle( u, t ) );
 List( ls, s -> StructureDescription( Group( List( s, PermList ) ) ) );
 IsFullPointRegularUnital( u );
 IsStronglyFullPointRegularUnital( u );
