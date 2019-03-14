@@ -51,12 +51,12 @@ DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign,
 #! the blocks $b_1,b_2,b_3$ form an abstract polar triangle, then there is an
 #! automorphism $\alpha$ of $U$ such that $b_1^\alpha, b_2^\alpha, b_3^\alpha$ are
 #! in the list. 
-DeclareAttribute( "AbstractPolarTrianglesOfUnitalRepresentatives", IsAbstractUnitalDesign );
+DeclareAttribute( "EmbeddedDual3NetsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
 #! @Arguments u, polartriangle
 #! @Returns A latin square associated to the abstract polar triangle
 #! <A>polartriangle</A> of the unital <A>u</A>.
-DeclareOperation( "LatinSquareOfAbstractPolarTriangle", [ IsAbstractUnitalDesign, IsList ] );
+DeclareOperation( "LatinSquareOfEmbeddedDual3Net", [ IsAbstractUnitalDesign, IsList ] );
 #! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
 #! @Arguments u
 #! @Returns The boolean <C>true</C> if the unital <A>u</A> is full point

@@ -130,37 +130,37 @@ function( u, b1, b2 )
     return PerspectivityGroupOfUnitalsBlocks( u, b1, b2, FullPointsOfUnitalsBlocks( u, ib1, ib2 ) );
 end );
 
-InstallMethod( AbstractPolarTrianglesOfUnitalRepresentatives, "for an abstract unital",
+InstallMethod( EmbeddedDual3NetsOfUnitalRepresentatives, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
-    local fullpts, polartris, thirdblocks, fp, b3;
+    local fullpts, ed3nets, thirdblocks, fp, b3;
     fullpts := Filtered( FullPointsOfUnitalRepresentatives( u ),
                          x -> ForAny( BlocksOfUnital( u ),
                                       b -> IsSubset( x.fullpts, b ) ) );
-    polartris := [];
+    ed3nets := [];
     for fp in fullpts do
         thirdblocks := Filtered( BlocksOfUnital( u ),
                                  b -> IsSubset( fp.fullpts, b ) );
         for b3 in thirdblocks do
-            Add( polartris, SortedList( [ fp.block1, fp.block2, b3 ] ) );
+            Add( ed3nets, SortedList( [ fp.block1, fp.block2, b3 ] ) );
         od;
     od;
-    return Set( polartris );
+    return Set( ed3nets );
 end );
 
-InstallOtherMethod( LatinSquareOfAbstractPolarTriangle, "for an abstract unital and an abstract polar triangle",
+InstallOtherMethod( LatinSquareOfEmbeddedDual3Net, "for an abstract unital and an embedded dual 3-net",
     [ IsAbstractUnitalDesign, IsList ],
-function( u, polartriangle )
+function( u, ed3net )
     local n, b1, b2, b3, latinsquare, block, p, permcols, permrows, i, j;
 ##  If the unital u has order q then the blocks contain n = q + 1 points
     n := Order( u ) + 1;
-    b1 := polartriangle[1];
-    b2 := polartriangle[2];
-    b3 := polartriangle[3];
+    b1 := ed3net[1];
+    b2 := ed3net[2];
+    b3 := ed3net[3];
     
     if Intersection( b1, b2 ) <> [] or Intersection( b1, b3 ) <> [] or
        Intersection( b2, b3 ) <> [] then
-        Error( "The blocks in an abstract polar triangle must be pairwise disjoint" );
+        Error( "The blocks in an embedded dual 3-net must be pairwise disjoint" );
     fi;
 
     latinsquare := List( [ 1..n ], x -> EmptyPlist( n ) );
