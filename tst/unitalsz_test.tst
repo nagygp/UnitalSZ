@@ -167,7 +167,7 @@ gap> bls := [ [1,2,55,64,65],   [1,3,32,46,63],   [1,4,7,34,45],    [1,5,11,31,4
 >          [33,34,44,47,60], [33,37,52,56,65], [39,45,57,60,63], [42,47,52,62,64]];;
 gap> u := AbstractUnitalByDesignBlocks( bls );
 AU_UnitalDesign<4>
-gap> apoltrs := AbstractPolarTrianglesOfUnitalRepresentatives( u );
+gap> ed3nets := EmbeddedDual3NetsOfUnitalRepresentatives( u );
 [ [ [ 1, 2, 55, 64, 65 ], [ 3, 5, 10, 39, 59 ], 
       [ 30, 31, 35, 46, 48 ] ], 
   [ [ 1, 2, 55, 64, 65 ], [ 4, 8, 16, 36, 57 ], 
@@ -206,7 +206,7 @@ gap> apoltrs := AbstractPolarTrianglesOfUnitalRepresentatives( u );
       [ 20, 23, 40, 54, 56 ] ], 
   [ [ 4, 13, 30, 32, 51 ], [ 5, 14, 22, 61, 62 ], 
       [ 12, 27, 37, 53, 60 ] ] ]
-gap> ls := List( apoltrs, t -> LatinSquareOfAbstractPolarTriangle( u, t ) );
+gap> ls := List( ed3nets, t -> LatinSquareOfEmbeddedDual3Net( u, t ) );
 [ [ [ 1, 2, 3, 4, 5 ], [ 2, 3, 1, 5, 4 ], [ 3, 4, 5, 1, 2 ], 
       [ 4, 5, 2, 3, 1 ], [ 5, 1, 4, 2, 3 ] ], 
   [ [ 1, 2, 3, 4, 5 ], [ 2, 4, 1, 5, 3 ], [ 3, 1, 5, 2, 4 ], 

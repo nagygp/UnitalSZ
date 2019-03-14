@@ -127,8 +127,8 @@ bls := [ [1,2,55,64,65],   [1,3,32,46,63],   [1,4,7,34,45],    [1,5,11,31,44],
          [33,34,44,47,60], [33,37,52,56,65], [39,45,57,60,63], [42,47,52,62,64]];;
 
 u := AbstractUnitalByDesignBlocks( bls );
-apoltrs := AbstractPolarTrianglesOfUnitalRepresentatives( u );
-ls := List( apoltrs, t -> LatinSquareOfAbstractPolarTriangle( u, t ) );
+ed3nets := EmbeddedDual3NetsOfUnitalRepresentatives( u );
+ls := List( ed3nets, t -> LatinSquareOfEmbeddedDual3Net( u, t ) );
 List( ls, s -> StructureDescription( Group( List( s, PermList ) ) ) );
 IsFullPointRegularUnital( u );
 IsStronglyFullPointRegularUnital( u );

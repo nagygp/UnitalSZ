@@ -7,7 +7,7 @@
 #! @Chapter Full points and perspectivities
 #! @Section Full points of unitals
 #! @Section Group of perspectivities
-#! @Section Abstract polar triangles and full point regularity
+#! @Section Embedded dual 3-nets and full point regularity
 
 
 
@@ -42,22 +42,21 @@ DeclareAttribute( "FullPointsOfUnitalRepresentatives", IsAbstractUnitalDesign );
 #!   are projections from $b_1$ to $b_2$ from a center $P$. In order the 
 #!   perspectivity be well-defined, $P$ must be a full point w.r.t. $b_1, b_2$. 
 DeclareOperation( "PerspectivityGroupOfUnitalsBlocks", [ IsAbstractUnitalDesign, IsList, IsList, IsList ] );
-#! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
+#! @ChapterInfo Full points and perspectivities, Embedded dual 3-nets and full point regularity
 #! @Arguments u
 #! @Returns A list of lists each having the form <C>[ b1, b2, b3 ]</C>, where
-#! <C>b1, b2, b3</C> are three blocks of the unital <A>u</A> forming an abstract
-#! polar triangle. The returned list contains all possible abstract polar
-#! triangles of <A>u</A> up to the automorphism group of <A>u</A>.  That is, if
-#! the blocks $b_1,b_2,b_3$ form an abstract polar triangle, then there is an
-#! automorphism $\alpha$ of $U$ such that $b_1^\alpha, b_2^\alpha, b_3^\alpha$ are
-#! in the list. 
-DeclareAttribute( "AbstractPolarTrianglesOfUnitalRepresentatives", IsAbstractUnitalDesign );
-#! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
-#! @Arguments u, polartriangle
-#! @Returns A latin square associated to the abstract polar triangle
-#! <A>polartriangle</A> of the unital <A>u</A>.
-DeclareOperation( "LatinSquareOfAbstractPolarTriangle", [ IsAbstractUnitalDesign, IsList ] );
-#! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
+#! <C>b1, b2, b3</C> are three blocks of the unital <A>u</A> forming an embedded
+#! dual 3-net. The returned list contains all possible embedded dual 3-nets of
+#! <A>u</A> up to the automorphism group of <A>u</A>.  That is, if the blocks
+#! $b_1,b_2,b_3$ form an embedded dual 3-net, then there is an automorphism
+#! $\alpha$ of $U$ such that $b_1^\alpha, b_2^\alpha, b_3^\alpha$ are in the list. 
+DeclareAttribute( "EmbeddedDual3NetsOfUnitalRepresentatives", IsAbstractUnitalDesign );
+#! @ChapterInfo Full points and perspectivities, Embedded dual 3-nets and full point regularity
+#! @Arguments u, ed3net
+#! @Returns A latin square associated to the embedded dual 3-net <A>ed3net</A> of
+#! the unital <A>u</A>.
+DeclareOperation( "LatinSquareOfEmbeddedDual3Net", [ IsAbstractUnitalDesign, IsList ] );
+#! @ChapterInfo Full points and perspectivities, Embedded dual 3-nets and full point regularity
 #! @Arguments u
 #! @Returns The boolean <C>true</C> if the unital <A>u</A> is full point
 #! regular, <C>false</C> otherwise.
@@ -65,7 +64,7 @@ DeclareOperation( "LatinSquareOfAbstractPolarTriangle", [ IsAbstractUnitalDesign
 #! non-intersecting pair of blocks $b_1, b_2$ the triple $(U, b_1, b_2)$ is full
 #! point regular.
 DeclareProperty( "IsFullPointRegularUnital", IsAbstractUnitalDesign );
-#! @ChapterInfo Full points and perspectivities, Abstract polar triangles and full point regularity
+#! @ChapterInfo Full points and perspectivities, Embedded dual 3-nets and full point regularity
 #! @Arguments u
 #! @Returns The boolean <C>true</C> if the unital <A>u</A> is strongly full point
 #! regular, <C>false</C> otherwise.
