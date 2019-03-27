@@ -24,7 +24,13 @@ gap makedoc.g
 # Unzipping the data
 gunzip data/*.gz
 # Creating the Windows release of UnitalSZ
-zip -r UnitalSZ-$1-win.zip ./* -x winrelease.sh
+cd ..
+mkdir UnitalSZ-$1
+cp -r UnitalSZ/* UnitalSZ-$1/
+zip -r UnitalSZ-$1-win.zip UnitalSZ-$1 -x UnitalSZ-$1/winrelease.sh
+rm -rf UnitalSZ-$1
+mv UnitalSZ-$1-win.zip UnitalSZ/
+cd -
 # Gzipping the data
 gzip data/*.txt
 # Revert unzipping to HEAD
