@@ -12,7 +12,12 @@ function( nr, q, filename )
     nolines := nr * v;
     filename := Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
                         filename );
-    myfile := IO_FilteredFile( [ [ "gzip", [ "-dc" ] ] ], filename, "r" );
+    if filename <> fail then
+        myfile := IO_FilteredFile( [ [ "gzip", [ "-dc" ] ] ], filename, "r" );
+    else
+        filename := ReplacedString( filename, ".txt.gz", ".txt" );
+        myfile := IO_File( filename, "r" );
+    fi;
     myincmatlist := [ ];
     myincmat := [ ];
     for i in [ 1..nolines ] do
