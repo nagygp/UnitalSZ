@@ -10,9 +10,17 @@ function( nr, q, filename )
     local v, nolines, myfile, myincmatlist, myincmat, i, currentline;
     v := q^3 + 1;
     nolines := nr * v;
-    filename := Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
-                        filename );
-    myfile := IO_FilteredFile( [ [ "gzip", [ "-dc" ] ] ], filename, "r" );
+    if Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
+                 filename ) <> fail then
+        filename := Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
+                              filename );
+        myfile := IO_FilteredFile( [ [ "gzip", [ "-dc" ] ] ], filename, "r" );
+    else
+        filename := ReplacedString( filename, ".txt.gz", ".txt" );
+        filename := Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
+                              filename );
+        myfile := IO_File( filename, "r" );
+    fi;
     myincmatlist := [ ];
     myincmat := [ ];
     for i in [ 1..nolines ] do
