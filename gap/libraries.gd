@@ -52,6 +52,15 @@ DeclareGlobalFunction( "KNPAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n
 #! @Returns
+#!   The <A>n</A>th (abstract) unital of order 3, constructed by paramodification from
+#!   the BBT and Krcadinac libraries.
+#! @Description
+#!   [...]
+DeclareGlobalFunction( "P3MAbstractUnital" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Libraries
+#! @Arguments n
+#! @Returns
 #!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
 #! @Description
 #!   In the paper <Cite Key="Krc2006"/> by Krčadinac, 4466

@@ -56,6 +56,13 @@ LIBDATA@ := rec(
         owner := "Krcadinac",
         callby := "KrcadinacAbstractUnital(n)",
         filename := "krcadinac_o3_incmats.txt.gz"
+    ),
+    P3M := rec(
+        order := 3,
+        nr := 173,
+        owner := "Mezőfi-Nagy",
+        callby := "P3MAbstractUnital(n)",
+        filename := "p3m-n173.txt.gz"
     )
 );
 ############################################
@@ -125,4 +132,10 @@ function( n )
     return ReadAbstractUnitalFromLibraryNC@( "Krcadinac", n );
 end );
 
-
+InstallGlobalFunction( P3MAbstractUnital,
+function( n )
+    if not ( IsPosInt( n ) and n <= 173 ) then
+        Error( "the P3M library knows 173 unitals" );
+    fi;
+    return ReadAbstractUnitalFromLibraryNC@( "P3M", n );
+end );
