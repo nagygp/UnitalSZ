@@ -82,51 +82,47 @@ function( name )
     fi;
 end );
 
+InstallGlobalFunction( ReadAbstractUnitalFromLibraryNC@,
+function( name, n )
+    local u, uname;
+    if not IsBound( LIBDATA@.(name).matrices ) then
+        LIBDATA@.(name).matrices := 
+            ReadLibraryDataFromFiles@( LIBDATA@.(name)  );
+    fi;
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
+    uname := ReplacedString( 
+        LIBDATA@.(name).callby, 
+        "(n)",
+        Concatenation( "(", String( n ), ")" )
+    );
+    SetName( u, uname );
+    return u;
+end );
+
 ############################################
 
 InstallGlobalFunction( BBTAbstractUnital,
 function( n )
-    local u;
     if not ( IsPosInt( n ) and n <= 909 ) then
         Error( "the BBT library knows 909 unitals" );
     fi;
-    if not IsBound( LIBDATA@.BBT.matrices ) then
-        LIBDATA@.BBT.matrices := 
-            ReadLibraryDataFromFiles@( LIBDATA@.BBT  );
-    fi;
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.BBT.matrices[ n ] ) );
-    SetName( u, Concatenation( "BBTAbstractUnital(", String( n ), ")" ) );
-    return u;
+    return ReadAbstractUnitalFromLibraryNC@( "BBT", n );
 end );
 
 InstallGlobalFunction( KNPAbstractUnital,
 function( n )
-    local u;
     if not ( IsPosInt( n ) and n <= 1777 ) then
         Error( "the KNP library knows 1777 unitals" );
     fi;
-    if not IsBound( LIBDATA@.KNP.matrices ) then
-        LIBDATA@.KNP.matrices := 
-            ReadLibraryDataFromFiles@( LIBDATA@.KNP );
-    fi;
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.KNP.matrices[ n ] ) );
-    SetName( u, Concatenation( "KNPAbstractUnital(", String( n ), ")" ) );
-    return u;
+    return ReadAbstractUnitalFromLibraryNC@( "KNP", n );
 end );
 
 InstallGlobalFunction( KrcadinacAbstractUnital,
 function( n )
-    local u;
     if not ( IsPosInt( n ) and n <= 4466 ) then
         Error( "the Krcadinac library knows 4466 unitals" );
     fi;
-    if not IsBound( LIBDATA@.Krcadinac.matrices ) then
-        LIBDATA@.Krcadinac.matrices := 
-            ReadLibraryDataFromFiles@( LIBDATA@.Krcadinac );
-    fi;
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.Krcadinac.matrices[ n ] ) );
-    SetName( u, Concatenation( "KrcadinacAbstractUnital(", String( n ), ")" ) );
-    return u;
+    return ReadAbstractUnitalFromLibraryNC@( "Krcadinac", n );
 end );
 
 

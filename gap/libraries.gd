@@ -6,16 +6,23 @@
 #
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
-#! @Arguments nr, q, filename
+#! @Arguments data
 #! @Returns
 #!  The list of boolean incidence matrices of size $(q^3 + 1) \times q^2(q^2 -
 #!  q + 1)$ read from <A>filename</A>.
 #! @Description
-#!  The file <A>filename</A> must be gzipped and must contain <A>nr</A>
+#!  The argument <A>data</A> must be a record with fields <C>filename, order, nr</C>. 
+#!  The file <A>data.filename</A> must be gzipped and must contain <A>data.nr</A>
 #!  matrices of dimension mentioned above. The matrices must be 0-1 matrices
 #!  without any whitespace between the entries in one row and there must not be
 #!  any empty lines between matrices.
 DeclareGlobalFunction( "ReadLibraryDataFromFiles@" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
+#! @Arguments name, n
+#! @Returns
+#!  The <A>n</A>th abstract unital from the library <A>name</A>. Non-checking version.
+DeclareGlobalFunction( "ReadAbstractUnitalFromLibraryNC@" );
 
 #####################################################
 #####################################################
