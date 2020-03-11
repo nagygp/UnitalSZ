@@ -67,6 +67,13 @@ LIBDATA@ := rec(
         callby := "P3MAbstractUnital(n)",
         filename := "p3m-n173.txt.gz"
     ),
+    P4M := rec(
+        order := 4,
+        nr := 25641,
+        owner := "Mezőfi-Nagy",
+        callby := "P4MAbstractUnital(n)",
+        filename := "p4m-aaa-bbb.txt.gz"
+    ),
     SL28inv := rec( 
         order := 8,
         nr := 6,
@@ -105,6 +112,37 @@ function( name, n )
     if not IsBound( LIBDATA@.(name).matrices ) then
         LIBDATA@.(name).matrices := 
             ReadLibraryDataFromFiles@( LIBDATA@.(name)  );
+    fi;
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
+    uname := ReplacedString( 
+        LIBDATA@.(name).callby, 
+        "(n)",
+        Concatenation( "(", String( n ), ")" )
+    );
+    SetName( u, uname );
+    return u;
+end );
+
+InstallGlobalFunction( ReadAbstractUnitalFromLibraryByChunksNC@,
+function( name, n, chunksize )
+    local u, uname, n0, fname, r, i, mats;
+    if not IsBound( LIBDATA@.(name).matrices ) then
+        LIBDATA@.(name).matrices := [];
+    fi;
+    if not IsBound( LIBDATA@.(name).matrices[n]) then
+        n0 := chunksize * Int( (n - 1) / chunksize );
+        fname := LIBDATA@.(name).filename;
+        fname := ReplacedString( fname, "aaa", String( n0 + 1 ) );
+        fname := ReplacedString( fname, "bbb", String( n0 + chunksize ) );
+        r := rec( 
+            nr := chunksize,
+            order := LIBDATA@.(name).order,
+            filename := fname
+        );
+        mats := ReadLibraryDataFromFiles@( r );
+        for i in [1..chunksize] do
+            LIBDATA@.(name).matrices[ n0 + i ] := mats[ i ];
+        od;
     fi;
     u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
     uname := ReplacedString( 
@@ -156,4 +194,12 @@ function( n )
         Error( "the SL28inv library knows 6 unitals" );
     fi;
     return ReadAbstractUnitalFromLibraryNC@( "SL28inv", n );
+end );
+
+InstallGlobalFunction( P4MAbstractUnital,
+function( n )
+    if not ( IsPosInt( n ) and n <= 25641 ) then
+        Error( "the P4M library knows 25641 unitals" );
+    fi;
+    return ReadAbstractUnitalFromLibraryByChunksNC@( "P4M", n, 1000 );
 end );

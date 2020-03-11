@@ -17,9 +17,11 @@
 #!   * __Class BBT:__ 909 unitals of order 3 by Betten, Betten and Tonchev <Cite Key="BBT2003"/>.
 #!   * __Class Krcadinac:__ 4466 unitals of order 3 with nontrivial automorphism groups by Krčadinac 
 #!   <Cite Key="Krc2006"/>. 722 of the BBT unitals appear in this class.
+#!   * __Class KNP:__ 1777 unitals of order 4 by Krčadinac, Nakić and Pavčević <Cite Key="KNP2011"/>.
 #!   * __Class P3M:__ 173 unitals of order 3, constructed by paramodification from
 #!   the BBT and Krcadinac libraries <Cite Key="MN2020"/>.
-#!   * __Class KNP:__ 1777 unitals of order 4 by Krčadinac, Nakić and Pavčević <Cite Key="KNP2011"/>.
+#!   * __Class P4M:__ 25641 unitals of order 4, constructed by paramodification from
+#!   the KNP libraries <Cite Key="MN2020"/>.
 #!   * __Class SL28inv:__ 6 $SL(2,8)$-invariant unitals of order 8 with many translation centers, 
 #!   constructed by Möhler <Cite Key="V2020"/> using the Grundhöfer-Stroppel-Van Maldeghem method <Cite Key="MR3533345"/>.
 #!   

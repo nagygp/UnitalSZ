@@ -39,6 +39,7 @@ DeclareGlobalFunction( "ReadLibraryDataFromFiles@" );
 #! @Returns
 #!  The <A>n</A>th abstract unital from the library <A>name</A>. Non-checking version.
 DeclareGlobalFunction( "ReadAbstractUnitalFromLibraryNC@" );
+DeclareGlobalFunction( "ReadAbstractUnitalFromLibraryByChunksNC@" );
 
 #####################################################
 #####################################################
@@ -60,6 +61,12 @@ DeclareGlobalFunction( "KNPAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n
 #! @Returns
+#!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
+DeclareGlobalFunction( "KrcadinacAbstractUnital" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Libraries
+#! @Arguments n
+#! @Returns
 #!   The <A>n</A>th (abstract) unital of order 3, constructed by paramodification 
 #!   from the BBT and Krcadinac libraries.
 DeclareGlobalFunction( "P3MAbstractUnital" );
@@ -67,8 +74,9 @@ DeclareGlobalFunction( "P3MAbstractUnital" );
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n
 #! @Returns
-#!   The <A>n</A>th (abstract) unital of order 3 of the unitals by Krčadinac.
-DeclareGlobalFunction( "KrcadinacAbstractUnital" );
+#!   The <A>n</A>th (abstract) unital of order 4, constructed by paramodification 
+#!   from the KNP libraries.
+DeclareGlobalFunction( "P4MAbstractUnital" );
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments n
