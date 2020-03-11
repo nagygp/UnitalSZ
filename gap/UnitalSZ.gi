@@ -126,7 +126,7 @@ end );
 InstallMethod( ViewObj, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
-    Print( "AU_UnitalDesign<", Order( u ), ">" );
+    Print( "AbstractUnital<", Order( u ), ">" );
 end );
 
 InstallMethod( Display, "for an abstract unital",
@@ -138,7 +138,7 @@ end );
 InstallMethod( PrintObj, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
-    Print( "AU_UnitalDesign<", Order( u ), ">" );
+    Print( "AbstractUnital<", Order( u ), ">" );
 end );
 
 InstallMethod( \=, "for two abstract unitals",

@@ -1,5 +1,5 @@
 #
-# AU libraries by Betten-Betten-Tonchev (order 3) and Krcadinac-Nakic-Pavcevic
+# Abstract unital libraries by Betten-Betten-Tonchev (order 3) and Krcadinac-Nakic-Pavcevic
 # (order 4) and Krcadinac (order 3)
 #
 # Implementations
