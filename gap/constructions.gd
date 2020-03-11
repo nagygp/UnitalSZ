@@ -13,7 +13,17 @@
 #!   The cyclic unital of order six is due to Bagchi and Bagchi <Cite Key="BagchiBagchi1989"/>.
 #!   
 #! @Section Libraries
-#! @Section Global functions for internal usage
+#!   The package contains the following libraries of abstract unitals:
+#!   * __Class BBT:__ 909 unitals of order 3 by Betten, Betten and Tonchev <Cite Key="BBT2003"/>.
+#!   * __Class Krcadinac:__ 4466 unitals of order 3 with nontrivial automorphism groups by Krčadinac 
+#!   <Cite Key="Krc2006"/>. 722 of the BBT unitals appear in this class.
+#!   * __Class P3M:__ 173 unitals of order 3, constructed by paramodification from
+#!   the BBT and Krcadinac libraries <Cite Key="MN2020"/>.
+#!   * __Class KNP:__ 1777 unitals of order 4 by Krčadinac, Nakić and Pavčević <Cite Key="KNP2011"/>.
+#!   * __Class SL28inv:__ 6 $SL(2,8)$-invariant unitals of order 8 with many translation centers, 
+#!   constructed by Möhler <Cite Key="V2020"/> using the Grundhöfer-Stroppel-Van Maldeghem method <Cite Key="MR3533345"/>.
+#!   
+#! @Section Global functions for libraries
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Classes of abstract unitals
 #! @Arguments q

@@ -126,7 +126,7 @@ available** : they are results of different papers (see the section
 the following, which prints some essential informations about these libraries:
 
 ```
-gap> AbstractUnitalLibraryInfo();
+gap> DisplayUnitalLibraryInfo();
 ```
 
 Full points and perspectivity groups

@@ -77,7 +77,7 @@ LIBDATA@ := rec(
 );
 ############################################
 
-InstallGlobalFunction( AbstractUnitalLibraryInfo,
+InstallGlobalFunction( DisplayUnitalLibraryInfo,
 function()
     local n;
     Print( "# The UnitalSZ package has the following libraries of abstract unitals:\n" );

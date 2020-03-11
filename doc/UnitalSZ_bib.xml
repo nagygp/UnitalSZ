@@ -132,4 +132,43 @@
   <url>https://doi.org/10.1016/0097-3165(89)90061-7</url>
   <other type="fjournal">Journal of Combinatorial Theory. Series A</other>
 </article></entry>
+<entry id="MR3533345"><article>
+  <author>
+    <name><first>Theo</first><last>Grundhöfer</last></name>
+    <name><first>Markus J.</first><last>Stroppel</last></name>
+    <name><first>Hendrik</first><last>Van Maldeghem</last></name>
+  </author>  
+  <title>A non-classical unital of order four with many translations</title>
+  <journal>Discrete Math.</journal>
+  <year>2016</year>
+  <volume>339</volume>
+  <number>12</number>
+  <pages>2987--2993</pages>
+  <issn>0012-365X</issn>
+  <mrnumber>3533345</mrnumber>
+  <mrclass>51E20 (05B25 05B30 20B25)</mrclass>
+  <mrreviewer>Francesco Pavese</mrreviewer>
+  <url>https://doi.org/10.1016/j.disc.2016.06.008</url>
+  <other type="doi">10.1016/j.disc.2016.06.008</other>
+  <other type="fjournal">Discrete Mathematics</other>
+</article></entry>
+<entry id="V2020"><misc>
+  <author>
+    <name><first>Verena</first><last>Möhler</last></name>
+  </author>  
+  <title>Personal communication</title>
+  <year>2020</year>
+  <howpublished>unpublished</howpublished>
+  <other type="address">Karlsruhe</other>
+  <other type="date">2020-02-13</other>
+</misc></entry>
+<entry id="MN2020"><unpublished>
+  <author>
+    <name><first>Dávid</first><last>Mezőfi</last></name>
+    <name><first>Gábor Péter</first><last>Nagy</last></name>
+  </author>  
+  <title>New 2-designs from old ones by paramodifications</title>
+  <year>2020</year>
+  <howpublished>manuscript</howpublished>
+</unpublished></entry>
 </file>
