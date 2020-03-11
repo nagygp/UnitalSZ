@@ -17,13 +17,6 @@
 #!  any empty lines between matrices.
 DeclareGlobalFunction( "ReadLibraryDataFromFiles@" );
 
-#! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
-#! @Arguments 
-#! @Description
-#!   Reads in the incidence matrices from the libraries of unitals shipped with
-#!   the package.
-DeclareGlobalFunction( "InitLibraryData@" );
-
 #####################################################
 #####################################################
 
