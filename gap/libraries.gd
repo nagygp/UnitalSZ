@@ -66,3 +66,9 @@ DeclareGlobalFunction( "KrcadinacAbstractUnital" );
 #!   The function prints the information about the available libraries of
 #!   unitals.
 DeclareGlobalFunction( "AbstractUnitalLibraryInfo" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Libraries
+#! @Arguments name
+#! @Returns
+#!   The number of abstract unitals in the library <A>name</A>. 
+DeclareGlobalFunction( "NumberOfAbstractUnitalsInLibrary" );

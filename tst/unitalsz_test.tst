@@ -12,7 +12,7 @@ HermitianAbstractUnital(4)
 gap> KnownAttributesOfObject( her );
 [ "Name", "Order" ]
 gap> 
-gap> knps := List( [ 1..NrKNPUnitals_AU ], i -> KNPAbstractUnital( i ) );;
+gap> knps := List( [ 1..NumberOfAbstractUnitalsInLibrary("KNP") ], i -> KNPAbstractUnital( i ) );;
 gap> knps[ 4 ];
 KNPAbstractUnital(4)
 gap> List( knps, AutomorphismGroup );;

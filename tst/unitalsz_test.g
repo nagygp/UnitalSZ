@@ -24,7 +24,7 @@ LoadPackage("unitalsz", false);
 her := HermitianAbstractUnital( 4 );
 KnownAttributesOfObject( her );
 
-knps := List( [ 1..NrKNPUnitals_AU ], i -> KNPAbstractUnital( i ) );;
+knps := List( [ 1..NumberOfAbstractUnitalsInLibrary("KNP") ], i -> KNPAbstractUnital( i ) );;
 knps[ 4 ];
 List( knps, AutomorphismGroup );;
 Collected( List( knps, x -> Size( AutomorphismGroup( x ) ) ) );

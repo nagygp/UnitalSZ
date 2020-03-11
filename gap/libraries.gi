@@ -28,38 +28,76 @@ function( nr, q, filename )
     return myincmatlist;
 end );
 
-BindGlobal( "LIBDATA_BBT_AU", fail );
-BindGlobal( "LIBDATA_KNP_AU", fail );
-BindGlobal( "LIBDATA_Krcadinac_AU", fail );
+############################################
+# Central source for library data
+# Start here to add new libraries
+LIBDATA@ := rec(
+    BBT := rec( 
+        order := 3,
+        nr := 909,
+        filename := "betten_incmats.txt.gz"
+    ),
+    KNP := rec( 
+        order := 4,
+        nr := 1777,
+        filename := "krcadinac_incmats.txt.gz"
+    ),
+    Krcadinac := rec( 
+        order := 3,
+        nr := 4466,
+        filename := "krcadinac_o3_incmats.txt.gz"
+    )
+);
+############################################
 
-InstallGlobalFunction( InitLibraryData@,
+InstallGlobalFunction( AbstractUnitalLibraryInfo,
 function()
-    if LIBDATA_BBT_AU = fail then
-        MakeReadWriteGlobal( "LIBDATA_BBT_AU" );
-        UnbindGlobal( "LIBDATA_BBT_AU" );
-        BindGlobal( "LIBDATA_BBT_AU",
-                    ReadLibraryDataFromFiles@( 909, 3,
-                                                 "betten_incmats.txt.gz" ) );
-    fi;
-    if LIBDATA_KNP_AU = fail then
-        MakeReadWriteGlobal( "LIBDATA_KNP_AU" );
-        UnbindGlobal( "LIBDATA_KNP_AU" );
-        BindGlobal( "LIBDATA_KNP_AU",
-                    ReadLibraryDataFromFiles@( 1777, 4,
-                                                 "krcadinac_incmats.txt.gz" ) );
-    fi;
-    if LIBDATA_Krcadinac_AU = fail then
-        MakeReadWriteGlobal( "LIBDATA_Krcadinac_AU" );
-        UnbindGlobal( "LIBDATA_Krcadinac_AU" );
-        BindGlobal( "LIBDATA_Krcadinac_AU",
-                    ReadLibraryDataFromFiles@( 4466, 3,
-                                                 "krcadinac_o3_incmats.txt.gz" ) );
+    Print( "# The UnitalSZ package has the following libraries of abstract unitals:\n" );
+    Print( "#   909 unitals of order 3 by Betten-Betten-Tonchev: <BBTAbstractUnital(n)>\n" );
+    Print( "#  1777 unitals of order 4 by Krcadinac-Nakic-Pavcevic: <KNPAbstractUnital(n)>\n" );
+    Print( "#  4466 unitals of order 3 by Krcadinac: <KrcadinacAbstractUnital(n)>\n" );
+end );
+
+InstallGlobalFunction( NumberOfAbstractUnitalsInLibrary,
+function( name )
+    if IsBound( LIBDATA@.(name) ) then
+        return LIBDATA@.(name).nr;
+    else
+        Error( "no abstract unital library with this name" );
     fi;
 end );
 
-BindGlobal( "NrBBTUnitals_AU", 909 );
-BindGlobal( "NrKNPUnitals_AU", 1777 );
-BindGlobal( "NrKrcadinacUnitals_AU", 4466 );
+############################################
+
+InstallGlobalFunction( InitLibraryData@,
+function()
+    if not IsBound( LIBDATA@.BBT.matrices ) then
+        LIBDATA@.BBT.matrices := 
+            ReadLibraryDataFromFiles@( 
+                909, 
+                3,
+                "betten_incmats.txt.gz"
+            );
+    fi;
+    if not IsBound( LIBDATA@.KNP.matrices ) then
+        LIBDATA@.KNP.matrices := 
+            ReadLibraryDataFromFiles@( 
+                1777, 
+                4,
+                "krcadinac_incmats.txt.gz" 
+            );
+    fi;
+    if not IsBound( LIBDATA@.Krcadinac.matrices ) then
+        LIBDATA@.Krcadinac.matrices := 
+            ReadLibraryDataFromFiles@( 
+                4466, 
+                3,
+                "krcadinac_o3_incmats.txt.gz" 
+            );
+    fi;
+end );
+
+############################################
 
 InstallGlobalFunction( BBTAbstractUnital,
 function( n )
@@ -68,7 +106,7 @@ function( n )
         Error( "the BBT library knows 909 unitals" );
     fi;
     InitLibraryData@();
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_BBT_AU[ n ] ) );
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.BBT.matrices[ n ] ) );
     SetName( u, Concatenation( "BBTAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
@@ -80,7 +118,7 @@ function( n )
         Error( "the KNP library knows 1777 unitals" );
     fi;
     InitLibraryData@();
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_KNP_AU[ n ] ) );
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.KNP.matrices[ n ] ) );
     SetName( u, Concatenation( "KNPAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
@@ -92,15 +130,9 @@ function( n )
         Error( "the Krcadinac library knows 4466 unitals" );
     fi;
     InitLibraryData@();
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_Krcadinac_AU[ n ] ) );
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.Krcadinac.matrices[ n ] ) );
     SetName( u, Concatenation( "KrcadinacAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
 
-InstallGlobalFunction( AbstractUnitalLibraryInfo,
-function()
-    Print( "# The UnitalSZ package has the following libraries of abstract unitals:\n" );
-    Print( "#   909 unitals of order 3 by Betten-Betten-Tonchev: <BBTAbstractUnital(n)>\n" );
-    Print( "#  1777 unitals of order 4 by Krcadinac-Nakic-Pavcevic: <KNPAbstractUnital(n)>\n" );
-    Print( "#  4466 unitals of order 3 by Krcadinac: <KrcadinacAbstractUnital(n)>\n" );
-end );
+
