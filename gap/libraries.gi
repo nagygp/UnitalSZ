@@ -16,7 +16,10 @@ function( data )
     nolines := nr * v;
     filename := Filename( DirectoriesPackageLibrary( "UnitalSZ", "data" ),
                         filename );
-    myfile := IO_FilteredFile( [ [ "gzip", [ "-dc" ] ] ], filename, "r" );
+    myfile := IO_CompressedFile( filename, "r" );
+    # HINT FOR GAP 4.11.0 ON WINDOWS:
+    # You must add the path to gzip in the system environment variables
+    # dialog box.
     myincmatlist := [ ];
     myincmat := [ ];
     for i in [ 1..nolines ] do
@@ -63,6 +66,13 @@ LIBDATA@ := rec(
         owner := "Mezőfi-Nagy",
         callby := "P3MAbstractUnital(n)",
         filename := "p3m-n173.txt.gz"
+    ),
+    SL28inv := rec( 
+        order := 8,
+        nr := 6,
+        owner := "Möhler",
+        callby := "SL28InvariantAbstractUnital(n)",
+        filename := "vm_sl28.txt.gz"
     )
 );
 ############################################
@@ -138,4 +148,12 @@ function( n )
         Error( "the P3M library knows 173 unitals" );
     fi;
     return ReadAbstractUnitalFromLibraryNC@( "P3M", n );
+end );
+
+InstallGlobalFunction( SL28InvariantAbstractUnital,
+function( n )
+    if not ( IsPosInt( n ) and n <= 6 ) then
+        Error( "the SL28inv library knows 6 unitals" );
+    fi;
+    return ReadAbstractUnitalFromLibraryNC@( "SL28inv", n );
 end );

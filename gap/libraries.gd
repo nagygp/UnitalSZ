@@ -70,6 +70,15 @@ DeclareGlobalFunction( "P3MAbstractUnital" );
 DeclareGlobalFunction( "KrcadinacAbstractUnital" );
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Libraries
+#! @Arguments n
+#! @Returns
+#!   The <A>n</A>th (abstract) $SL(2,8)$-invariant unital of order 8, constructed 
+#!   by the Grundhöfer-Stroppel-Van Maldeghem method. 
+#! @Description
+#!   These unitals may have many translation centers.
+DeclareGlobalFunction( "SL28InvariantAbstractUnital" );
+
+#! @ChapterInfo Libraries and classes of abstract unitals, Libraries
 #! @Arguments 
 #! @Description
 #!   The function prints the information about the available libraries of

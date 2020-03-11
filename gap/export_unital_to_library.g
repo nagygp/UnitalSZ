@@ -1,4 +1,9 @@
 ###############################################################################
+BmatrixToZeroOneMatrix := function( bmat );
+  return List( bmat,
+               row -> List( row, function( x ) if x then return 1; else return 0; fi; end ) );
+end;
+###############################################################################
 ExportUnitals := function( unitals, filename )
   local file, incmat, u, line;
   file := IO_CompressedFile( filename, "w" );
