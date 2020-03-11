@@ -215,7 +215,7 @@ function( n )
         od;
         BB := Union( List( B, x -> Orbit( Group( perm ), x, OnSets ) ) );
         # Check for the unital property
-        if Length( BB ) = ( p - 1 )^2 * q and AU_IsUnitalBlockDesign( BB ) then
+        if Length( BB ) = ( p - 1 )^2 * q and IsUnitalBlockDesign@( BB ) then
             BB := AbstractUnitalByDesignBlocks( BB );
             SetName( BB, Concatenation( "BagchiBagchiCyclicUnital(",
                                         String( n ), ")" ) );

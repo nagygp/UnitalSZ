@@ -5,7 +5,7 @@
 # Implementations
 #
 
-InstallGlobalFunction( AU_ReadLibraryDataFromFiles,
+InstallGlobalFunction( ReadLibraryDataFromFiles@,
 function( nr, q, filename )
     local v, nolines, myfile, myincmatlist, myincmat, i, currentline;
     v := q^3 + 1;
@@ -28,38 +28,38 @@ function( nr, q, filename )
     return myincmatlist;
 end );
 
-BindGlobal( "AU_LIBDATA_BBT", fail );
-BindGlobal( "AU_LIBDATA_KNP", fail );
-BindGlobal( "AU_LIBDATA_Krcadinac", fail );
+BindGlobal( "LIBDATA_BBT_AU", fail );
+BindGlobal( "LIBDATA_KNP_AU", fail );
+BindGlobal( "LIBDATA_Krcadinac_AU", fail );
 
-InstallGlobalFunction( AU_InitLibraryData,
+InstallGlobalFunction( InitLibraryData@,
 function()
-    if AU_LIBDATA_BBT = fail then
-        MakeReadWriteGlobal( "AU_LIBDATA_BBT" );
-        UnbindGlobal( "AU_LIBDATA_BBT" );
-        BindGlobal( "AU_LIBDATA_BBT",
-                    AU_ReadLibraryDataFromFiles( 909, 3,
+    if LIBDATA_BBT_AU = fail then
+        MakeReadWriteGlobal( "LIBDATA_BBT_AU" );
+        UnbindGlobal( "LIBDATA_BBT_AU" );
+        BindGlobal( "LIBDATA_BBT_AU",
+                    ReadLibraryDataFromFiles@( 909, 3,
                                                  "betten_incmats.txt.gz" ) );
     fi;
-    if AU_LIBDATA_KNP = fail then
-        MakeReadWriteGlobal( "AU_LIBDATA_KNP" );
-        UnbindGlobal( "AU_LIBDATA_KNP" );
-        BindGlobal( "AU_LIBDATA_KNP",
-                    AU_ReadLibraryDataFromFiles( 1777, 4,
+    if LIBDATA_KNP_AU = fail then
+        MakeReadWriteGlobal( "LIBDATA_KNP_AU" );
+        UnbindGlobal( "LIBDATA_KNP_AU" );
+        BindGlobal( "LIBDATA_KNP_AU",
+                    ReadLibraryDataFromFiles@( 1777, 4,
                                                  "krcadinac_incmats.txt.gz" ) );
     fi;
-    if AU_LIBDATA_Krcadinac = fail then
-        MakeReadWriteGlobal( "AU_LIBDATA_Krcadinac" );
-        UnbindGlobal( "AU_LIBDATA_Krcadinac" );
-        BindGlobal( "AU_LIBDATA_Krcadinac",
-                    AU_ReadLibraryDataFromFiles( 4466, 3,
+    if LIBDATA_Krcadinac_AU = fail then
+        MakeReadWriteGlobal( "LIBDATA_Krcadinac_AU" );
+        UnbindGlobal( "LIBDATA_Krcadinac_AU" );
+        BindGlobal( "LIBDATA_Krcadinac_AU",
+                    ReadLibraryDataFromFiles@( 4466, 3,
                                                  "krcadinac_o3_incmats.txt.gz" ) );
     fi;
 end );
 
-BindGlobal( "AU_NrBBTUnitals", 909 );
-BindGlobal( "AU_NrKNPUnitals", 1777 );
-BindGlobal( "AU_NrKrcadinacUnitals", 4466 );
+BindGlobal( "NrBBTUnitals_AU", 909 );
+BindGlobal( "NrKNPUnitals_AU", 1777 );
+BindGlobal( "NrKrcadinacUnitals_AU", 4466 );
 
 InstallGlobalFunction( BBTAbstractUnital,
 function( n )
@@ -67,8 +67,8 @@ function( n )
     if not ( IsPosInt( n ) and n <= 909 ) then
         Error( "the BBT library knows 909 unitals" );
     fi;
-    AU_InitLibraryData();
-    u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_BBT[ n ] ) );
+    InitLibraryData@();
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_BBT_AU[ n ] ) );
     SetName( u, Concatenation( "BBTAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
@@ -79,8 +79,8 @@ function( n )
     if not ( IsPosInt( n ) and n <= 1777 ) then
         Error( "the KNP library knows 1777 unitals" );
     fi;
-    AU_InitLibraryData();
-    u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_KNP[ n ] ) );
+    InitLibraryData@();
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_KNP_AU[ n ] ) );
     SetName( u, Concatenation( "KNPAbstractUnital(", String( n ), ")" ) );
     return u;
 end );
@@ -91,8 +91,8 @@ function( n )
     if not ( IsPosInt( n ) and n <= 4466 ) then
         Error( "the Krcadinac library knows 4466 unitals" );
     fi;
-    AU_InitLibraryData();
-    u := AU_UnitalByBlistListNC( TransposedMat( AU_LIBDATA_Krcadinac[ n ] ) );
+    InitLibraryData@();
+    u := UnitalByBlistListNC@( TransposedMat( LIBDATA_Krcadinac_AU[ n ] ) );
     SetName( u, Concatenation( "KrcadinacAbstractUnital(", String( n ), ")" ) );
     return u;
 end );

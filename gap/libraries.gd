@@ -15,14 +15,14 @@
 #!  matrices of dimension mentioned above. The matrices must be 0-1 matrices
 #!  without any whitespace between the entries in one row and there must not be
 #!  any empty lines between matrices.
-DeclareGlobalFunction( "AU_ReadLibraryDataFromFiles" );
+DeclareGlobalFunction( "ReadLibraryDataFromFiles@" );
 
 #! @ChapterInfo Libraries and classes of abstract unitals, Global functions for internal usage
 #! @Arguments 
 #! @Description
 #!   Reads in the incidence matrices from the libraries of unitals shipped with
 #!   the package.
-DeclareGlobalFunction( "AU_InitLibraryData" );
+DeclareGlobalFunction( "InitLibraryData@" );
 
 #####################################################
 #####################################################

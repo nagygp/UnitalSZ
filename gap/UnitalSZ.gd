@@ -19,7 +19,7 @@ DeclareSynonym( "IsAbstractUnital", IsAbstractUnitalDesign );
 
 DeclareRepresentation( "IsAbstractUnitalDesignRep", IsComponentObjectRep and
                        IsAttributeStoringRep, [ "bmat" ] );
-AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
+UnitalDesignFamily@ := NewFamily( "AbstractUnitalDesignFam" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
@@ -28,7 +28,7 @@ AU_UnitalDesignFamily := NewFamily( "AbstractUnitalDesignFam" );
 #! @Description
 #!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
-DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
+DeclareGlobalFunction( "UnitalBlistList_axiomcheck@" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
@@ -38,7 +38,7 @@ DeclareGlobalFunction( "AU_UnitalBlistList_axiomcheck" );
 #!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
 #!   Wrong <A>bmat</A> matrix size drops error.
-DeclareGlobalFunction( "AU_IsUnitalBlistList" );
+DeclareGlobalFunction( "IsUnitalBlistList@" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments incmat
@@ -48,7 +48,7 @@ DeclareGlobalFunction( "AU_IsUnitalBlistList" );
 #!   Each row of <A>incmat</A> corresponds to a block of the unital. We check
 #!   the sizes of the blocks and the sizes of the intersections of the dual
 #!   blocks. Wrong <A>incmat</A> matrix size drops error.
-DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
+DeclareGlobalFunction( "IsUnitalIncidenceMatrix@" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments blocklist
@@ -59,7 +59,7 @@ DeclareGlobalFunction( "AU_IsUnitalIncidenceMatrix" );
 #!   We check the sizes of the blocks and the sizes of the intersections of the
 #!   dual blocks. Wrong number of blocks or wrong number of points (union of the
 #!   blocks in <A>blocklist</A>) drops error.
-DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
+DeclareGlobalFunction( "IsUnitalBlockDesign@" );
 
 #####################################################
 #####################################################
@@ -71,7 +71,7 @@ DeclareGlobalFunction( "AU_IsUnitalBlockDesign" );
 #!   The function stores <A>bmat</A> and sets the order of the unital. The
 #!   function **do not check** the necessary conditions (the size of bmat,
 #!   the sizes of the blocks and their intersections).
-DeclareGlobalFunction( "AU_UnitalByBlistListNC" );
+DeclareGlobalFunction( "UnitalByBlistListNC@" );
 
 #! @ChapterInfo Abstract unitals, Constructing abstract unitals
 #! @Arguments bmat

@@ -8,7 +8,7 @@
 ##  UTILITIES
 ##  ---------------------------------------------------------------------------
 
-InstallGlobalFunction( AU_UnitalBlistList_axiomcheck,
+InstallGlobalFunction( UnitalBlistList_axiomcheck@,
 function( bmat )
     local bmattr, q, i, j;
     q := SizeBlist( bmat[ 1 ] ) - 1;
@@ -27,7 +27,7 @@ function( bmat )
     return true;
 end );
 
-InstallGlobalFunction( AU_IsUnitalBlistList,
+InstallGlobalFunction( IsUnitalBlistList@,
 function( bmat )
     local q, i, j;
     q := SizeBlist( bmat[ 1 ] ) - 1;
@@ -35,10 +35,10 @@ function( bmat )
        ForAny( bmat, x -> Length( x ) <> q^3 + 1 ) then
         Error("wrong bmat size");
     fi;
-    return AU_UnitalBlistList_axiomcheck( bmat );
+    return UnitalBlistList_axiomcheck@( bmat );
 end );
 
-InstallGlobalFunction( AU_IsUnitalIncidenceMatrix,
+InstallGlobalFunction( IsUnitalIncidenceMatrix@,
 function( incmat )
     local q, bmat;
     bmat := List( incmat, x -> List( x, IsOne ) );
@@ -47,10 +47,10 @@ function( incmat )
        ForAny( bmat, x -> Length( x ) <> q^3 + 1 ) then
         Error( "wrong incmat size" );
     fi;
-    return AU_UnitalBlistList_axiomcheck(bmat);
+    return UnitalBlistList_axiomcheck@(bmat);
 end );
 
-InstallGlobalFunction( AU_IsUnitalBlockDesign,
+InstallGlobalFunction( IsUnitalBlockDesign@,
 function( bls )
     local q, bmat, pts;
     pts := Union( bls );
@@ -59,18 +59,18 @@ function( bls )
         Error( "wrong number of points or blocks" );
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
-    return AU_UnitalBlistList_axiomcheck( bmat );
+    return UnitalBlistList_axiomcheck@( bmat );
 end );
 
 ###############################################################################
 ##  CONSTRUCTORS
 ##  ---------------------------------------------------------------------------
 
-InstallGlobalFunction( AU_UnitalByBlistListNC,
+InstallGlobalFunction( UnitalByBlistListNC@,
 function( bmat )
     local q, uni;
     q := SizeBlist( bmat[ 1 ] ) - 1;
-    uni := Objectify( NewType( AU_UnitalDesignFamily, IsAbstractUnitalDesign and
+    uni := Objectify( NewType( UnitalDesignFamily@, IsAbstractUnitalDesign and
                                IsAbstractUnitalDesignRep ),
                       rec( bmat := Set( bmat ) ) );
     SetOrder( uni, q );
@@ -79,8 +79,8 @@ end );
 
 InstallGlobalFunction( AbstractUnitalByBlistList,
 function( bmat )
-    if AU_IsUnitalBlistList( bmat ) then
-        return AU_UnitalByBlistListNC( bmat );
+    if IsUnitalBlistList@( bmat ) then
+        return UnitalByBlistListNC@( bmat );
     else
         Error( "argument must be the blist list of an abstract unital" );
     fi;
@@ -95,8 +95,8 @@ function( bls )
         Error( "wrong number of blocks" );
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
-    if AU_UnitalBlistList_axiomcheck( bmat ) then
-        u := AU_UnitalByBlistListNC( bmat );
+    if UnitalBlistList_axiomcheck@( bmat ) then
+        u := UnitalByBlistListNC@( bmat );
     else
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
@@ -112,8 +112,8 @@ function( incmat )
        ForAny( bmat, x -> Length( x ) <> q^3 + 1 ) then
         Error( "wrong incmat size" );
     fi;
-    if AU_UnitalBlistList_axiomcheck( bmat ) then
-        return AU_UnitalByBlistListNC( bmat );
+    if UnitalBlistList_axiomcheck@( bmat ) then
+        return UnitalByBlistListNC@( bmat );
     else
         Error( "argument must be the incident matrix of an abstract unital" );
     fi;
@@ -196,7 +196,7 @@ end );
 InstallOtherMethod( \^, "for an abstract unitals and a permutation",
     [ IsAbstractUnitalDesign, IsPerm ],
     function( u, perm )
-        return AU_UnitalByBlistListNC( List( u!.bmat,
+        return UnitalByBlistListNC@( List( u!.bmat,
                                              x -> Permuted( x, perm ) ) );
 end );
 
