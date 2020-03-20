@@ -3,11 +3,9 @@ The GAP 4 package `UnitalSZ`
 
 **Algorithms and library of abstract unitals and their embeddings**
 
-See the package documentation on
-[`https://nagygp.github.io/UnitalSZ/`](https://nagygp.github.io/UnitalSZ/).
+* Website: https://nagygp.github.io/UnitalSZ/
+* Repository: https://github.com/nagygp/UnitalSZ
 
->   Supported by the UNKP-17-3 New National Excellence Program of the Ministry
->   of Human Capacities, and by NKFIH-OTKA Grants 114614 and 119687.
 
 Install
 -------
@@ -128,7 +126,7 @@ available** : they are results of different papers (see the section
 the following, which prints some essential informations about these libraries:
 
 ```
-gap> AbstractUnitalLibraryInfo();
+gap> DisplayUnitalLibraryInfo();
 ```
 
 Full points and perspectivity groups
@@ -150,3 +148,10 @@ The **group of perspectivities** from one block to another is closely related
 to full points, and it serves as tool for testing embeddability.
 `PerspectivityGroupOfUnitalsBlocks` is the  command for computing this group.
 For the exact specification of its arguments please refer to the documentation.
+
+Acknowledgement
+---------------
+
+- Support provided from the National Research, Development and Innovation Fund of Hungary, financed under the 2018-1.2.1-NKP funding scheme, within the SETIT Project (2018-1.2.1-NKP-2018-00004).
+- Partially supported by NKFIH-OTKA Grants 114614, 119687 and 115288.
+- D. Mezőfi has been supported by the UNKP-17-3 New National Excellence Program of the Ministry of Human Capacities.

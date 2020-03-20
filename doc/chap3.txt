@@ -43,3 +43,42 @@
   projections  from  [23Xb_1[123X to [23Xb_2[123X from a center [23XP[123X. In order the perspectivity be
   well-defined, [23XP[123X must be a full point w.r.t. [23Xb_1, b_2[123X.[133X
   
+  
+  [1X3.3 [33X[0;0YEmbedded dual 3-nets and full point regularity[133X[101X
+  
+  [1X3.3-1 EmbeddedDual3NetsOfUnitalRepresentatives[101X
+  
+  [33X[1;0Y[29X[2XEmbeddedDual3NetsOfUnitalRepresentatives[102X( [3Xu[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists each having the form [10X[ b1, b2, b3 ][110X, where [10Xb1, b2,
+            b3[110X  are  three  blocks  of  the  unital [3Xu[103X forming an embedded dual
+            3-net.  The  returned  list  contains  all  possible embedded dual
+            3-nets  of  [3Xu[103X  up  to the automorphism group of [3Xu[103X. That is, if the
+            blocks  [23Xb_1,b_2,b_3[123X  form an embedded dual 3-net, then there is an
+            automorphism   [23X\alpha[123X  of  [23XU[123X  such  that  [23Xb_1^\alpha,  b_2^\alpha,
+            b_3^\alpha[123X are in the list.[133X
+  
+  [1X3.3-2 LatinSquareOfEmbeddedDual3Net[101X
+  
+  [33X[1;0Y[29X[2XLatinSquareOfEmbeddedDual3Net[102X( [3Xu[103X, [3Xed3net[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA latin square associated to the embedded dual 3-net [3Xed3net[103X of the
+            unital [3Xu[103X.[133X
+  
+  [1X3.3-3 IsFullPointRegularUnital[101X
+  
+  [33X[1;0Y[29X[2XIsFullPointRegularUnital[102X( [3Xu[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10YThe  boolean  [10Xtrue[110X  if  the  unital [3Xu[103X is full point regular, [10Xfalse[110X
+            otherwise.[133X
+  
+  [33X[0;0YThe  unital [23XU[123X is said to be full point regular, if for each non-intersecting
+  pair of blocks [23Xb_1, b_2[123X the triple [23X(U, b_1, b_2)[123X is full point regular.[133X
+  
+  [1X3.3-4 IsStronglyFullPointRegularUnital[101X
+  
+  [33X[1;0Y[29X[2XIsStronglyFullPointRegularUnital[102X( [3Xu[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10YThe  boolean  [10Xtrue[110X if the unital [3Xu[103X is strongly full point regular,
+            [10Xfalse[110X otherwise.[133X
+  
+  [33X[0;0YThe  unital  [23XU[123X  is  said  to  be  strongly  full  point regular, if for each
+  non-intersecting  pair  of  blocks [23Xb_1, b_2[123X the triple [23X(U, b_1, b_2)[123X is full
+  point regular.[133X
+  

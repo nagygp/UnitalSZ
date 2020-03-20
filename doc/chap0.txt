@@ -6,10 +6,10 @@
       [1X Algorithms and libraries of abstract unitals and their embeddings [101X
   
   
-                                      0.5
+                                      0.6
   
   
-                                 23 March 2018
+                                 20 March 2020
   
   
                                 Gábor Péter Nagy
@@ -51,11 +51,11 @@
       1.2-5 AutomorphismGroup
       1.2-6 Isomorphism
     1.3 [33X[0;0YGlobal functions for internal usage[133X
-      1.3-1 AU_UnitalBlistList_axiomcheck
-      1.3-2 AU_IsUnitalBlistList
-      1.3-3 AU_IsUnitalIncidenceMatrix
-      1.3-4 AU_IsUnitalBlockDesign
-      1.3-5 AU_UnitalByBlistListNC
+      1.3-1 UnitalBlistList_axiomcheck@
+      1.3-2 IsUnitalBlistList@
+      1.3-3 IsUnitalIncidenceMatrix@
+      1.3-4 IsUnitalBlockDesign@
+      1.3-5 UnitalByBlistListNC@
   2 [33X[0;0YLibraries and classes of abstract unitals[133X
     2.1 [33X[0;0YClasses of abstract unitals[133X
       2.1-1 HermitianAbstractUnital
@@ -67,16 +67,28 @@
       2.2-1 BBTAbstractUnital
       2.2-2 KNPAbstractUnital
       2.2-3 KrcadinacAbstractUnital
-      2.2-4 AbstractUnitalLibraryInfo
-    2.3 [33X[0;0YGlobal functions for internal usage[133X
-      2.3-1 AU_ReadLibraryDataFromFiles
-      2.3-2 AU_InitLibraryData
+      2.2-4 P3MAbstractUnital
+      2.2-5 P4MAbstractUnital
+      2.2-6 SL28InvariantAbstractUnital
+    2.3 [33X[0;0YGlobal functions for libraries[133X
+      2.3-1 DisplayUnitalLibraryInfo
+      2.3-2 NumberOfAbstractUnitalsInLibrary
+      2.3-3 ReadLibraryDataFromFiles@
+      2.3-4 ReadAbstractUnitalFromLibraryNC@
   3 [33X[0;0YFull points and perspectivities[133X
     3.1 [33X[0;0YFull points of unitals[133X
       3.1-1 FullPointsOfUnitalsBlocks
       3.1-2 FullPointsOfUnitalRepresentatives
     3.2 [33X[0;0YGroup of perspectivities[133X
       3.2-1 PerspectivityGroupOfUnitalsBlocks
+    3.3 [33X[0;0YEmbedded dual 3-nets and full point regularity[133X
+      3.3-1 EmbeddedDual3NetsOfUnitalRepresentatives
+      3.3-2 LatinSquareOfEmbeddedDual3Net
+      3.3-3 IsFullPointRegularUnital
+      3.3-4 IsStronglyFullPointRegularUnital
+  4 [33X[0;0YUnitalSZ automatic generated documentation[133X
+    4.1 [33X[0;0YUnitalSZ automatic generated documentation of global functions[133X
+      4.1-1 ReadAbstractUnitalFromLibraryByChunksNC@
   
   
   [32X

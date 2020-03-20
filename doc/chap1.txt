@@ -104,44 +104,44 @@
   
   [1X1.3 [33X[0;0YGlobal functions for internal usage[133X[101X
   
-  [1X1.3-1 AU_UnitalBlistList_axiomcheck[101X
+  [1X1.3-1 UnitalBlistList_axiomcheck@[101X
   
-  [33X[1;0Y[29X[2XAU_UnitalBlistList_axiomcheck[102X( [3Xbmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnitalBlistList_axiomcheck@[102X( [3Xbmat[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X if [3Xbmat[103X is the blist list of an abstract unital.[133X
   
   [33X[0;0YEach row of [3Xbmat[103X corresponds to a block of the unital. We check the sizes of
   the blocks and the sizes of the intersections of the dual blocks.[133X
   
-  [1X1.3-2 AU_IsUnitalBlistList[101X
+  [1X1.3-2 IsUnitalBlistList@[101X
   
-  [33X[1;0Y[29X[2XAU_IsUnitalBlistList[102X( [3Xbmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsUnitalBlistList@[102X( [3Xbmat[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X if [3Xbmat[103X is the blist list of an abstract unital.[133X
   
   [33X[0;0YEach row of [3Xbmat[103X corresponds to a block of the unital. We check the sizes of
   the blocks and the sizes of the intersections of the dual blocks. Wrong [3Xbmat[103X
   matrix size drops error.[133X
   
-  [1X1.3-3 AU_IsUnitalIncidenceMatrix[101X
+  [1X1.3-3 IsUnitalIncidenceMatrix@[101X
   
-  [33X[1;0Y[29X[2XAU_IsUnitalIncidenceMatrix[102X( [3Xincmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsUnitalIncidenceMatrix@[102X( [3Xincmat[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X if [3Xincmat[103X is the incidence matrix of an abstract unital.[133X
   
   [33X[0;0YEach  row of [3Xincmat[103X corresponds to a block of the unital. We check the sizes
   of  the  blocks and the sizes of the intersections of the dual blocks. Wrong
   [3Xincmat[103X matrix size drops error.[133X
   
-  [1X1.3-4 AU_IsUnitalBlockDesign[101X
+  [1X1.3-4 IsUnitalBlockDesign@[101X
   
-  [33X[1;0Y[29X[2XAU_IsUnitalBlockDesign[102X( [3Xblocklist[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsUnitalBlockDesign@[102X( [3Xblocklist[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X if [3Xblocklist[103X is the list of blocks of an abstract unital.[133X
   
   [33X[0;0YWe  check  the sizes of the blocks and the sizes of the intersections of the
   dual  blocks. Wrong number of blocks or wrong number of points (union of the
   blocks in [3Xblocklist[103X) drops error.[133X
   
-  [1X1.3-5 AU_UnitalByBlistListNC[101X
+  [1X1.3-5 UnitalByBlistListNC@[101X
   
-  [33X[1;0Y[29X[2XAU_UnitalByBlistListNC[102X( [3Xbmat[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XUnitalByBlistListNC@[102X( [3Xbmat[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe unital object corresponding to the blist list [3Xbmat[103X.[133X
   
   [33X[0;0YThe  function  stores [3Xbmat[103X and sets the order of the unital. The function [13Xdo

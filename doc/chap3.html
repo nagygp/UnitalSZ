@@ -15,9 +15,9 @@
 <body class="chap3"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
-<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
 <p><a id="X854CDC7081F6B299" name="X854CDC7081F6B299"></a></p>
@@ -32,6 +32,14 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X807DFEFE8647525F">3.2-1 PerspectivityGroupOfUnitalsBlocks</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7F782B5F78445DB7">3.3 <span class="Heading">Embedded dual 3-nets and full point regularity</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X870D4CCA83CEE578">3.3-1 EmbeddedDual3NetsOfUnitalRepresentatives</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7F2130017803609F">3.3-2 LatinSquareOfEmbeddedDual3Net</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7E09EB1C8241F79A">3.3-3 IsFullPointRegularUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7AC3037383FC71BA">3.3-4 IsStronglyFullPointRegularUnital</a></span>
 </div></div>
 </div>
 
@@ -70,11 +78,47 @@
 
 <p>Perspectivities between blocks <span class="Math">b_1, b_2</span> of an abstract unital <span class="Math">U</span> are projections from <span class="Math">b_1</span> to <span class="Math">b_2</span> from a center <span class="Math">P</span>. In order the perspectivity be well-defined, <span class="Math">P</span> must be a full point w.r.t. <span class="Math">b_1, b_2</span>.</p>
 
+<p><a id="X7F782B5F78445DB7" name="X7F782B5F78445DB7"></a></p>
 
-<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+<h4>3.3 <span class="Heading">Embedded dual 3-nets and full point regularity</span></h4>
+
+<p><a id="X870D4CCA83CEE578" name="X870D4CCA83CEE578"></a></p>
+
+<h5>3.3-1 EmbeddedDual3NetsOfUnitalRepresentatives</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EmbeddedDual3NetsOfUnitalRepresentatives</code>( <var class="Arg">u</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list of lists each having the form <code class="code">[ b1, b2, b3 ]</code>, where <code class="code">b1, b2, b3</code> are three blocks of the unital <var class="Arg">u</var> forming an embedded dual 3-net. The returned list contains all possible embedded dual 3-nets of <var class="Arg">u</var> up to the automorphism group of <var class="Arg">u</var>. That is, if the blocks <span class="Math">b_1,b_2,b_3</span> form an embedded dual 3-net, then there is an automorphism <span class="Math">\alpha</span> of <span class="Math">U</span> such that <span class="Math">b_1^\alpha, b_2^\alpha, b_3^\alpha</span> are in the list.</p>
+
+<p><a id="X7F2130017803609F" name="X7F2130017803609F"></a></p>
+
+<h5>3.3-2 LatinSquareOfEmbeddedDual3Net</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatinSquareOfEmbeddedDual3Net</code>( <var class="Arg">u</var>, <var class="Arg">ed3net</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A latin square associated to the embedded dual 3-net <var class="Arg">ed3net</var> of the unital <var class="Arg">u</var>.</p>
+
+<p><a id="X7E09EB1C8241F79A" name="X7E09EB1C8241F79A"></a></p>
+
+<h5>3.3-3 IsFullPointRegularUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFullPointRegularUnital</code>( <var class="Arg">u</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: The boolean <code class="code">true</code> if the unital <var class="Arg">u</var> is full point regular, <code class="code">false</code> otherwise.</p>
+
+<p>The unital <span class="Math">U</span> is said to be full point regular, if for each non-intersecting pair of blocks <span class="Math">b_1, b_2</span> the triple <span class="Math">(U, b_1, b_2)</span> is full point regular.</p>
+
+<p><a id="X7AC3037383FC71BA" name="X7AC3037383FC71BA"></a></p>
+
+<h5>3.3-4 IsStronglyFullPointRegularUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsStronglyFullPointRegularUnital</code>( <var class="Arg">u</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: The boolean <code class="code">true</code> if the unital <var class="Arg">u</var> is strongly full point regular, <code class="code">false</code> otherwise.</p>
+
+<p>The unital <span class="Math">U</span> is said to be strongly full point regular, if for each non-intersecting pair of blocks <span class="Math">b_1, b_2</span> the triple <span class="Math">(U, b_1, b_2)</span> is full point regular.</p>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

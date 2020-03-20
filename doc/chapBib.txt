@@ -12,6 +12,10 @@
   [[20XBE08[120X]  [16XBarwick,  S.  and Ebert, G.[116X, [17XUnitals in projective planes[117X, Springer,
   New York, Springer Monographs in Mathematics (2008), xii+193 pages.
   
+  [[20XGSVM16[120X]   [16XGrundhöfer,  T.,  Stroppel,  M.  J.  and  Van  Maldeghem,  H.[116X,  [17XA
+  non-classical  unital  of order four with many translations[117X, [18XDiscrete Math.[118X,
+  [19X339[119X, 12 (2016), 2987--2993.
+  
   [[20XHir98[120X]  [16XHirschfeld, J. W. P.[116X, [17XProjective geometries over finite fields[117X, The
   Clarendon  Press,  Oxford University Press, New York, Second edition, Oxford
   Mathematical Monographs (1998), xiv+555 pages.
@@ -20,11 +24,16 @@
   method  with  tactical  decompositions:  some  new  unitals on 65 points[117X, [18XJ.
   Combin. Des.[118X, [19X19[119X, 4 (2011), 290--303.
   
-  [[20XKr{\v  c}06[120X]  [16XKrčadinac,  V.[116X,  [17XSome  new  Steiner  2-designs S(2,4,37)[117X, [18XArs
-  Combin.[118X, [19X78[119X (2006), 127--135.
+  [[20XKr{č}06[120X]  [16XKrčadinac, V.[116X, [17XSome new Steiner 2-designs S(2,4,37)[117X, [18XArs Combin.[118X,
+  [19X78[119X (2006), 127--135.
   
   [[20XKSS18[120X] [16XKorchmáros, G., Siciliano, A. and Szőnyi, T.[116X, [17XEmbedding of classical
   polar unitals in PG(2,q^2)[117X, [18XJ. Combin. Theory Ser. A[118X, [19X153[119X (2018), 67--75.
+  
+  [[20XMN20[120X]  [16XMezőfi,  D.  and  Nagy,  G.  P.[116X,  [17XNew  2-designs  from  old  ones by
+  paramodifications[117X (2020), manuscript.
+  
+  [[20XMöh20[120X] [16XMöhler, V.[116X, [17XPersonal communication[117X, Karlsruhe (2020), unpublished.
   
   
   

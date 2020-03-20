@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <script type="text/javascript"
-  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <title>GAP (UnitalSZ) - Chapter 2: Libraries and classes of abstract unitals</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -18,7 +18,7 @@
 <body class="chap2"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
@@ -40,13 +40,17 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7801F7627CCD8BB3">2.2-1 BBTAbstractUnital</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CCF744581EB8E44">2.2-2 KNPAbstractUnital</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7B3CB10A79955EA7">2.2-3 KrcadinacAbstractUnital</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7D89C3858378B174">2.2-4 AbstractUnitalLibraryInfo</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X81753AE478F363E9">2.2-4 P3MAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7EAAA5637C077A85">2.2-5 P4MAbstractUnital</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7B4A244B8302CA0C">2.2-6 SL28InvariantAbstractUnital</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X79CB9BDF7CD35881">2.3 <span class="Heading">Global functions for internal usage</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X831C487A798DFF7E">2.3 <span class="Heading">Global functions for libraries</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X85E7203A78843422">2.3-1 AU_ReadLibraryDataFromFiles</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8014516A7CBCA8BC">2.3-2 AU_InitLibraryData</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C62925D871AB381">2.3-1 DisplayUnitalLibraryInfo</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83A78B8A7B856DD1">2.3-2 NumberOfAbstractUnitalsInLibrary</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X82BC889D8799F320">2.3-3 ReadLibraryDataFromFiles@</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7DCC957A7FA11FFC">2.3-4 ReadAbstractUnitalFromLibraryNC@</a></span>
 </div></div>
 </div>
 
@@ -115,14 +119,35 @@
 
 <h4>2.2 <span class="Heading">Libraries</span></h4>
 
+<p>The package contains the following libraries of abstract unitals:</p>
+
+
+<ul>
+<li><p><em>Class BBT:</em> 909 unitals of order 3 by Betten, Betten and Tonchev <a href="chapBib_mj.html#biBBBT2003">[BBT03]</a>.</p>
+
+</li>
+<li><p><em>Class Krcadinac:</em> 4466 unitals of order 3 with nontrivial automorphism groups by Krčadinac <a href="chapBib_mj.html#biBKrc2006">[Kr{č}06]</a>. 722 of the BBT unitals appear in this class.</p>
+
+</li>
+<li><p><em>Class KNP:</em> 1777 unitals of order 4 by Krčadinac, Nakić and Pavčević <a href="chapBib_mj.html#biBKNP2011">[KNP11]</a>.</p>
+
+</li>
+<li><p><em>Class P3M:</em> 173 unitals of order 3, constructed by paramodification from the BBT and Krcadinac libraries <a href="chapBib_mj.html#biBMN2020">[MN20]</a>.</p>
+
+</li>
+<li><p><em>Class P4M:</em> 25641 unitals of order 4, constructed by paramodification from the KNP libraries <a href="chapBib_mj.html#biBMN2020">[MN20]</a>.</p>
+
+</li>
+<li><p><em>Class SL28inv:</em> 6 <span class="SimpleMath">\(SL(2,8)\)</span>-invariant unitals of order 8 with many translation centers, constructed by Möhler <a href="chapBib_mj.html#biBV2020">[Möh20]</a> using the Grundhöfer-Stroppel-Van Maldeghem method <a href="chapBib_mj.html#biBMR3533345">[GSVM16]</a>.</p>
+
+</li>
+</ul>
 <p><a id="X7801F7627CCD8BB3" name="X7801F7627CCD8BB3"></a></p>
 
 <h5>2.2-1 BBTAbstractUnital</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BBTAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 3 of the unitals by Betten, Betten and Tonchev.</p>
-
-<p>In the paper <a href="chapBib_mj.html#biBBBT2003">[BBT03]</a> by Betten, Betten and Tonchev, 909 unitals of order 3 were constructed. The incidence matrices of these unitals are shipped with the package.</p>
 
 <p><a id="X7CCF744581EB8E44" name="X7CCF744581EB8E44"></a></p>
 
@@ -131,8 +156,6 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; KNPAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 4 of the unitals by Krčadinac, Nakić and Pavčević.</p>
 
-<p>In the paper <a href="chapBib_mj.html#biBKNP2011">[KNP11]</a> by Krčadinac, Nakić and Pavčević, 1777 unitals of order 4 were constructed. The incidence matrices of these unitals are shipped with the package.</p>
-
 <p><a id="X7B3CB10A79955EA7" name="X7B3CB10A79955EA7"></a></p>
 
 <h5>2.2-3 KrcadinacAbstractUnital</h5>
@@ -140,40 +163,66 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; KrcadinacAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 3 of the unitals by Krčadinac.</p>
 
-<p>In the paper <a href="chapBib_mj.html#biBKrc2006">[Kr{\v c}06]</a> by Krčadinac, 4466 unitals of order 3 were constructed. This library contains all the unitals of order 3 with nontrivial automorphism group. The incidence matrices of these unitals are shipped with the package.</p>
+<p><a id="X81753AE478F363E9" name="X81753AE478F363E9"></a></p>
 
-<p><a id="X7D89C3858378B174" name="X7D89C3858378B174"></a></p>
+<h5>2.2-4 P3MAbstractUnital</h5>
 
-<h5>2.2-4 AbstractUnitalLibraryInfo</h5>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; P3MAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 3, constructed by paramodification from the BBT and Krcadinac libraries.</p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AbstractUnitalLibraryInfo</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p><a id="X7EAAA5637C077A85" name="X7EAAA5637C077A85"></a></p>
+
+<h5>2.2-5 P4MAbstractUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; P4MAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: The <var class="Arg">n</var>th (abstract) unital of order 4, constructed by paramodification from the KNP libraries.</p>
+
+<p><a id="X7B4A244B8302CA0C" name="X7B4A244B8302CA0C"></a></p>
+
+<h5>2.2-6 SL28InvariantAbstractUnital</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SL28InvariantAbstractUnital</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: The <var class="Arg">n</var>th (abstract) <span class="SimpleMath">\(SL(2,8)\)</span>-invariant unital of order 8, constructed by the Grundhöfer-Stroppel-Van Maldeghem method.</p>
+
+<p><a id="X831C487A798DFF7E" name="X831C487A798DFF7E"></a></p>
+
+<h4>2.3 <span class="Heading">Global functions for libraries</span></h4>
+
+<p><a id="X7C62925D871AB381" name="X7C62925D871AB381"></a></p>
+
+<h5>2.3-1 DisplayUnitalLibraryInfo</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DisplayUnitalLibraryInfo</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>The function prints the information about the available libraries of unitals.</p>
 
-<p><a id="X79CB9BDF7CD35881" name="X79CB9BDF7CD35881"></a></p>
+<p><a id="X83A78B8A7B856DD1" name="X83A78B8A7B856DD1"></a></p>
 
-<h4>2.3 <span class="Heading">Global functions for internal usage</span></h4>
+<h5>2.3-2 NumberOfAbstractUnitalsInLibrary</h5>
 
-<p><a id="X85E7203A78843422" name="X85E7203A78843422"></a></p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumberOfAbstractUnitalsInLibrary</code>( <var class="Arg">name</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: The number of abstract unitals in the library <var class="Arg">name</var>.</p>
 
-<h5>2.3-1 AU_ReadLibraryDataFromFiles</h5>
+<p><a id="X82BC889D8799F320" name="X82BC889D8799F320"></a></p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AU_ReadLibraryDataFromFiles</code>( <var class="Arg">nr</var>, <var class="Arg">q</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<h5>2.3-3 ReadLibraryDataFromFiles@</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReadLibraryDataFromFiles@</code>( <var class="Arg">data</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: The list of boolean incidence matrices of size <span class="SimpleMath">\((q^3 + 1) \times q^2(q^2 - q + 1)\)</span> read from <var class="Arg">filename</var>.</p>
 
-<p>The file <var class="Arg">filename</var> must be gzipped and must contain <var class="Arg">nr</var> matrices of dimension mentioned above. The matrices must be 0-1 matrices without any whitespace between the entries in one row and there must not be any empty lines between matrices.</p>
+<p>The argument <var class="Arg">data</var> must be a record with fields <code class="code">filename, order, nr</code>. The file <var class="Arg">data.filename</var> must be gzipped and must contain <var class="Arg">data.nr</var> matrices of dimension mentioned above. The matrices must be 0-1 matrices without any whitespace between the entries in one row and there must not be any empty lines between matrices.</p>
 
-<p><a id="X8014516A7CBCA8BC" name="X8014516A7CBCA8BC"></a></p>
+<p><a id="X7DCC957A7FA11FFC" name="X7DCC957A7FA11FFC"></a></p>
 
-<h5>2.3-2 AU_InitLibraryData</h5>
+<h5>2.3-4 ReadAbstractUnitalFromLibraryNC@</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AU_InitLibraryData</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Reads in the incidence matrices from the libraries of unitals shipped with the package.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReadAbstractUnitalFromLibraryNC@</code>( <var class="Arg">name</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: The <var class="Arg">n</var>th abstract unital from the library <var class="Arg">name</var>. Non-checking version.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

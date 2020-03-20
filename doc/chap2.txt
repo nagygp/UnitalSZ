@@ -90,15 +90,33 @@
   
   [1X2.2 [33X[0;0YLibraries[133X[101X
   
+  [33X[0;0YThe package contains the following libraries of abstract unitals:[133X
+  
+  [30X    [33X[0;6Y[13XClass  BBT:[113X  909  unitals  of  order  3  by Betten, Betten and Tonchev
+        [BBT03].[133X
+  
+  [30X    [33X[0;6Y[13XClass  Krcadinac:[113X 4466 unitals of order 3 with nontrivial automorphism
+        groups  by  Krčadinac [Kr{č}06]. 722 of the BBT unitals appear in this
+        class.[133X
+  
+  [30X    [33X[0;6Y[13XClass  KNP:[113X  1777  unitals of order 4 by Krčadinac, Nakić and Pavčević
+        [KNP11].[133X
+  
+  [30X    [33X[0;6Y[13XClass  P3M:[113X  173  unitals  of order 3, constructed by paramodification
+        from the BBT and Krcadinac libraries [MN20].[133X
+  
+  [30X    [33X[0;6Y[13XClass  P4M:[113X  25641 unitals of order 4, constructed by paramodification
+        from the KNP libraries [MN20].[133X
+  
+  [30X    [33X[0;6Y[13XClass  SL28inv:[113X  6  [23XSL(2,8)[123X-invariant  unitals  of  order  8 with many
+        translation   centers,   constructed   by  Möhler  [Möh20]  using  the
+        Grundhöfer-Stroppel-Van Maldeghem method [GSVM16].[133X
+  
   [1X2.2-1 BBTAbstractUnital[101X
   
   [33X[1;0Y[29X[2XBBTAbstractUnital[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth  (abstract)  unital  of order 3 of the unitals by Betten,
             Betten and Tonchev.[133X
-  
-  [33X[0;0YIn  the  paper [BBT03] by Betten, Betten and Tonchev, 909 unitals of order 3
-  were  constructed.  The incidence matrices of these unitals are shipped with
-  the package.[133X
   
   [1X2.2-2 KNPAbstractUnital[101X
   
@@ -106,45 +124,59 @@
   [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth (abstract) unital of order 4 of the unitals by Krčadinac,
             Nakić and Pavčević.[133X
   
-  [33X[0;0YIn the paper [KNP11] by Krčadinac, Nakić and Pavčević, 1777 unitals of order
-  4 were constructed. The incidence matrices of these unitals are shipped with
-  the package.[133X
-  
   [1X2.2-3 KrcadinacAbstractUnital[101X
   
   [33X[1;0Y[29X[2XKrcadinacAbstractUnital[102X( [3Xn[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe [3Xn[103Xth (abstract) unital of order 3 of the unitals by Krčadinac.[133X
   
-  [33X[0;0YIn  the  paper  [Kr{\v  c}06]  by  Krčadinac,  4466  unitals of order 3 were
-  constructed.  This  library  contains  all  the  unitals  of  order  3  with
-  nontrivial  automorphism  group. The incidence matrices of these unitals are
-  shipped with the package.[133X
+  [1X2.2-4 P3MAbstractUnital[101X
   
-  [1X2.2-4 AbstractUnitalLibraryInfo[101X
+  [33X[1;0Y[29X[2XP3MAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe   [3Xn[103Xth   (abstract)   unital   of   order   3,  constructed  by
+            paramodification from the BBT and Krcadinac libraries.[133X
   
-  [33X[1;0Y[29X[2XAbstractUnitalLibraryInfo[102X(  ) [32X function[133X
+  [1X2.2-5 P4MAbstractUnital[101X
+  
+  [33X[1;0Y[29X[2XP4MAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe   [3Xn[103Xth   (abstract)   unital   of   order   4,  constructed  by
+            paramodification from the KNP libraries.[133X
+  
+  [1X2.2-6 SL28InvariantAbstractUnital[101X
+  
+  [33X[1;0Y[29X[2XSL28InvariantAbstractUnital[102X( [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe   [3Xn[103Xth   (abstract)   [23XSL(2,8)[123X-invariant   unital  of  order  8,
+            constructed by the Grundhöfer-Stroppel-Van Maldeghem method.[133X
+  
+  
+  [1X2.3 [33X[0;0YGlobal functions for libraries[133X[101X
+  
+  [1X2.3-1 DisplayUnitalLibraryInfo[101X
+  
+  [33X[1;0Y[29X[2XDisplayUnitalLibraryInfo[102X(  ) [32X function[133X
   
   [33X[0;0YThe  function  prints  the  information  about  the  available  libraries of
   unitals.[133X
   
+  [1X2.3-2 NumberOfAbstractUnitalsInLibrary[101X
   
-  [1X2.3 [33X[0;0YGlobal functions for internal usage[133X[101X
+  [33X[1;0Y[29X[2XNumberOfAbstractUnitalsInLibrary[102X( [3Xname[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe number of abstract unitals in the library [3Xname[103X.[133X
   
-  [1X2.3-1 AU_ReadLibraryDataFromFiles[101X
+  [1X2.3-3 ReadLibraryDataFromFiles@[101X
   
-  [33X[1;0Y[29X[2XAU_ReadLibraryDataFromFiles[102X( [3Xnr[103X, [3Xq[103X, [3Xfilename[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XReadLibraryDataFromFiles@[102X( [3Xdata[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YThe  list  of  boolean incidence matrices of size [23X(q^3 + 1) \times
             q^2(q^2 - q + 1)[123X read from [3Xfilename[103X.[133X
   
-  [33X[0;0YThe  file [3Xfilename[103X must be gzipped and must contain [3Xnr[103X matrices of dimension
+  [33X[0;0YThe argument [3Xdata[103X must be a record with fields [10Xfilename, order, nr[110X. The file
+  [3Xdata.filename[103X must be gzipped and must contain [3Xdata.nr[103X matrices of dimension
   mentioned  above.  The  matrices must be 0-1 matrices without any whitespace
   between the entries in one row and there must not be any empty lines between
   matrices.[133X
   
-  [1X2.3-2 AU_InitLibraryData[101X
+  [1X2.3-4 ReadAbstractUnitalFromLibraryNC@[101X
   
-  [33X[1;0Y[29X[2XAU_InitLibraryData[102X(  ) [32X function[133X
-  
-  [33X[0;0YReads  in  the incidence matrices from the libraries of unitals shipped with
-  the package.[133X
+  [33X[1;0Y[29X[2XReadAbstractUnitalFromLibraryNC@[102X( [3Xname[103X, [3Xn[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YThe  [3Xn[103Xth  abstract  unital  from  the  library  [3Xname[103X. Non-checking
+            version.[133X
   

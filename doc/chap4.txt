@@ -1,0 +1,10 @@
+  
+  [1X4 [33X[0;0YUnitalSZ automatic generated documentation[133X[101X
+  
+  
+  [1X4.1 [33X[0;0YUnitalSZ automatic generated documentation of global functions[133X[101X
+  
+  [1X4.1-1 ReadAbstractUnitalFromLibraryByChunksNC@[101X
+  
+  [33X[1;0Y[29X[2XReadAbstractUnitalFromLibraryByChunksNC@[102X( [3Xarg[103X ) [32X function[133X
+  
