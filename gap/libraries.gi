@@ -133,7 +133,11 @@ function( name, n, chunksize )
         n0 := chunksize * Int( (n - 1) / chunksize );
         fname := LIBDATA@.(name).filename;
         fname := ReplacedString( fname, "aaa", String( n0 + 1 ) );
-        fname := ReplacedString( fname, "bbb", String( n0 + chunksize ) );
+        if ( n0 + 1 ) > ( LIBDATA@.(name).nr - chunksize ) then
+          fname := ReplacedString( fname, "bbb", String( LIBDATA@.(name).nr ) );
+        else
+          fname := ReplacedString( fname, "bbb", String( n0 + chunksize ) );
+        fi;
         r := rec( 
             nr := chunksize,
             order := LIBDATA@.(name).order,
