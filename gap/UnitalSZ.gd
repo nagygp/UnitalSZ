@@ -37,7 +37,7 @@ DeclareGlobalFunction( "UnitalBlistList_axiomcheck@" );
 #! @Description
 #!   Each row of <A>bmat</A> corresponds to a block of the unital. We check the
 #!   sizes of the blocks and the sizes of the intersections of the dual blocks.
-#!   Wrong <A>bmat</A> matrix size drops error.
+#!   Wrong <A>bmat</A> matrix size or order smaller than 3 drops error.
 DeclareGlobalFunction( "IsUnitalBlistList@" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
@@ -47,7 +47,7 @@ DeclareGlobalFunction( "IsUnitalBlistList@" );
 #! @Description
 #!   Each row of <A>incmat</A> corresponds to a block of the unital. We check
 #!   the sizes of the blocks and the sizes of the intersections of the dual
-#!   blocks. Wrong <A>incmat</A> matrix size drops error.
+#!   blocks. Wrong <A>incmat</A> matrix size or order smaller than 3 drops error.
 DeclareGlobalFunction( "IsUnitalIncidenceMatrix@" );
 
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
@@ -58,7 +58,7 @@ DeclareGlobalFunction( "IsUnitalIncidenceMatrix@" );
 #! @Description
 #!   We check the sizes of the blocks and the sizes of the intersections of the
 #!   dual blocks. Wrong number of blocks or wrong number of points (union of the
-#!   blocks in <A>blocklist</A>) drops error.
+#!   blocks in <A>blocklist</A>) or order smaller than 3 drops error.
 DeclareGlobalFunction( "IsUnitalBlockDesign@" );
 
 #####################################################
