@@ -35,6 +35,9 @@ function( bmat )
        ForAny( bmat, x -> Length( x ) <> q^3 + 1 ) then
         Error("wrong bmat size");
     fi;
+    if q < 3 then
+        Error("order n must be at least 3");
+    fi;
     return UnitalBlistList_axiomcheck@( bmat );
 end );
 
@@ -47,6 +50,9 @@ function( incmat )
        ForAny( bmat, x -> Length( x ) <> q^3 + 1 ) then
         Error( "wrong incmat size" );
     fi;
+    if q < 3 then
+        Error("order n must be at least 3");
+    fi;
     return UnitalBlistList_axiomcheck@(bmat);
 end );
 
@@ -57,6 +63,9 @@ function( bls )
     q := Size( bls[ 1 ] ) - 1;
     if Length( bls ) <> q^2 * ( q^2 - q + 1 ) or Size( pts ) <> q^3 + 1 then
         Error( "wrong number of points or blocks" );
+    fi;
+    if q < 3 then
+        Error("order n must be at least 3");
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
     return UnitalBlistList_axiomcheck@( bmat );
