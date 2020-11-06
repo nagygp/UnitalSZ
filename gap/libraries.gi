@@ -113,7 +113,7 @@ function( name, n )
         LIBDATA@.(name).matrices := 
             ReadLibraryDataFromFiles@( LIBDATA@.(name)  );
     fi;
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
+    u := AbstractUnitalByBlistList( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
     uname := ReplacedString( 
         LIBDATA@.(name).callby, 
         "(n)",
@@ -148,7 +148,7 @@ function( name, n, chunksize )
             LIBDATA@.(name).matrices[ n0 + i ] := mats[ i ];
         od;
     fi;
-    u := UnitalByBlistListNC@( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
+    u := AbstractUnitalByBlistList( TransposedMat( LIBDATA@.(name).matrices[ n ] ) );
     uname := ReplacedString( 
         LIBDATA@.(name).callby, 
         "(n)",

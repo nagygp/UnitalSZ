@@ -76,12 +76,20 @@ end );
 ##  ---------------------------------------------------------------------------
 
 InstallGlobalFunction( UnitalByBlistListNC@,
-function( bmat )
+function( pts, bls, bmat )
     local q, uni;
     q := SizeBlist( bmat[ 1 ] ) - 1;
-    uni := Objectify( NewType( UnitalDesignFamily@, IsAbstractUnitalDesign and
-                               IsAbstractUnitalDesignRep ),
-                      rec( bmat := Set( bmat ) ) );
+    if pts = [] then 
+        pts := [1..q^3+1];
+    fi;
+    if bls = [] then 
+        bls := List( bmat, x -> ListBlist( pts, x ) );
+    fi;
+    # uni := Objectify( NewType( UnitalDesignFamily@, IsAbstractUnitalDesign and
+    #                            IsAbstractUnitalDesignRep ),
+    #                   rec( bmat := Set( bmat ) ) );
+    uni := IncidenceStructureByIncidenceMatrix( pts, bls, bmat );
+    SetFilterObj( uni, IsAbstractUnitalDesign );
     SetOrder( uni, q );
     return uni;
 end );
@@ -89,7 +97,7 @@ end );
 InstallGlobalFunction( AbstractUnitalByBlistList,
 function( bmat )
     if IsUnitalBlistList@( bmat ) then
-        return UnitalByBlistListNC@( bmat );
+        return UnitalByBlistListNC@( [], [], AsSortedList( bmat ) );
     else
         Error( "argument must be the blist list of an abstract unital" );
     fi;
@@ -105,7 +113,7 @@ function( bls )
     fi;
     bmat := List( bls, b -> BlistList( pts, b ) );
     if UnitalBlistList_axiomcheck@( bmat ) then
-        u := UnitalByBlistListNC@( bmat );
+        u := UnitalByBlistListNC@( pts, bls, bmat );
     else
         Error( "argument must be the list of blocks of an abstract unital" );
     fi;
@@ -122,7 +130,7 @@ function( incmat )
         Error( "wrong incmat size" );
     fi;
     if UnitalBlistList_axiomcheck@( bmat ) then
-        return UnitalByBlistListNC@( bmat );
+        return UnitalByBlistListNC@( [], [], bmat );
     else
         Error( "argument must be the incident matrix of an abstract unital" );
     fi;
@@ -186,34 +194,35 @@ function( u )
     return Set( u!.bmat, x -> ListBlist( PointsOfUnital( u ), x ) );
 end );
 
-InstallMethod( IncidenceDigraph, "for an abstract unital",
-    [ IsAbstractUnitalDesign ],
-function( u )
-    local q;
-    q := Order( u );
-    return Digraph( [ 1..q^3 + 1 + q^2 * ( q^2 - q + 1 ) ],
-                    function( x, y )
-                        return x <= q^3 + 1 and y > q^3 + 1 and
-                               u!.bmat[ y - q^3 - 1 ][ x ];
-                    end );
-end );
+# IncStr
+# InstallMethod( IncidenceDigraph, "for an abstract unital",
+#     [ IsAbstractUnitalDesign ],
+# function( u )
+#     local q;
+#     q := Order( u );
+#     return Digraph( [ 1..q^3 + 1 + q^2 * ( q^2 - q + 1 ) ],
+#                     function( x, y )
+#                         return x <= q^3 + 1 and y > q^3 + 1 and
+#                                u!.bmat[ y - q^3 - 1 ][ x ];
+#                     end );
+# end );
 
-###############################################################################
-##  ACTIONS, AUTOMORPHISMS
-##  ---------------------------------------------------------------------------
+# ###############################################################################
+# ##  ACTIONS, AUTOMORPHISMS
+# ##  ---------------------------------------------------------------------------
 
-InstallOtherMethod( \^, "for an abstract unitals and a permutation",
-    [ IsAbstractUnitalDesign, IsPerm ],
-    function( u, perm )
-        return UnitalByBlistListNC@( List( u!.bmat,
-                                             x -> Permuted( x, perm ) ) );
-end );
+# InstallOtherMethod( \^, "for an abstract unitals and a permutation",
+#     [ IsAbstractUnitalDesign, IsPerm ],
+#     function( u, perm )
+#         return UnitalByBlistListNC@( List( u!.bmat,
+#                                              x -> Permuted( x, perm ) ) );
+# end );
 
 InstallMethod( AutomorphismGroup, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
     local g;
-    g := AutomorphismGroup( IncidenceDigraph( u ) );
+    g := AutomorphismGroupOnPointsAndLines( u );
     return Action( g, [ 1..Order( u )^3 + 1 ] );
 end );
 
@@ -224,8 +233,7 @@ InstallMethod( Isomorphism, "for two abstract unitals",
         if Order( u1 ) <> Order( u2 ) then
             return fail;
         fi;
-        ret := IsomorphismDigraphs( IncidenceDigraph( u1 ),
-                                    IncidenceDigraph( u2 ) );
+        ret := IsomorphismIncidenceStructures( u1, u2 );
         if ret = fail then
             return fail;
         else

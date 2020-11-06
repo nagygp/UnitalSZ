@@ -10,7 +10,8 @@ gap>
 gap> her := HermitianAbstractUnital( 4 );
 HermitianAbstractUnital(4)
 gap> KnownAttributesOfObject( her );
-[ "Name", "Order" ]
+[ "Name", "Order", "PointsOfIncidenceStructure", 
+  "BlocksOfIncidenceStructure" ]
 gap> 
 gap> knps := List( [ 1..NumberOfAbstractUnitalsInLibrary("KNP") ], i -> KNPAbstractUnital( i ) );;
 gap> knps[ 4 ];

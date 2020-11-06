@@ -83,7 +83,7 @@ Dependencies := rec(
     GAP := ">= 4.8",
     NeededOtherPackages := [
         [ "GAPDoc", ">= 1.6" ],
-        [ "Digraphs", ">= 0.11" ],
+        [ "IncidenceStructures", ">= 0.3" ],
         [ "io", ">=4.5" ]
     ],
     SuggestedOtherPackages := [ ],
