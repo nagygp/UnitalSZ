@@ -85,9 +85,6 @@ function( pts, bls, bmat )
     if bls = [] then 
         bls := List( bmat, x -> ListBlist( pts, x ) );
     fi;
-    # uni := Objectify( NewType( UnitalDesignFamily@, IsAbstractUnitalDesign and
-    #                            IsAbstractUnitalDesignRep ),
-    #                   rec( bmat := Set( bmat ) ) );
     uni := IncidenceStructureByIncidenceMatrix( pts, bls, bmat );
     SetFilterObj( uni, IsAbstractUnitalDesign );
     SetOrder( uni, q );
@@ -179,7 +176,7 @@ end );
 InstallMethod( PointsOfUnital, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
-    return [ 1..Order( u )^3 + 1 ];
+    return PointsOfIncidenceStructure( u );
 end );
 
 InstallMethod( PointNamesOfUnital, "for an abstract unital",
@@ -191,21 +188,8 @@ end );
 InstallMethod( BlocksOfUnital, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
-    return Set( u!.bmat, x -> ListBlist( PointsOfUnital( u ), x ) );
+    return BlocksOfIncidenceStructure( u );
 end );
-
-# IncStr
-# InstallMethod( IncidenceDigraph, "for an abstract unital",
-#     [ IsAbstractUnitalDesign ],
-# function( u )
-#     local q;
-#     q := Order( u );
-#     return Digraph( [ 1..q^3 + 1 + q^2 * ( q^2 - q + 1 ) ],
-#                     function( x, y )
-#                         return x <= q^3 + 1 and y > q^3 + 1 and
-#                                u!.bmat[ y - q^3 - 1 ][ x ];
-#                     end );
-# end );
 
 # ###############################################################################
 # ##  ACTIONS, AUTOMORPHISMS

@@ -17,12 +17,6 @@ DeclareCategory( "IsAbstractUnitalDesign", IsObject );
 
 DeclareSynonym( "IsAbstractUnital", IsAbstractUnitalDesign );
 
-# IncStr
-# DeclareRepresentation( "IsAbstractUnitalDesignRep", IsComponentObjectRep and
-#                        IsAttributeStoringRep, [ "bmat" ] );
-# UnitalDesignFamily@ := NewFamily( "AbstractUnitalDesignFam" );
-# IncStr
-
 #! @ChapterInfo Abstract unitals, Global functions for internal usage
 #! @Arguments bmat
 #! @Returns
@@ -141,14 +135,6 @@ DeclareAttribute( "BlocksOfUnital", IsAbstractUnitalDesign );
 #!   The default is the range <C>[ 1..q^3 + 1 ]</C>.
 DeclareAttribute( "PointNamesOfUnital", IsAbstractUnitalDesign );
 
-# IncStr
-#! @ChapterInfo Abstract unitals, Methods for abstract unitals
-#! @Arguments u
-#! @Returns
-#!   The (bipartite) digraph constructed from the boolean incidence matrix
-#!   <C>bmat</C> of the unital <A>u</A>.
-#DeclareAttribute( "IncidenceDigraph", IsAbstractUnitalDesign );
-
 #! @ChapterInfo Abstract unitals, Methods for abstract unitals
 #! @Arguments u
 #! @Returns
@@ -170,7 +156,6 @@ DeclareAttribute( "AutomorphismGroup", IsAbstractUnitalDesign );
 #!   isomorphism with the help of the incidence digraphs of the unitals
 #!   <A>u1</A> and <A>u2</A>.
 DeclareOperation( "Isomorphism", [ IsAbstractUnitalDesign, IsAbstractUnitalDesign ] );
-# IncStr
 
 #! @ChapterInfo Abstract unitals, Constructing abstract unitals
 #! @Description
