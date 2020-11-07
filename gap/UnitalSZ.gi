@@ -206,7 +206,7 @@ InstallMethod( AutomorphismGroup, "for an abstract unital",
     [ IsAbstractUnitalDesign ],
 function( u )
     local g;
-    g := AutomorphismGroupOnPointsAndLines( u );
+    g := AutomorphismGroup@IncidenceStructures( u );
     return Action( g, [ 1..Order( u )^3 + 1 ] );
 end );
 
@@ -217,7 +217,7 @@ InstallMethod( Isomorphism, "for two abstract unitals",
         if Order( u1 ) <> Order( u2 ) then
             return fail;
         fi;
-        ret := IsomorphismIncidenceStructures( u1, u2 );
+        ret := Isomorphism@IncidenceStructures( u1, u2 );
         if ret = fail then
             return fail;
         else
