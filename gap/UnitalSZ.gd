@@ -4,6 +4,9 @@
 # Declarations
 #
 
+#! @Copyright
+#!   This package may be distributed under the terms and conditions of the GNU Public License Version 2 or higher.
+
 #! @Chapter Abstract unitals
 #! @Section Constructing abstract unitals
 #! @Section Methods for abstract unitals
